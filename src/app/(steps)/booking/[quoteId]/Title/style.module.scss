@@ -1,0 +1,29 @@
+@import "../mixins";
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+
+    .button {
+        margin: 0;
+        height: fit-content;
+        @include button-round;
+    }
+}
+
+.title {
+    @include page-title;
+}
+
+
+@media (max-width: $phone-breakpoint) {
+    .button {
+        display: none;
+    }
+    .container {
+        margin-bottom: 1rem;
+    }
+}

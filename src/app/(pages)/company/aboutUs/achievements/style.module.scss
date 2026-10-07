@@ -1,0 +1,69 @@
+.leftPanel {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(24px, 3.13vw, 48px);
+}
+
+.header {
+    h2 {
+        @include font-heading-xl-semibold;
+        margin: 0 0 clamp(12px, 1.56vw, 24px) 0;
+        color: $text-heading;
+        line-height: 4vw; //two lines so adjusted the default setting
+    }
+
+    p {
+        @include font-heading-m-semibold;
+        margin: 0;
+        color: $text-heading;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(24px, 3.13vw, 48px);
+}
+
+.achievement {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(8px, 1.04vw, 16px);
+}
+
+.label {
+    @include font-heading-xl-semibold;
+    line-height: 1;
+    color: $brand-deep-violet;
+}
+
+.suffix {
+    @include font-heading-xl-semibold;
+    color: $brand-deep-violet;
+    display: inline-block;
+}
+
+.description {
+    @include font-body-m-semibold;
+    color: $brand-deep-violet;
+}
+
+.rightPanel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: clamp(8px, 1.04vw, 16px);
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+}

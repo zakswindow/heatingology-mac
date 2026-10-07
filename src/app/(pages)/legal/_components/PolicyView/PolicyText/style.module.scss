@@ -1,0 +1,25 @@
+.policy {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vh(42);
+
+    .anchor {
+        cursor: unset;
+    }
+
+    .paragraph {
+        color: $text-body;
+        @include font-body-s-regular;
+    }
+
+    .title {
+        color: $text-heading;
+        @include font-heading-m-semibold;
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        gap: px-to-vh(16);       
+    }
+}

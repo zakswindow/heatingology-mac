@@ -1,0 +1,101 @@
+@import "../mixins";
+
+.contactFormContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vh(8);
+
+    .title {
+        @include page-title;
+
+        &{
+            margin-top: 0;
+        }
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: px-to-vh(16);
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    .names {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: px-to-vw(16);
+    }
+
+    .sectionTitle {
+        color: $text-default;
+        margin-bottom: px-to-vh(4);
+        @include font-body-s-regular;
+    }
+
+    .sectionDescription {
+        color: $text-body;
+        margin-bottom: px-to-vh(4);
+        @include font-body-s-regular;
+    }
+
+    .sectionFieldset {
+        background-color: $surface-card-info;
+        border: 1px solid $brand-light-blue;
+        padding: px-to-vw(16);
+        display: flex;
+        flex-direction: column;
+        gap: px-to-vw(8);
+    }
+
+    .sectionFootprint {
+        color: $base-neutral;
+        @include font-body-xs-regular;
+    }
+
+    .footprint {
+        color: $base-neutral;
+        text-align: center;
+        margin: px-to-vh(8) 0;
+        @include font-body-xxs-regular;
+    }
+
+    .submitButton {
+        width: 100%;
+        @include button-round;
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .contactFormContainer {
+        gap: px-to-vh-m(8);
+
+        .form {
+            gap: px-to-vh-m(16);
+        }
+
+        .names {
+            display: flex;
+            flex-direction: column;
+            gap: px-to-vh-m(16);
+        }
+
+        .sectionTitle,
+        .sectionDescription {
+            margin-bottom: px-to-vh-m(4);
+        }
+
+        .sectionFieldset {
+            padding: px-to-vw-m(16);
+            gap: px-to-vw-m(8);
+        }
+
+        .footprint {
+            margin: px-to-vh-m(8) 0;
+        }
+    }
+}
+

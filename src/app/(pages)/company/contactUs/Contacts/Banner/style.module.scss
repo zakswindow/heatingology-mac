@@ -1,0 +1,36 @@
+.bannerContainer {
+    border-radius: px-to-vw(20);
+    overflow: hidden;
+
+    transform: scale(1);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.bannerContainer:hover {
+    transform: scale(1.05);
+}
+
+.content {
+    padding-left: px-to-vw(32);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: px-to-vw(8);
+    
+}
+
+.iconContainer {
+    width: px-to-vw(60);
+    height: px-to-vw(60);
+}
+
+.headline {
+    @include font-heading-m-semibold;
+    color: $white;
+}
+
+.subHeadline {
+    @include font-body-s-regular;
+    color: $white;
+}

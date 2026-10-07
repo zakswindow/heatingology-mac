@@ -1,0 +1,223 @@
+.heroContainer {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1440 / 720;
+    color: #f5f5f5;
+
+    .imageContainer {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        .heroImage {
+            display: block;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            @include linear-overlay;
+        }
+    }
+}
+
+
+
+.heroMetadata {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: 100%;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: px-to-vh(24);
+    max-width: px-to-vw(768);
+}
+
+.breadcrumb {
+    position: relative;
+    padding-top: px-to-vh(40);
+}
+
+.heroMetadata .heroHeadline,
+.heroMetadata .heroSubHeadline {
+    @include pre-slide-in-x(px-to-vw(-50));
+    @include slide-in-x(0);
+    @include enable-line-break;
+}
+
+.heroHeadline,
+.heroSubHeadline,
+.heroFooterNote {
+    position: relative;
+}
+
+.heroHeadline {
+    @include font-heading-xxl-semibold;
+}
+
+.heroSubHeadline {
+    font-family: "Helvetica Neue";
+    @include font-body-s-regular;
+}
+
+.heroFooterNote {
+    bottom: 2rem;
+    color: $white;
+    display: flex;
+    align-items: center;
+    gap: px-to-vw(12);
+    @include font-body-xs-regular;
+    @include pre-slide-in-y(-50);
+    @include slide-in-y(px-to-vh(0));
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+.reviewRating {
+    display: flex;
+    align-items: center;
+    gap: px-to-vw(4);
+}
+
+.ratingScore {
+    font-family: "Plus Jakarta Sans";
+    font-weight: 800;
+    font-size: px-to-vw(20);
+    line-height: 1;
+}
+
+.stars {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: px-to-vw(2);
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.starsFilled {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: px-to-vw(2);
+    overflow: hidden;
+    color: #FBBC05;
+}
+
+.star {
+    flex-shrink: 0;
+    width: px-to-vw(21);
+    height: px-to-vw(21);
+}
+
+.googleIcon {
+    width: px-to-vw(24);
+    height: px-to-vw(24);
+}
+
+.button {
+    position: relative;
+    margin: 0;
+    gap: px-to-vw(16);
+    // border-radius: 9999px;
+
+    @include font-button-m-semibold;
+    @include pre-slide-in-y(-50);
+    @include slide-in-y(px-to-vh(0));
+    @include button-round;
+
+    span {
+        display: flex;
+        align-items: center;
+    }
+
+    &:hover {
+        background-color: #170F55;
+    }
+}
+
+.arrowContainer {
+    background-color: #170F55;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    padding: px-to-vw(8);
+}
+
+.arrow {
+    height: px-to-vw(20);
+    transform: rotate(-45deg);
+    transition: 0.5s;
+}
+
+.button:hover .arrow {
+    transform: rotate(0);
+}
+
+.spacer {
+    @include spacer;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .heroContainer {
+        aspect-ratio: 375 / 812;
+        color: #f5f5f5;
+
+        .imageContainer {
+            .heroImage {
+                object-position: 50% center;
+            }
+        }
+
+        .heroMetadata {
+            max-width: unset;
+            gap: px-to-vh-m(16);
+            padding-left: px-to-vw-m(24);
+            padding-right: px-to-vw-m(24);
+        }
+
+        .button {
+            width: fit-content;
+        }
+
+        .heroImage.heatPump {
+            object-position: right;
+        }
+    }
+
+    .heroFooterNote {
+        padding-left: px-to-vw-m(16);
+        margin-bottom: px-to-vh-m(80);
+        flex-direction: column;
+        align-items: start;
+
+        .reviewRating {
+            gap: px-to-vw-m(8);
+        }
+
+        .ratingScore {
+            @include font-body-s-semibold;
+        }
+
+        .star {
+            width: px-to-vw-m(16);
+            height: px-to-vw-m(16);
+        }
+        
+        .googleIcon {
+            width: px-to-vw-m(16);
+            height: px-to-vw-m(16);
+        }
+    }
+}

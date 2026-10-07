@@ -1,0 +1,232 @@
+@keyframes slideInRight {
+    to {
+        opacity: 1;
+        transform: translateX(-25%);
+    }
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(25%);
+    }
+}
+
+.card {
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: px-to-vw(20);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #d9d9d9;
+    gap: px-to-vw(8);
+    overflow: hidden;
+    margin: px-to-vw(10);
+    max-width: 25.3rem;
+
+    .button {
+        width: 100%;
+        margin: 0;
+        @include button-round;
+    }
+
+    .banner {
+        position: relative;
+        background-color: $brand-light-blue;
+        padding: px-to-vh(16) 0;
+        height: px-to-vw(236);
+        overflow: hidden;
+    }
+
+    .tags {
+        position: absolute;
+        top: px-to-vw(10);
+        left: px-to-vw(10);
+        display: flex;
+        gap: px-to-vw(4);
+        z-index: 1;
+    }
+
+    .imagesAnimationContainer {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        .imagesAnimation {
+            position: relative;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .imageContainer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hidden.imageContainer {
+            opacity: 0;
+        }
+
+        .hover.imageContainer img {
+            transition: transform 0.3s ease-in-out;
+            transform: scale(1.1);
+        }
+
+        .slideInRight.imageContainer {
+            opacity: 0;
+            transform: translateX(-30%);
+            animation: slideInRight 0.5s forwards;
+        }
+
+        .slideInLeft.imageContainer {
+            opacity: 0;
+            transform: translateX(30%);
+            animation: slideInLeft 0.5s forwards;
+        }
+    }
+
+    .imageContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        img {
+            width: auto;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+}
+
+
+.metadata {
+    display: flex;
+    flex-direction: column;
+    padding: px-to-vh(16) px-to-vw(16);
+    gap: px-to-vh(8);
+    min-height: px-to-vh(250);
+    flex: 1;
+}
+
+.brandContainer {
+    max-width: 132px;
+    height: 40px;
+
+    figure {
+        width: 100%;
+        height: 100%;
+    }
+
+    img {
+        object-fit: contain;
+        max-width: 100%;
+        max-height: 100%;
+        width: auto !important;
+        height: 100% !important;
+    }
+}
+
+.name {
+    @include font-body-s-semibold;
+    color: $text-heading;
+}
+
+.benefits {
+    gap: px-to-vw(4);
+
+    li {
+        @include font-body-s-regular;
+        @include list-li;
+        color: $text-body;
+    }
+}
+
+.ellipsis {
+    @include text-ellipsis;
+}
+
+.note {
+    @include font-body-xs-regular;
+    color: $text-body;
+}
+
+.help {
+    color: $secondaryText;
+    display: flex;
+    gap: px-to-vw(4);
+    align-items: center;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.price {
+    border: 1px solid black;
+    padding: 16px;
+    border-radius: px-to-vw(10);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+.spacer {
+    @include spacer;
+}
+
+.whatsIncludedTrigger {
+    @include font-body-s-regular;
+}
+
+.CardButton {
+    margin: 0px;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .card {
+        width: 100%;
+        border-radius: px-to-vw-m(20);
+        gap: px-to-vw-m(8);
+        margin: px-to-vw-m(10);
+        max-width: unset;
+        margin: auto;
+
+        .banner {
+            height: px-to-vw-m(188);
+        }
+
+        .tags {
+            top: px-to-vw-m(10);
+            left: px-to-vw-m(10);
+            gap: px-to-vw-m(4);
+        }
+
+        .imageContainer {
+            height: 100%;
+        }
+
+        .metadata {
+            padding: px-to-vh-m(16) px-to-vw-m(16);
+            gap: px-to-vh-m(16);
+            min-height: px-to-vh-m(250);
+        }
+        .button {
+            margin-top: px-to-vh-m(16);
+            margin-bottom: px-to-vh-m(12);
+            @include button-round;
+        }
+    }
+
+    
+}

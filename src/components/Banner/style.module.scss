@@ -1,0 +1,148 @@
+.banner {
+    position: relative;
+    width: 100%;
+    max-height: 24rem;
+    overflow: hidden;
+    aspect-ratio: 1440/440;
+
+    .overlay {
+        background: linear-gradient(
+        to right,
+        rgba(52, 40, 137, 1) 0%,
+        rgba(52, 40, 137, 0.6) 61%,
+        rgba(241, 130, 99, 0.5) 100%
+        );
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+    }
+    
+    .content {
+        position: absolute;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        margin: auto;
+    }
+}
+
+.imageContainer {
+    position: absolute;
+    inset: 0;
+    
+    .backgroundImage {
+        object-fit: cover;
+
+        &.top {
+            object-position: top;
+        }
+
+        &.center {
+            object-position: center;
+        }
+    }
+}
+
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vh(16);
+}
+
+.title {
+    color: $base-neutral-white;
+    text-align: center;
+    padding: 0 1rem;
+
+    @include font-heading-l-semibold;
+}
+
+.featuresList {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+.featureItem {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; // space-x-3
+}
+
+.checkContainer {
+    flex-shrink: 0;
+    width: 1.25rem; // w-5
+    height: 1.25rem; // h-5
+    background-color: $base-neutral-white;
+    border-radius: 50%; // rounded-full
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkIcon {
+    width: 0.75rem; // w-3
+    height: 0.75rem; // h-3
+    color: rgb(126, 34, 206); // text-purple-700
+}
+
+.featureText {
+    color: $base-neutral-white;
+    @include font-body-s-semibold;
+}
+
+.ctaButton {
+    background-color: $base-neutral-white;
+    color: rgb(126, 34, 206);
+    padding: 0.5rem 1.5rem;
+    transition: background-color 0.2s ease-in-out;
+    width: max-content;
+    margin: 0.85rem auto;
+    @include button-round;
+    @include font-button-m-semibold;
+
+    &:hover {
+        background-color: rgb(243, 244, 246);
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .banner {
+        aspect-ratio: 375 /404;
+    }
+
+    .backgroundImage {
+        object-position: "right" !important;
+    }
+
+    .content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .contentWrapper {
+        gap: px-to-vh-m(28);
+    }
+
+    .title {
+        font-size: 2.25rem;
+    }
+
+    .featuresList {
+        flex-direction: column;
+        margin: auto;
+        width: fit-content;
+    }
+
+    .featureText {
+        font-size: 1rem;
+    }
+
+    .ctaButton {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,10 @@
+.textInput {
+    input {
+        border-color: $base-neutral-lighter;
+    }
+
+    input::placeholder {
+        color: $text-default-teritiary;
+        @include font-body-s-single-line;
+    }
+}

@@ -1,0 +1,25 @@
+.container {
+    overflow: hidden;
+    width: 100%;
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 15%,
+        black 85%,
+        transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 15%,
+        black 85%,
+        transparent 100%
+    );
+
+    .marquee {
+        padding-top: 1rem;
+        display: grid;
+        width: 200vh;
+        grid-template-columns: repeat(10, 1fr);
+    }
+}

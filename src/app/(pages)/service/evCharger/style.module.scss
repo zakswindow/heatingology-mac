@@ -1,0 +1,58 @@
+.heroOverlay {
+    background: linear-gradient(to right,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0) 50%,
+        rgba(0, 0, 0, 0.5) 100%
+    ) !important;
+}
+
+.evChargerList {
+    background-color: $base-neutral-lightest !important;
+    color: $base-neutral-black !important;
+}
+
+.evReasons {
+    background-color: $white !important;
+
+    > div:last-child > div:nth-child(2) img {
+        object-fit: contain;
+        // object-fit: cover;
+        object-position: left;
+    }
+
+     > div:last-child > div:nth-child(1) {
+        background-color: transparent;
+    }
+
+    > div:last-child > div:nth-child(2) {
+        background-color: transparent;
+    }
+}
+
+.evChargerSteps {
+    background-color: $brand-deep-violet !important;
+    color: $base-neutral-white !important;
+}
+
+.evChargerBrands {
+    background-color: $base-neutral-lightest !important;
+    color: $base-neutral-black !important;
+}
+
+.evChargerFaq {
+    background-color: #D8DFFF !important;
+}
+
+.reviews {
+    background-color: $base-neutral-lightest !important;
+    color: $base-neutral-black !important;
+}
+
+.chargers {
+    background-color: $base-neutral-lightest !important;
+    padding-bottom: px-to-vh(96) !important;
+
+    h2 {
+        color: $base-neutral-black !important;
+    }
+}

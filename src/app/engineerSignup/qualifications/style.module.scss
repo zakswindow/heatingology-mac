@@ -1,0 +1,27 @@
+@import "../mixins";
+
+.form {
+    @include form;
+}
+
+.title {
+    @include form-title;
+}
+
+.description {
+    @include form-description;
+}
+
+.buttonList {
+    @include form-button-list;
+
+    button {
+        @include form-button;
+    }
+}
+
+.checklistSection {
+    fieldset {
+        border: none;
+    }
+}

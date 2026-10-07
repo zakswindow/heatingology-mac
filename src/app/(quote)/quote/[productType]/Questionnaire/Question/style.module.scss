@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vh(8);
+}
+
+.icon {
+    width: px-to-vw(335);
+    height: auto;
+    margin: auto;
+}
+
+.label {
+    @include font-body-s-regular;
+}
+
+.question {
+    @include enable-line-break;
+    @include font-heading-l-semibold;
+}
+
+.hasIcon .question {
+    @include font-heading-m-semibold;
+}
+
+.description {
+    @include enable-line-break;
+    @include font-body-s-regular;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .container {
+        gap: px-to-vh-m(8);
+    }
+    .icon {
+        width: px-to-vw-m(335);
+    }
+}

@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    align-items: flex-start;
+    gap: px-to-vw(10);
+    padding: px-to-vh(12) px-to-vw(14);
+    background-color: $bg-info;
+    border: 1px solid $brand-light-blue;
+    border-radius: 10px;
+}
+
+.text {
+    @include font-body-s-regular;
+    color: $text-body;
+    line-height: 1.5;
+}
+
+.phone {
+    color: $brand-deep-violet;
+    font-weight: 600;
+    text-decoration: underline;
+    white-space: nowrap;
+}

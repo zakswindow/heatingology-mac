@@ -1,0 +1,73 @@
+.title {
+    color: $text-body;
+    margin-bottom: px-to-vh(8);
+    @include font-body-xs-regular;
+}
+
+.container {
+    .selector {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+
+        .item:first-child {
+            border-top-left-radius: px-to-vw(10);
+            border-bottom-left-radius: px-to-vw(10);
+            border-right-width: 0;
+        }
+
+        .item:last-child {
+            border-top-right-radius: px-to-vw(10);
+            border-bottom-right-radius: px-to-vw(10);
+            border-left-width: 0;
+        }
+
+        .item {
+            background-color: $surface-card-info;
+            padding: px-to-vh(8) px-to-vw(16);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            border: 1px solid $brand-light-blue;
+            cursor: pointer;
+
+            &.selected {
+                background-color: $brand-luminous-blue;
+
+                .name {
+                    color: $white;
+                }
+            }
+
+            .name {
+                color: $text-heading;
+                @include font-body-xs-semibold;
+            }
+
+            .price {
+                color: $brand-vibrant-red;
+                @include font-body-xxs-regular;
+            }
+        }
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .title {
+        margin-bottom: px-to-vh-m(8);
+    }
+    .container {
+        border-radius: px-to-vw-m(10); 
+        padding: px-to-vh-m(8) px-to-vw-m(16);
+
+        .selector {
+            .item {
+                // padding: px-to-vh-m(8) px-to-vw-m(16);
+            }
+        }
+    }
+}

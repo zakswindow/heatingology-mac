@@ -1,0 +1,29 @@
+.tags {
+  display: flex;
+  flex-direction: row;
+  margin: px-to-vw(24) 0;
+  gap: px-to-vw(8);
+}
+
+.tag {
+  @include font-label-s;
+  color: $base-neutral;
+  display: flex;
+  flex-direction: row;
+  gap: px-to-vw(8);
+}
+
+.tag.inStock {
+  background-color: $tag-instalment-bg;
+}
+
+.tag.instalment {
+  background-color: $tag-bestseller-bg;
+}
+
+@media (max-width: $phone-breakpoint) {
+  .tags {
+    flex-direction: column;
+    width: fit-content;
+  }
+}

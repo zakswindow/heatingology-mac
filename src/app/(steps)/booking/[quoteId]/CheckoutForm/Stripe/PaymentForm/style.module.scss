@@ -1,0 +1,15 @@
+.pay {
+    margin-top: px-to-vh(16);
+}
+
+.error {
+    color: #df1b41;
+    font-size: 12px;
+    margin-top: px-to-vh(8);
+}
+
+@media (max-width: $phone-breakpoint) {
+    .pay {
+        margin-top: px-to-vh-m(16);
+    }
+}

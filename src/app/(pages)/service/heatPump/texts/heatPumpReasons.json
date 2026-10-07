@@ -1,0 +1,31 @@
+{
+    "heading": {
+        "title": "Is a Heat Pump right for me?"
+    },
+    "infoItems": [
+        {
+            "title": "Save on your energy bills",
+            "description": "Heat pumps use less energy than traditional systems - reducing monthly costs.",
+            "learnMoreText": "Learn more",
+            "imageSrc": "/products/boiler.png",
+            "imageAlt": "Save on your energy bills",
+            "redirectUrl": "/about"
+        },
+        {
+            "title": "Get government support",
+            "description": "Through the Boiler Upgrade Scheme, you may be eligible for up to £7,500 in grant funding.",
+            "learnMoreText": "Learn more",
+            "imageSrc": "/products/boiler.png",
+            "imageAlt": "Get government support",
+            "redirectUrl": "/about"
+        },
+        {
+            "title": "Future-proof your home",
+            "description": "Quiet, low-maintenance and eco-conscious - heat pumps are built to last.",
+            "learnMoreText": "Learn more",
+            "imageSrc": "/products/boiler.png",
+            "imageAlt": "Future-proof your home",
+            "redirectUrl": "/about"
+        }
+    ]
+}

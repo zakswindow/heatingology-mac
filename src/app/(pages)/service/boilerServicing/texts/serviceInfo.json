@@ -1,0 +1,41 @@
+{
+    "heading": {
+        "title": "Why Does a Boiler Need Servicing?"
+    },
+    "infoItems": [
+        {
+            "title": "Prevent breakdowns",
+            "description": "Catch small issues early before they become big (and expensive) ones.",
+            "learnMoreText": "Learn more",
+            "imageSrc": "https://assets.heatingology.com/boiler-servicing/prevent-breakdowns.jpeg",
+            "imageAlt": "Prevent breakdowns",
+            "modalContent": [
+                "Recommended for older or heavily used heating systems, our exclusive ProFlush uses advanced, non-invasive technology to thoroughly cleanse your system. It removes stubborn sludge and hardened debris using specially formulated cleaning solutions, supported by an innovative high-powered twin magnet filtration process.",
+                "By clearing built-up contaminants, ProFlush improves hot water circulation, restores system efficiency, and helps protect your boiler’s internal components. This not only enhances overall performance but also extends the lifespan of your boiler by preventing harmful debris from causing long-term damage."
+            ]
+        },
+        {
+            "title": "Protect Your Home",
+            "description": "Ensure your boiler's gas and ventilation systems are running safely and to standard.",
+            "learnMoreText": "Learn more",
+            "imageSrc": "https://assets.heatingology.com/boiler-servicing/protect-home.jpg",
+            "imageAlt": "Protect Your Home",
+            "modalContent": [
+                "A yearly boiler service helps ensure your heating system is operating safely and reliably throughout the year. During the visit, our engineers carry out thorough safety checks, inspect key components, and test for issues such as gas leaks, ventilation problems, and carbon monoxide risks.",
+                "By keeping your boiler properly maintained, you reduce potential hazards and help protect everyone in your home. Regular servicing also ensures your system continues running smoothly, giving you confidence that your heating is safe, compliant, and ready for the months ahead."
+            ]
+        },
+        {
+            "title": "Reduce Energy Costs",
+            "description": "A well-maintained boiler runs more efficiently - and costs less to run.",
+            "learnMoreText": "Learn more",
+            "imageSrc": "https://assets.heatingology.com/boiler-servicing/reduce-cost.png",
+            "imageAlt": "Save energy, save money",
+            "modalContent": [
+                "Over time, boilers can lose efficiency due to internal wear, debris build-up, or incorrect settings. An annual service helps restore performance by ensuring all components are clean, calibrated, and working as they should. This allows your boiler to heat your home more effectively while using less energy.",
+                "A well-maintained system doesn’t have to work as hard to produce the same level of warmth, which can lead to lower energy usage and reduced heating bills. Keeping your boiler serviced regularly helps maintain efficiency, improve reliability, and support long-term cost savings."
+            ]
+        }
+    ]
+}
+

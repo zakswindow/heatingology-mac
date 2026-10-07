@@ -1,0 +1,35 @@
+@import "../../mixins";
+
+.title {
+    @include font-body-s-regular;
+}
+
+.fieldset {
+    @include form-section;
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vw(24);
+}
+
+.title {
+    @include font-body-s-regular;
+    color: $text-default;
+}
+
+.checklistContainer {
+    @include font-body-s-regular;
+}
+
+.checklist {
+    display: grid;
+    gap: px-to-vw(16);
+    grid-template-columns: repeat(auto-fill, minmax(px-to-vw(200), 1fr));
+}
+
+@media (max-width: $phone-breakpoint) {
+    .checklist {
+        display: flex;
+        flex-direction: column;
+        gap: px-to-vw-m(16);
+    }
+}

@@ -1,0 +1,28 @@
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    @include font-body-xs-regular;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.current {
+    color: $base-neutral-neutral;
+    font-weight: 500;
+}
+
+.separator {
+    font-size: 0.9em;
+}

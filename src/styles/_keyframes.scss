@@ -1,0 +1,73 @@
+@mixin pre-slide-in-x ($x, $duration: 0.5s, $opacity: 0) {
+    opacity: $opacity;
+    transform: translateX($x);
+    animation: slideInX $duration forwards;
+}
+
+@mixin slide-in-x ($x, $opacity: 1) {
+  @keyframes slideInX {
+    to {
+      opacity: $opacity;
+      transform: translateX($x);
+    }
+  }
+}
+
+@mixin pre-slide-in-y ($y, $duration: 0.5s, $opacity: 0) {
+    opacity: $opacity;
+    transform: translateY($y);
+    animation: slideInY $duration forwards;
+}
+
+@mixin slide-in-y ($y, $opacity: 1) {
+  @keyframes slideInY {
+    to {
+      opacity: $opacity;
+      transform: translateY($y);
+    }
+  }
+}
+
+@mixin pre-rotate-only($deg) {
+  transform: rotate($deg);
+  animation: rotateOnly 0.5s forwards;
+}
+
+@mixin rotate-only($deg) {
+  @keyframes rotateOnly {
+    to {
+      transform: rotate($deg);
+    }
+  }
+}
+
+@mixin slide-down ($height) {
+
+  animation: slideDown 200ms ease-in-out;
+
+  @keyframes slideDown {
+    from {
+      max-height: 0;
+      opacity: 0;
+    }
+    to {
+      max-height: $height;
+      opacity: 1;
+    }
+  }
+}
+
+@mixin slide-up($height) {
+  animation: slideUp 200ms ease-in-out;
+
+  @keyframes slideUp {
+    from {
+      max-height: $height;
+      opacity: 1;
+    }
+    to {
+      max-height: 0;
+      opacity: 0;
+    }
+  }
+}

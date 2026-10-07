@@ -1,0 +1,71 @@
+enum EngineerTitle {
+  MR
+  MRS
+  MS
+  DR
+  MX
+}
+
+model Engineer {
+  id                    String          @id @default(cuid())
+  title                 EngineerTitle
+  firstName             String
+  lastName              String
+  contactNumber         String
+  email                 String
+  companyId             String
+  company               Company         @relation(fields: [companyId], references: [id])
+  profileUrl            String
+  gasSafeCardFrontUrl   String
+  gasSafeCardRearUrl    String
+  gasSafeCardExpiryDate DateTime
+  ccnUrl                String
+  ccnExpiryDate         DateTime
+  insuranceUrl          String
+  insuranceExpiryDate   DateTime
+  fgaUrl                String
+  fgaExpiryDate         DateTime
+  dbsUrl                String
+  dbsIssueDate          DateTime
+  locations             String[]
+  qualifications        Qualification[] @relation("EngQualifications")
+}
+
+enum CompanyType {
+  LIMITED_COMPANY
+  SOLE_TRADER
+}
+
+model Company {
+  id             String      @id @default(cuid())
+  name           String
+  gasSafeLicense String
+  gasSafeNumber  String
+  address        String
+  type           CompanyType
+  vatRegistered  Boolean
+  companyNumber  String
+  engineers      Engineer[]
+}
+
+enum QUALIFICATION_CATEGORY {
+  GAS_SAFE
+  INSTALL_ABILITIES
+  TECHNICAL_ABILITIES
+  OTHER
+}
+
+model QualificationCategory {
+  categoryId    QUALIFICATION_CATEGORY @unique
+  label         String
+  Qualification Qualification[]
+}
+
+model Qualification {
+  id          Int                    @id @default(autoincrement())
+  name        String
+  categoryId  QUALIFICATION_CATEGORY @default(OTHER)
+  category    QualificationCategory  @relation(fields: [categoryId], references: [categoryId])
+  subCategory String?
+  engineers   Engineer[]             @relation("EngQualifications")
+}

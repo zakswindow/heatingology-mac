@@ -1,0 +1,28 @@
+.button {
+    width: 100%;
+    gap: px-to-vw(16);
+   // Align with Paypal checkout button
+    font-size: 11px;
+    line-height: 16px;
+
+    @include button-round;
+    // @include font-button-m-semibold;
+ 
+    .icon {
+        width: px-to-vw(24);
+        height: px-to-vw(24);
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .button {
+        gap: px-to-vw-m(16);
+        padding: px-to-vh-m(8) 0;
+
+
+        .icon {
+            width: 1em;
+            height: 1em;
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.hero {
+    aspect-ratio: 1440 / 536;
+
+    img {
+        object-position: top;
+    }
+}
+
+.info {
+    background-color: $base-neutral-white;
+    padding: px-to-vw(64) px-to-vw(32);
+    margin: 0 auto;
+}
+
+.achievements {
+    background-color: $surface-card-info;
+    padding: px-to-vw(64) px-to-vw(32);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(32px, 4.17vw, 64px);
+    margin: 0 auto 2rem 0;
+}
+
+.values {
+    background-color: $surface-secondary;
+    margin: 0 auto;
+}
+
+.people {
+    background-color: $base-neutral-white;
+    padding: px-to-vw(64) px-to-vw(32);
+    margin: 0 auto;
+}
+
+.partnership {
+    margin-bottom: 4rem;
+}
+
+
+@media (max-width: $phone-breakpoint) {
+    .info {
+        padding: 0;
+    }
+
+    .achievements {
+        grid-template-columns: 1fr;
+        padding: 50px;
+    }
+
+    .values {
+        padding: px-to-vw-m(64) px-to-vw-m(40);
+    }
+
+    .people {
+        padding: 50px;
+    }
+
+    .hero {
+        aspect-ratio: 375/ 450;
+    }
+
+    .info {
+        margin-top: px-to-vh-m(16);
+    }
+}

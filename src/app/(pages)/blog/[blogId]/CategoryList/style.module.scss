@@ -1,0 +1,31 @@
+.categoryList {
+    margin-bottom: px-to-vw(40);
+    legend {
+        margin-bottom: px-to-vw(32);
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        gap: px-to-vw(24);
+
+    }
+}
+
+.categoryItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: px-to-vw(24);
+    border-bottom: 1px solid $border-primary;
+
+    .label {
+        @include font-body-m-semibold;
+        color: $base-neutral-black;
+    }
+
+    .count {
+        @include font-body-s-regular;
+        color: $base-neutral-light;
+    }
+}

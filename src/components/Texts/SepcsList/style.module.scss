@@ -1,0 +1,21 @@
+.benefits {
+    color: $text-info-body;
+    gap: px-to-vw(4);
+
+    li {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        gap: px-to-vw(4);
+        line-height: px-to-vw(32);
+        white-space: wrap;
+
+        svg {
+            color: $brand-deep-violet;
+        }
+    }
+}
+
+.spacer {
+    @include spacer;
+}

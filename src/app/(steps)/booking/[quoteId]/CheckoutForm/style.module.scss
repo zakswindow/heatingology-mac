@@ -1,0 +1,71 @@
+.container {
+    padding-bottom: px-to-vh(80);
+}
+
+.description {
+    margin-bottom: 1.5rem;
+
+    dt {
+        @include font-body-s-semibold;
+    }
+
+    dd {
+        color: $base-neutral;
+        @include font-body-s-regular;
+    }
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vh(8);
+
+    .accordionHeader {
+        color: $text-heading;
+        border: 1px solid $border-primary;
+        background-color: $base-neutral-white;
+
+        // Align with Stripe option buttons
+        padding: 9px 12px;
+        border-radius: 12px;
+    }
+
+    .accordionHeader[data-state="open"] {
+        border-color: transparent;
+        background-color: $surface-card-info;
+    }
+
+    .accordionItem[data-state="open"] {
+        background-color: $surface-card-info;
+        border-color: $brand-deep-violet;
+    }
+
+    .accordionItem {
+        border: 2px solid transparent;
+        border-radius: 12px;
+        overflow: hidden;
+
+        * {
+            cursor: pointer;
+        }
+    }
+
+    .accordionContent{
+        padding: 0 px-to-vw(16) px-to-vh(16) px-to-vw(16);
+    }
+}
+
+
+@media (max-width: $phone-breakpoint) {
+    .contianer {
+        padding-bottom: px-to-vh-m(80);
+    }
+
+    .accordion {
+        gap: px-to-vh-m(8);
+
+        .accordionContent{
+            padding: 0 px-to-vw-m(16) px-to-vh-m(16) px-to-vw-m(16);
+        }
+    }
+}

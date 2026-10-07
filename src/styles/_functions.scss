@@ -1,0 +1,15 @@
+@function px-to-vw($px-value, $baseVw: 1440) {
+    @return calc($px-value / $baseVw) * 100vw;
+}
+
+@function px-to-vh($px-value, $baseVh: 930) {
+    @return calc($px-value / $baseVh) * 100vh;
+}
+
+@function px-to-vw-m($px-value, $baseVw: 375) {
+    @return calc($px-value / $baseVw) * 100vw;
+}
+
+@function px-to-vh-m($px-value, $baseVh: 812) {
+    @return calc($px-value / $baseVh) * 100vh;
+}

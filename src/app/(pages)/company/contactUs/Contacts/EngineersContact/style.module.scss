@@ -1,0 +1,30 @@
+.container {
+    padding-top: px-to-vw(24);
+
+    li {
+        list-style: none;
+        color: $text-heading;
+        @include font-body-s-regular;
+
+        strong {
+            @include font-body-s-semibold;
+        }
+    }
+
+    .button {
+        margin: px-to-vw(24) 0 0 0;
+        @include button-round;
+        @include font-button-m-semibold;
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .container {
+        padding-top: px-to-vw-m(24);
+    
+        .button {
+            margin: px-to-vw-m(24) 0 0 0;
+        }
+    }
+}
+

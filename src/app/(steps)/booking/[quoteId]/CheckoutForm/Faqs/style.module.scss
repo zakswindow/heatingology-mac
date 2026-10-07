@@ -1,0 +1,17 @@
+.container {
+    background-color: $base-neutral-white;
+    margin-top: px-to-vh(32);
+    padding: px-to-vh(24) px-to-vw(24);
+    border-radius: px-to-vw(10);
+
+    .title {
+        color: $black;
+        margin-bottom: px-to-vh(24);
+        @include font-heading-m-semibold;
+    }
+
+    .accordionContent {
+        color: $black;
+        @include font-body-s-regular;
+    }
+}

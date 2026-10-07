@@ -1,0 +1,63 @@
+.searchInput {
+    position: relative;
+    .label {
+        color: $base-neutral;
+        @include font-body-s-regular;
+    }
+
+    .inputContainer {
+        padding: px-to-vw(12) px-to-vw(16);
+        border-radius: px-to-vw(8);
+        border: 1px solid $border-primary;
+        background-color: $white;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        @include font-body-s-single-line;
+
+        input {
+            all: unset;
+            width: 100%;
+        }
+    }
+
+    .list {
+        background-color: $base-neutral-white;
+        width: 100%;
+        max-height: px-to-vh(190);
+        overflow-y: auto;
+        border-radius: px-to-vw(8);
+        position: absolute;
+
+        .listItem {
+            list-style: none;
+            padding: px-to-vh(16) px-to-vw(16);
+            @include font-body-xs-semibold;
+        }
+    }
+}
+
+
+
+@media (max-width: $phone-breakpoint) {
+    .searchInput {
+
+    .inputContainer {
+        padding: px-to-vw-m(12) px-to-vw-m(16);
+        border-radius: px-to-vw-m(8);
+    }
+
+    .list {
+        width: 100%;
+        max-height: px-to-vh-m(190);
+        overflow: scroll;
+        border-radius: px-to-vw-m(8);
+
+        .listItem {
+            padding: px-to-vh-m(8) px-to-vw-m(16);
+            border-bottom: 1px solid $border-primary;
+        }
+    }
+}
+}

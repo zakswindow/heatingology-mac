@@ -1,0 +1,59 @@
+
+.radioMarkContainer {
+    position: relative;
+    width: px-to-vw(16);
+    height:px-to-vw(16);
+    display: flex;
+    align-items: center;
+}
+
+.radioMark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // width: px-to-vw(16);
+    // height: px-to-vw(16);
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: px-to-vw(2) solid $base-neutral-light;
+}
+
+.radioMark.checked {
+    border-color: $text-default;
+}
+
+.radioDot {
+    display: none;    
+}
+
+.radioMark.checked .radioDot {
+    width: px-to-vw(8);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    background-color: $text-default;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .radioMarkContainer {
+        width: px-to-vw-m(16);
+        height:px-to-vw-m(16);
+    }
+
+    .radioMark {
+        // width: px-to-vw-m(16);
+        // height: px-to-vw-m(16);
+        border: 2px solid $base-neutral-light;
+        padding: px-to-vw-m(2);
+    }
+
+    .radioMark.checked .radioDot {
+    width: px-to-vw-m(8);
+    height: px-to-vw-m(8);
+    top: px-to-vw-m(4);
+    left: px-to-vw-m(4);
+}
+}

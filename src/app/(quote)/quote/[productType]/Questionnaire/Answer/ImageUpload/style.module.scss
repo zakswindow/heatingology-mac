@@ -1,0 +1,163 @@
+.uploadContainer {
+    width: 100%;
+}
+
+.sharedUpload {
+    background: $white;
+    border-radius: px-to-vw(20);
+
+    @media (max-width: $phone-breakpoint) {
+        border-radius: px-to-vw-m(20);
+    }
+}
+
+.mobileUploadContainer {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    border: px-to-vw-m(1.5) dashed $primary;
+    border-radius: px-to-vw-m(12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: px-to-vw-m(32) px-to-vw-m(24);
+    gap: px-to-vw-m(20);
+    overflow: hidden;
+}
+
+.mobileUploadIcon {
+    width: px-to-vw-m(80);
+    height: px-to-vw-m(80);
+    margin: 0;
+}
+
+.mobileAddButton {
+    background-color: $base-neutral-black;
+    color: $white;
+    @include button-round;
+    @include font-button-m-semibold;
+    padding: px-to-vw-m(14) px-to-vw-m(48);
+}
+
+.uploadNote {
+    color: $text-body;
+    text-align: left;
+    width: 100%;
+    @include font-body-xs-regular;
+}
+
+.fileCard {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #E5E5E5;
+    border-radius: px-to-vw(12);
+    padding: px-to-vw(10) px-to-vw(14);
+    margin-top: px-to-vw(12);
+    background: #fff;
+    width: 100%;
+
+    @media (max-width: $phone-breakpoint) {
+        border-radius: px-to-vw-m(12);
+        padding: px-to-vw-m(10) px-to-vw-m(14);
+        margin-top: px-to-vw-m(12);
+        max-width: 100%;
+        box-sizing: border-box;
+        min-width: 0;
+    }
+}
+
+.fileCardRow {
+    flex-direction: row;
+    align-items: center;
+    gap: px-to-vw(12);
+
+    @media (max-width: $phone-breakpoint) {
+        gap: px-to-vw-m(12);
+        overflow: hidden;
+    }
+}
+
+.thumbnail {
+    width: px-to-vw(44);
+    height: px-to-vw(44);
+    object-fit: cover;
+    border-radius: px-to-vw(6);
+    flex-shrink: 0;
+
+    @media (max-width: $phone-breakpoint) {
+        width: px-to-vw-m(44);
+        height: px-to-vw-m(44);
+        border-radius: px-to-vw-m(6);
+    }
+}
+
+.fileInfo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+.fileName {
+    @include font-body-s-regular;
+    color: #1A1A1A;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.fileSize {
+    @include font-body-xs-regular;
+    color: $text-body;
+}
+
+.deleteBtn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.uploadingRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.uploadingLabel {
+    @include font-body-s-regular;
+    color: #1A1A1A;
+}
+
+.progressTrack {
+    width: 100%;
+    height: px-to-vw(4);
+    background: #E5E5E5;
+    border-radius: px-to-vw(4);
+    margin-top: px-to-vw(10);
+    overflow: hidden;
+
+    @media (max-width: $phone-breakpoint) {
+        height: px-to-vw-m(4);
+        border-radius: px-to-vw-m(4);
+        margin-top: px-to-vw-m(10);
+    }
+}
+
+@keyframes progress {
+    0% { width: 0%; }
+    100% { width: 85%; }
+}
+
+.progressBar {
+    width: 0%;
+    height: 100%;
+    background: $primary;
+    border-radius: inherit;
+    animation: progress 8s cubic-bezier(0.1, 0.4, 0.2, 1) forwards;
+}

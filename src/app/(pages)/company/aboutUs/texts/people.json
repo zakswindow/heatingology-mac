@@ -1,0 +1,24 @@
+{
+    "title": "Built by Experts. Backed by Experience.",
+    "description": "Heatingology brings together experienced engineers, industry knowledge, and a trusted network, all focused on doing things properly, every time.",
+    "people": [
+        {
+            "name": "Qualified Engineers",
+            "image": "https://assets.heatingology.com/our-story/qualified-engineer.jpeg",
+            "title": "",
+            "description": "Every installation and repair is carried out by certified professionals who know heating systems inside out."
+        },
+        {
+            "name": "Years of Experience",
+            "image": "https://assets.heatingology.com/our-story/years-of-experience.jpeg",
+            "title": "",
+            "description": "From boilers to heat pumps, we’ve worked across homes of all types, solving real problems, not just ticking boxes."
+        },
+        {
+            "name": "Trusted Network",
+            "image": "https://assets.heatingology.com/our-story/what-we-believe.png",
+            "title": "",
+            "description": "We work with carefully selected engineers and specialists to make sure every job meets our standards."
+        }
+    ]
+}

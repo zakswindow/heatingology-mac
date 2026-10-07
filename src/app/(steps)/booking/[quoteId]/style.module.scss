@@ -1,0 +1,63 @@
+@import "./mixins";
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .faqs {
+        background-color: transparent;
+        padding: px-to-vh(112) px-to-vw(80);
+    }
+}
+
+.main {
+    padding: 0 px-to-vw(72);
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    gap: px-to-vw(16);
+}
+
+.cartView {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.calendarForm {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vw(8);
+}
+
+.bookButton {
+    width: 100%;
+}
+
+.selectTime {
+    legend {
+        font-weight: 700;
+    }
+}
+
+.page .moreQuestions {
+    background-color: $white;
+}
+
+.cartBar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .page {
+        .faqs {
+            padding: px-to-vh-m(64) px-to-vw-m(20);
+        }
+    }
+    .main {
+        grid-template-columns: 1fr;
+    }
+}
+

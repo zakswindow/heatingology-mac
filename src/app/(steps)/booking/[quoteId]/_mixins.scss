@@ -1,0 +1,5 @@
+@mixin page-title {
+    color: $black;
+    margin: px-to-vh(16) 0;
+    @include font-body-m-semibold;
+}

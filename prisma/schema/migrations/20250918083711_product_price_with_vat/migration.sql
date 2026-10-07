@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Product" ADD COLUMN     "hasVat" BOOLEAN NOT NULL DEFAULT false,
+ADD COLUMN     "priceWithVat" DOUBLE PRECISION DEFAULT 0;

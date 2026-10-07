@@ -1,0 +1,21 @@
+.container {
+    padding-top: px-to-vw(80);
+    padding-bottom: px-to-vw(64);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: px-to-vw(16);
+}
+
+.category {
+    @include button-round;
+    @include font-body-s-regular;
+    margin: 0;
+    border-color: $brand-luminous-blue;
+    background-color: $surface-card-info;
+}
+
+.category.selected {
+    color: $white;
+    background-color: $brand-luminous-blue;
+}

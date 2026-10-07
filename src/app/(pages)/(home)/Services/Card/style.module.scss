@@ -1,0 +1,198 @@
+.card {
+    border-radius: px-to-vw(20);
+    flex: 1;
+    box-shadow: 1px 1px 5px #EEE;
+    overflow: hidden;
+}
+
+.card.landscape {
+    display: flex;
+    flex-direction: row;
+    background-color: #FAFAFA;
+    min-width: px-to-vw(624);
+    aspect-ratio: 624/271;
+
+    .banner {
+        width: px-to-vw(260);
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: px-to-vh(16) px-to-vw(16);
+    }
+}
+
+.card.portrait {
+    display: flex;
+    flex-direction: column;
+    min-width: px-to-vw(405);
+    aspect-ratio: 405 / 543;
+
+    .imageContainer{
+        padding: px-to-vw(16) px-to-vw(16);
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    .banner {
+        background-color: $brand-light-blue;
+        padding: px-to-vh(16) 0;
+        height: 60%;
+        aspect-ratio: 405 / 303;
+        overflow: hidden;
+    }
+
+    &.card.portrait:hover {
+        .banner {
+            background-color: $base-neutral-lightest;
+        }
+    }
+}
+
+.imageContainer {
+    position: relative;
+    height: 100%;
+    margin: auto;
+    aspect-ratio: 130 / 230;
+}
+
+.description {
+    padding: px-to-vw(20) px-to-vw(24) px-to-vw(24);
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vh(8);
+    flex-grow: 1;
+    @include font-body-s-regular;
+}
+
+.category {
+    @include font-body-xs-semibold;
+}
+
+.headline {
+    @include font-heading-s-semibold;
+}
+
+.content {
+    @include font-body-s-regular;
+}
+
+.button {
+    @include font-button-m-bold;
+    @include button-round;
+    display: flex;
+    margin: 0;
+}
+
+.card:hover .button {
+    background-color: $brand-luminous-blue;
+
+    .arrow {
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(px-to-vw(4));
+    }
+}
+
+.spacer {
+    @include spacer;
+    padding-bottom: 1rem;
+}
+
+// Featured vs non featured cards
+.card {
+    .category {
+        color: $brand-deep-violet;
+    }
+
+    .description {
+        color: $text-body;
+    }
+}
+
+.card.featured {
+    .category {
+        color: $white;
+    }
+
+    .banner {
+        background-color: $brand-dark-purple;
+        padding: 0;
+        position: relative;
+        aspect-ratio: 405 / 303;
+
+
+        .bannerAnimation {
+            position: absolute;
+        }
+    }
+
+    .description {
+        background-color: $brand-deep-violet;
+        color: $white;
+    }
+
+    .button {
+        background-color: $white;
+        color: $brand-deep-violet;
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .card {
+        border-radius: 1rem;;
+    }
+
+    .card.landscape,
+    .card.portrait {
+        min-width: unset;
+    }
+
+    .card.portrait:not(.featured) {
+        .banner {
+            width: 100%;
+            height: px-to-vw-m(200);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: px-to-vw-m(16);
+            background-color: $brand-light-blue;
+        }
+    }
+
+    .card.landscape {
+        flex-direction: column;
+
+        .banner {
+            width: 100%;
+            height: px-to-vw-m(200);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: px-to-vw-m(16);
+        }
+    }
+
+    .card {
+        &.portrait,
+        &.landscape {
+            aspect-ratio: unset;
+        }
+
+        .description {
+            padding: px-to-vw-m(20);
+            gap: px-to-vh-m(8);
+
+            .category {
+                @include font-body-s-semibold;
+            }
+
+            .headline {
+                @include font-heading-m-semibold;
+            }
+        }
+    }
+}

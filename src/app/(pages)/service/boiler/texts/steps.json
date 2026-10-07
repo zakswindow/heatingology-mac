@@ -1,0 +1,27 @@
+{
+    "heading": {
+        "title": "Here's how it works"
+    },
+    "steps": [
+        {
+            "image": "/home/contact_us.png",
+            "title": "You Share ",
+            "text": "Tell us what’s happening, just a few simple questions to get started."
+        },
+        {
+            "image": "/home/contact_us.png",
+            "title": "You Choose",
+            "text": "Get your instant fixed price and pick the option that works best for you."
+        },
+        {
+            "image": "/home/contact_us.png",
+            "title": "Polly Arrives",
+            "text": "Our engineer will come and install your new boiler."
+        },
+        {
+            "image": "/home/contact_us.png",
+            "title": "Care Begins",
+            "text": "We follow up to ensure you're satisfied with everything."
+        }
+    ]
+}

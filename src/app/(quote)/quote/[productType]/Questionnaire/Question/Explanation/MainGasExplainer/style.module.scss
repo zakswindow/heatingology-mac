@@ -1,0 +1,123 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vh(64);
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vh(24);
+}
+
+.sectionHeader {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vh(16);
+}
+
+.heading {
+    @include font-heading-m-semibold;
+    color: $text-heading;
+}
+
+.subtitle {
+    @include font-body-s-regular;
+    color: $text-body;
+    line-height: 1.5;
+}
+
+// Boiler type cards
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vh(24);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: $surface-secondary;
+}
+
+.cardImage {
+    width: 100%;
+    height: px-to-vh(205);
+    object-fit: cover;
+    display: block;
+}
+
+.cardBody {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vh(4);
+    padding: px-to-vh(20) px-to-vw(20);
+}
+
+.cardTitle {
+    @include font-body-m-semibold;
+    color: $text-heading;
+}
+
+.cardDescription {
+    @include font-body-s-regular;
+    color: $text-heading;
+    line-height: 1.5;
+}
+
+// Info card
+.infoCard {
+    display: flex;
+    align-items: flex-start;
+    gap: px-to-vw(12);
+    padding: px-to-vh(16) px-to-vw(16);
+    background-color: $bg-info;
+    border: 1px solid $brand-light-blue;
+    border-radius: 10px;
+
+    p {
+        line-height: 1.5;
+    }
+}
+
+.infoTitle {
+    @include font-body-s-semibold;
+    color: $text-info-title;
+    margin-bottom: px-to-vh(8);
+}
+
+.infoBody {
+    @include font-body-xxs-regular;
+    color: $text-body;
+}
+
+// Support action panels
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vh(16);
+}
+
+.actionPanel {
+    display: flex;
+    padding: px-to-vh(16) px-to-vw(16);
+    background-color: $bg-info;
+    border: 1px solid $brand-light-blue;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.actionInner {
+    display: flex;
+    align-items: center;
+    gap: px-to-vw(8);
+
+    span {
+        @include font-body-s-semibold;
+        color: $brand-deep-violet;
+        text-decoration: underline;
+    }
+}

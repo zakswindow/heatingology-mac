@@ -1,0 +1,122 @@
+.questionaire {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: px-to-vh(32);
+    width: px-to-vw(720);
+    margin: px-to-vh(60) auto;
+    // padding-left: px-to-vw(80);
+}
+
+.textInput.questionaire {
+    width: px-to-vw(480);
+}
+
+.answers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: px-to-vw(16);
+    justify-content: center;
+}
+
+.searchableAnswers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+
+    button {
+        flex: unset;
+
+        div:empty {
+            display: none;
+        }
+    }
+}
+
+.searchInputWrapper {
+    grid-column: 1 / -1;
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+    gap: px-to-vw(12);
+    padding: px-to-vw(12) px-to-vw(20);
+    // background-color: #F2F4F7;
+    background-color: $white;
+    border: 1px solid $base-neutral-light;
+    border-radius: px-to-vw(8);
+    box-sizing: border-box;
+}
+
+.searchIcon {
+    width: px-to-vw(20);
+    height: px-to-vw(20);
+    flex-shrink: 0;
+    color: #667085;
+}
+
+.searchInput {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    @include font-body-s-regular;
+    color: #101828;
+
+    &::placeholder {
+        color: #667085;
+    }
+}
+
+.answer {
+    flex: 1 0 40%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.info .headline {
+    font-size: px-to-vw(24);
+    line-height: px-to-vw(30);
+}
+
+
+
+@media (max-width: $phone-breakpoint) {
+    .questionaire {
+        width: 100%;
+        max-width: 100vw;
+        box-sizing: border-box;
+        padding: px-to-vh-m(64) px-to-vw-m(20);
+    }
+
+    .answers {
+        flex-direction: column;
+        gap: px-to-vh-m(16);
+    }
+
+    .searchableAnswers {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: unset;
+    }
+
+    .searchInputWrapper {
+        grid-column: unset;
+        gap: px-to-vw-m(12);
+        padding: px-to-vw-m(12) px-to-vw-m(20);
+        border-radius: px-to-vw-m(100);
+    }
+
+    .searchIcon {
+        width: px-to-vw-m(20);
+        height: px-to-vw-m(20);
+    }
+
+    .infoContainer .infoIcon {
+        width: px-to-vw(60);
+    }
+
+    .textInput.questionaire {
+        width: 100%;
+    }
+}

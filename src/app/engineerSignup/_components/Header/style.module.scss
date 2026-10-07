@@ -1,0 +1,13 @@
+.header {
+    border-bottom: 1px solid $border-primary;
+
+    .stepCount {
+        color: $base-neutral-light;
+        @include font-body-s-semibold;
+    }
+
+    .title {
+        color: $text-heading;
+        @include font-heading-m-semibold;
+    }
+}

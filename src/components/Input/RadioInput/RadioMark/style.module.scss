@@ -1,0 +1,51 @@
+.radioMarkContainer {
+    position: relative;
+    width: px-to-vw(16);
+    height: auto;
+    aspect-ratio: 1;
+    display: grid;
+    grid-template-columns: px-to-vw(16) 1fr;
+    align-items: center;
+}
+
+.radioMark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 1px solid $text-default;
+}
+
+.radioDot {
+    display: none;    
+}
+
+.radioMark.checked .radioDot {
+    display: flex;
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    background-color: $text-default;
+}
+
+@media (max-width: $phone-breakpoint) {
+
+    .radioMarkContainer {
+        position: relative;
+        width: px-to-vw(16);
+        height: auto;
+        aspect-ratio: 1;
+        display: grid;
+        grid-template-columns: px-to-vw-m(16) 1fr;
+        align-items: center;
+    }
+    .radioMark {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+    }
+}

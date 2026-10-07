@@ -1,0 +1,16 @@
+.page {
+    background-color: $base-neutral-lightest;
+    @include pages-layout;
+}
+
+.title {
+    @include font-heading-xl-semibold;
+    text-align: center;
+}
+
+.subTitle {
+    @include font-body-m-regular;
+    color: $base-neutral-neutral;
+    text-align: center;
+}
+

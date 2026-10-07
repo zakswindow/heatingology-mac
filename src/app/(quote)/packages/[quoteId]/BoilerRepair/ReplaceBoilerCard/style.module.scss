@@ -1,0 +1,59 @@
+.card {
+    border-radius: px-to-vw(20);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: $white;
+    gap: px-to-vh(8);
+
+    .banner {
+        aspect-ratio: 405 / 188;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+    .details {
+        padding: px-to-vh(16) px-to-vw(20);
+        display: flex;
+        flex-direction: column;
+        gap: px-to-vh(8);
+        flex-grow: 1;
+    }
+
+    .name {
+        @include font-body-m-semibold;
+    }
+
+    .description {
+        @include font-body-s-regular;
+    }
+
+    .benefits {
+        li {
+            @include font-body-xs-regular;
+            
+            svg {
+                color: $brand-luminous-blue;
+            }
+        }
+    }
+
+    .price {
+        color: $brand-deep-violet;
+        margin-top: px-to-vh(16);
+        @include font-heading-m-semibold;
+    }
+
+    .button {
+        width: 100%;
+        @include button-round;
+    }
+
+    .spacer {
+        @include spacer;
+    }
+}

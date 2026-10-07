@@ -1,0 +1,34 @@
+.container {
+    padding-top: px-to-vw(80);
+    padding-bottom: px-to-vw(40);
+}
+
+.label {
+    @include font-body-s-semibold;
+}
+
+.socialMedia {
+    display: flex;
+    flex-direction: row;
+    gap: px-to-vw(8);
+}
+
+.button {
+    @include button-round;
+    margin: 0;
+    background-color: $white;
+    padding: px-to-vw(8);
+}
+
+.icon {
+    border-radius: 50%;
+    color: $brand-deep-violet;
+    width: px-to-vw(24);
+    height: px-to-vw(24);
+}
+
+.copiedFeedback {
+    @include font-body-xs-regular;
+    color: $brand-deep-violet;
+    margin-top: px-to-vw(4);
+}

@@ -1,0 +1,19 @@
+.progressBar {
+    width: 100%;
+    height: 4px;
+    padding: 0 px-to-vw(80);
+    transform: translateY(px-to-vh(-2));
+}
+
+.progress {
+    background-color: $brand-luminous-blue;
+    height: 100%;
+    transition: width 200ms ease-in-out
+}
+
+@media (max-width: $phone-breakpoint) {
+    .progressBar {
+        padding: 0;
+        transform: translateX(0);
+    }
+}

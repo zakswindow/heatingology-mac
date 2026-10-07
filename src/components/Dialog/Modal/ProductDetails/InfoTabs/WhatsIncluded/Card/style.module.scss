@@ -1,0 +1,16 @@
+.card {
+    border: 1px solid $border-primary;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: $base-neutral-lightest;
+
+    .headline {
+        margin-bottom: px-to-vh(4);
+        @include font-body-s-bold;
+    }
+
+    .description {
+        color: $base-neutral;
+        @include font-body-xs-regular;
+    }
+}

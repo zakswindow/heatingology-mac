@@ -1,0 +1,58 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--teritary);
+    padding: px-to-vw(80) px-to-vw(112);
+    justify-content: center;
+    background-color: $brand-light-blue;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+.header {
+    flex: 0.7;
+
+    h2 {
+        @include font-heading-xl-semibold;
+    }
+    p {
+        @include font-body-m-regular;
+    }
+}
+ 
+.description {
+    padding-right: 5rem;
+    p {
+        width: max-content;
+        padding: 1rem 0;
+    }
+}
+
+.faqs {
+    flex: 1;
+    
+    h3 {
+        @include font-body-m-bold;
+    }
+
+    p {
+        // font-size: 0.75rem;
+        @include font-body-m-regular;
+    }
+}
+
+.footer {
+    display: flex;
+    margin-top: px-to-vw(80);
+
+    button {
+        @include button-round;
+        @include font-button-m-bold;
+        color: $brand-deep-violet;
+        border-color: $brand-deep-violet;
+        padding: px-to-vw(12) px-to-vw(20);
+    }
+}

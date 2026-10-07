@@ -1,0 +1,9 @@
+.title {
+    color: $base-neutral-black;
+    @include font-heading-xl-semibold;
+}
+
+.subTitle {
+    color: $text-body;
+    @include font-body-m-regular;
+}

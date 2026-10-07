@@ -1,0 +1,43 @@
+@import "../mixins";
+
+.form {
+    @include form;
+}
+
+.title {
+    @include font-body-s-regular;
+}
+
+.fieldset {
+    @include form-section;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.uploadContainer {
+    padding: px-to-vw(16) 0;
+}
+
+.multipleContainer {
+    border-bottom: 1px solid $border-primary;
+}
+
+.uploadTitle {
+    @include font-body-s-regular;
+    color: $text-default;
+}
+
+.uploadDescription,
+.uploadFootprint {
+    @include font-body-xs-regular;
+    color: $text-body;
+}
+
+.buttonList {
+    @include form-button-list;
+    
+    button {
+        @include form-button;
+    }
+}

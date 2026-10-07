@@ -1,0 +1,39 @@
+.accordion {
+
+}
+
+.accordionHeader {
+    border-radius: px-to-vw(10);
+    border: 1px solid $base-neutral-lighter;
+    padding: px-to-vh(16) px-to-vw(16);
+}
+
+.accordionHeader[data-state="open"] {
+    border-color: transparent;
+}
+
+.accordionItem[data-state="open"] {
+    // background-color: $brand-
+    background-color: $surface-card-info;
+    border-color: $brand-deep-violet;
+}
+
+.accordionItem {
+    border: px-to-vw(2) solid transparent;
+    border-radius: px-to-vw(10);
+}
+
+.content {
+    padding: 0 px-to-vw(16);
+}
+
+.descriptionRow {
+    @include font-body-xs-regular;
+    justify-content: space-between;
+    padding: px-to-vw(16) 0;
+    border-bottom: 1px solid $border-primary;
+}
+
+.triggerLabel {
+    @include font-body-s-regular;
+}

@@ -1,0 +1,83 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vw(8);
+}
+
+.label {
+    @include font-body-s-regular;
+    color: $text-heading;
+}
+
+.container .select {
+    @include font-body-s-single-line;
+    width: 100%;
+    border: 1px solid $border-default;
+    padding: px-to-vw(12) px-to-vw(16);
+    border-radius: px-to-vw(8);
+    box-shadow: none;
+
+    > div {
+        padding: 0;
+    }
+}
+
+.container .select:hover {
+    border-color: $brand-light-blue;
+}
+
+.container .select.focused {
+    border-color: $brand-light-blue;
+}
+
+.container.dirty .select {
+    color: $text-default;
+    border-color: $brand-light-blue;
+}
+
+.container.error .select {
+    border-color: $border-danger;
+}
+
+.container.disabled .select {
+    background-color: $bg-disabled-default;
+    color: $base-neutral-light;
+}
+
+.select .arrow {
+    color: $text-default;
+    padding: 0;
+    width: px-to-vw(16);
+}
+
+.select .seperator {
+    display: none;
+}
+
+.option {
+    @include font-body-s-regular;
+}
+
+.option.selected {
+    @include font-body-s-regular;
+    background-color: $brand-light-blue;
+}
+
+.menu {
+    @include font-body-s-regular;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .container {
+        gap: px-to-vw-m(8);
+    }
+
+    .container .select {
+        padding: px-to-vw-m(12) px-to-vw-m(16);
+        border-radius: px-to-vw-m(8);
+    }
+
+    .select .arrow {
+        width: px-to-vw-m(16);
+    }
+}

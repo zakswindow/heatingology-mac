@@ -1,0 +1,75 @@
+.menuBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: px-to-vw(16);
+    width: 100%;
+
+    [data-radix-popper-content-wrapper] {
+        width: 100%;
+    }
+}
+
+.menuBarTrigger {
+    all: unset;
+    @include font-button-m-bold;
+    color: $white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .arrowIcon {
+        width: px-to-vw(24);
+        height: px-to-vw(24);
+        transition: transform 0.2s;
+    }
+}
+
+.menuBarTrigger[data-state="open"] .arrowIcon {
+    @include transform-rotate(180deg, 0.2s);
+}
+
+.menuBarTrigger.isScrolled {
+    color: $black;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(px-to-vw(4));
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.menuBarContent {
+    background-color: $white;
+    display: flex;
+    flex-direction: row;
+    width: px-to-vw(1280);
+    padding: px-to-vw(24);
+    border-radius: 20px;
+    margin: px-to-vw(16) auto;
+    z-index: 101;
+
+}
+
+.featuredContainer {
+    display: flex;
+    flex-direction: row;
+    gap: px-to-vw(32);
+
+    > div {
+        flex: 1;
+    }
+
+}
+
+.minorContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: px-to-vw(32);
+    gap: px-to-vw(16);
+}

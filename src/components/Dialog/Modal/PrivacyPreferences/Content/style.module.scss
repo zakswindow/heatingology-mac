@@ -1,0 +1,124 @@
+.contentContainer {
+    overflow: scroll;
+    
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vw(24);
+    border-bottom: 1px solid $black; 
+    padding-bottom: px-to-vw(24);
+    margin-bottom: px-to-vw(24);
+}
+
+.intro .buttons,
+.details .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vw(16);
+}
+
+.details .buttons {
+    margin-top: px-to-vw(8);
+}
+
+.intro .button,
+.details .button {
+    width: 100%;
+    @include button-round;
+    @include font-button-m-semibold;
+}
+
+.description {
+    color: $text-heading;
+    @include font-body-s-regular;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vw(24);
+
+    .sectionTitle {
+        @include font-heading-s-semibold;
+    }
+
+    .title {
+        margin-bottom: px-to-vw(8);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @include font-body-m-semibold;
+
+        .switch {
+            width: px-to-vw(40);
+            border: none;
+            background-color: $base-neutral-light;
+            @include button-round;
+
+            &[data-state="checked"] {
+                background-color: $brand-deep-violet;
+            }
+
+            .thumb {
+                display: block;
+                border-radius: 50%;
+                width: px-to-vw(16);
+                height: px-to-vw(16);
+                background-color: $white;
+                transition: transform 100ms;
+                transform: translateX(2px);
+                will-change: transform;
+
+                &[data-state="checked"] {
+                    transform: translateX(px-to-vw(20));
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .intro {
+        gap: px-to-vw-m(24);
+        padding-bottom: px-to-vw-m(24);
+        margin-bottom: px-to-vw-m(24);
+        padding-top: px-to-vw-m(16);
+    }
+
+    .intro .buttons,
+    .details .buttons {
+        gap: px-to-vw-m(8);
+    }
+
+    .details .buttons {
+        margin-top: px-to-vw-m(8);
+    }
+
+    .details {
+        gap: px-to-vw-m(24);
+
+        .sectionTitle {
+            @include font-heading-m-semibold;
+        }
+
+        .title {
+            margin-bottom: px-to-vw-m(8);
+
+             .switch {
+                width: px-to-vw-m(40);
+
+                .thumb {
+                    width: px-to-vw-m(16);
+                    height: px-to-vw-m(16);
+                    transform: translateX(2px);
+
+                    &[data-state="checked"] {
+                        transform: translateX(px-to-vw-m(20));
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,179 @@
+.scrollAreaParent {
+    background-color: $brand-deep-violet;
+    padding-top: clamp(50px, px-to-vw(100), 100px);
+    padding-bottom: clamp(50px, px-to-vw(100), 100px);
+    position: relative;
+    color: $white;
+}
+
+.scrollAreaParent>h1 {
+    @include font-heading-xl-semibold;
+    text-align: center;
+    // padding-top: clamp(20px, px-to-vw(30), 40px);
+    padding-bottom: clamp(20px, px-to-vw(30), 40px);
+}
+
+.scrollAreaParent>h2 {
+    @include font-body-s-regular;
+    text-align: center;
+    padding-bottom: clamp(20px, px-to-vw(30), 40px);
+}
+
+.scrollableViewport {
+    height: auto;
+    // margin-left: -4rem;
+    padding-right: 4rem;
+    width: calc(100% + 4rem);
+}
+
+.scrollableViewport>div {
+    display: block !important;
+    width: max-content;
+}
+
+.scrollableNavContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+    width: 100%;
+    padding-left: 4rem;
+    gap: var(--scroll-card-gap, 0);
+}
+
+.scrollableNavContainer > :first-child {
+    margin-left: var(--scroll-first-card-margin, 0.75rem);
+}
+
+.scrollableNav {
+    all: unset;
+    flex: 1;
+    text-align: center;
+    color: $text-info-body;
+    width: fit-content;
+    padding: px-to-vw(12) px-to-vw(16);
+    white-space: nowrap;
+    cursor: pointer;
+    @include font-body-s-regular;
+}
+
+.scrollableNav.selected {
+    @include font-body-s-semibold;
+    background-color: $base-neutral-lightest;
+    color: $black;
+    border-bottom: 1px solid $black;
+}
+
+.scrollAreaRoot {
+    flex: 1;
+    overflow: visible;
+    // padding-left: 4rem;
+}
+
+.scrollAreaParent {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    color: $base-neutral-white;
+    background-color: $brand-deep-violet;
+    border-radius: px-to-vw(10);
+}
+
+.buttonsWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: px-to-vw(16);
+    gap: px-to-vw(16);
+    padding-left: 2.5rem;
+    padding-right: 4rem;
+}
+
+.arrowGroup {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.leftArrow,
+.rightArrow {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid $secondary;
+    color: $secondary;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+}
+
+.leftArrow svg,
+.rightArrow svg {
+    width: 40%;
+    height: 40%;
+}
+
+.pageIndicators {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+
+.activeDot {
+    background-color: $brand-deep-violet;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .container {
+        overflow: visible;
+    }
+
+    .scrollAreaRoot {
+        height: max-content;
+        overflow: visible;
+        // padding-left: 0;
+    }
+
+    .scrollableViewport {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .scrollableNavContainer {
+        padding-left: 0;
+    }
+
+    .scrollAreaRoot:global(.horizontal) {
+        /*Need to provide space for arrow keys*/
+        padding-bottom: 30px;
+    }
+
+    .scrollableNavContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .scrollableNavContainer:global(.horizontal) {
+        flex-direction: row;
+    }
+
+    .scrollableViewport>div {
+        width: 100%;
+    }
+
+    .scrollableViewport:global(.horizontal)>div {
+        width: max-content;
+    }
+}

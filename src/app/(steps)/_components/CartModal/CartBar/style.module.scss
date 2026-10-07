@@ -1,0 +1,70 @@
+.container {
+    background-color: $white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding: px-to-vh-m(20);
+    @include sticky-nav;
+
+    .cart {
+        display: flex;
+        flex-direction: row;
+
+        .iconContainer {
+            border-radius: 50%;
+            background-color: $base-neutral-lightest;
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            .icon {
+                width: px-to-vw-m(24);
+                height: px-to-vw-m(24);
+                margin: auto;
+            }
+
+            .badge {
+                position: absolute;
+                top: px-to-vw-m(0);
+                right: px-to-vw-m(0);
+                background-color: $primary;
+                color: $white;
+                border-radius: 50%;
+                width: 1rem;
+                aspect-ratio: 1;
+                display: flex;
+                justify-content: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 0.5rem;
+                font-weight: 700;
+                line-height: 1;
+            }
+        }
+
+        .priceContainer {
+            color: $text-heading;
+            @include font-body-m-semibold;
+            display: flex;
+            flex-direction: row;
+            gap: px-to-vw-m(8);
+            align-items: center;
+
+            .chevron {
+                transform: rotate(180deg);
+            }
+
+            .chevron[data-state="open"] {
+                @include transform-rotate(0, 0.2s);
+            }
+        }
+    }
+
+    .button {
+        margin: 0;
+        @include button-round;
+    }
+}

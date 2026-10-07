@@ -1,0 +1,90 @@
+.button {
+    flex-direction: column;
+    flex: 0.25;
+    gap: px-to-vh(8);
+    padding: px-to-vh(16) px-to-vw(16);
+    border-radius: px-to-vw(10);
+    border: 1.5px solid $brand-luminous-blue;
+    background-color: $base-neutral-white;
+    color: $brand-deep-violet;
+    cursor: pointer;
+    @include font-button-m-semibold;
+    @include flex-center;
+
+    .icon {
+        width: px-to-vw(100);
+        height: px-to-vw(100);
+    }
+
+    .spacer {
+        @include spacer;
+    }
+}
+
+.tooltipIcon {
+    color: $brand-deep-violet;
+    align-items: center;
+    width: px-to-vw(24);
+    height: px-to-vw(24);
+}
+
+.tooltipContent {
+    max-width: px-to-vw(500);
+    padding: px-to-vw(16);
+
+    .tooltipContainer {
+        display: grid;
+        grid-template-columns: px-to-vw(24) 1fr;
+        gap: px-to-vw(16);
+
+        .metadata {
+            display: flex;
+            flex-direction: column;
+            gap: px-to-vh(8);
+
+            .tooltipTitle {
+                color: $text-info-title;
+                @include font-body-s-semibold;
+            }
+
+            .tooltipDescription {
+                color: $text-body;
+                @include font-body-s-regular;
+            }
+        }
+    }
+}
+
+.button:hover {
+    background-color: $brand-light-blue;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .button {
+        display: grid;
+        grid-template-columns: fit-content(100%) 1fr auto;
+        gap:px-to-vw-m(16);
+        padding: px-to-vh-m(8) px-to-vw-m(8);
+        border-radius: px-to-vw-m(10);
+        text-align: left;
+        align-items: center;
+
+        .icon {
+            width: px-to-vw-m(32);
+            height: px-to-vw-m(32);
+        }
+
+        .spacer {
+            display: none;
+        }
+    }
+
+
+    .tooltipIcon {
+        display: none;
+    }
+
+    .tooltipContent {
+        display: none;
+    }
+}

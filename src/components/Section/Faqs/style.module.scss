@@ -1,0 +1,80 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--teritary);
+    padding: px-to-vw(80) px-to-vw(112);
+    justify-content: center;
+    background-color: $brand-light-blue;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+}
+
+.header {
+    flex: 0.7;
+
+    h2 {
+        @include font-heading-xl-semibold;
+    }
+    p {
+        color: $text-body;
+        @include font-body-m-regular;
+    }
+}
+
+.faqs {
+    flex: 1;
+    
+    .header {
+        @include font-body-m-bold;
+    }
+
+    .content {
+        @include font-body-s-regular;
+    }
+}
+
+.footer {
+    display: flex;
+    margin-top: px-to-vw(80);
+
+    button {
+        @include button-round;
+        @include font-button-m-bold;
+        color: $brand-deep-violet;
+        border-color: $brand-deep-violet;
+        padding: px-to-vw(12) px-to-vw(20);
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .section {
+        padding: px-to-vh-m(64) px-to-vw-m(20);
+    }
+
+    .content {
+        flex-direction: column;
+        gap: px-to-vh-m(32);
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        gap: px-to-vh-m(20);
+
+        h2 {
+            @include font-heading-m-semibold;
+        }
+
+        p {
+            @include font-body-s-regular;
+        }
+    }
+
+    .footer button {
+        padding: px-to-vh-m(8) px-to-vw-m(16)
+    }
+}

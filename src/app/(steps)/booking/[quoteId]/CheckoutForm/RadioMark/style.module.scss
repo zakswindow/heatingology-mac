@@ -1,0 +1,39 @@
+.radioMarkContainer {
+    position: relative;
+    width: 1em;
+    height: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.radioMark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 1px solid $brand-luminous-blue;
+}
+
+.radioDot {
+    display: none;    
+}
+
+.radioMark.checked .radioDot {
+    display: flex;
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    background-color: $brand-luminous-blue;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .radioMark {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+    }
+}

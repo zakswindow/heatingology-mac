@@ -1,0 +1,15 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    gap: px-to-vw(4);
+
+    .icon {
+        color: $brand-deep-violet;
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .nav {
+        gap: px-to-vw-m(4);
+    }
+}

@@ -1,0 +1,40 @@
+.note {
+    border-radius: 5px;
+    background-color: $base-neutral-lightest;
+    border: 1px solid $border-primary;
+    padding: px-to-vh(8) px-to-vw(16);
+    display: grid;
+    grid-template-columns: px-to-vw(24) 1fr;
+    align-items: center;
+    gap: px-to-vw(8);
+    color: $text-info-body;
+
+    .icon {
+        width: px-to-vw(24);
+        height: px-to-vw(24);
+    }
+
+    .noteText {
+        color: $text-body;
+        @include font-body-xxs-regular;
+    }
+}
+
+.highlight {
+    color: $brand-deep-violet;
+    background-color: $bg-info;
+    border-color: $brand-light-blue;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .note {
+        padding: px-to-vh-m(8) px-to-vw-m(16);
+        grid-template-columns: px-to-vw-m(24) 1fr;
+        gap: px-to-vw-m(8);
+
+        .icon {
+            width: px-to-vw-m(24);
+            height: px-to-vw-m(24);
+        }
+    }
+}

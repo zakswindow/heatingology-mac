@@ -1,0 +1,72 @@
+.ctaButton {
+    @include button-round;
+    margin: px-to-vh(16) auto;
+}
+
+.specsList {
+    @include font-body-s-regular;
+}
+
+.container {
+    h2 {
+        margin-top: px-to-vh(32);
+        margin-bottom: px-to-vh(8);
+        @include font-heading-l-semibold;
+    }
+
+    & > div:first-child > h2:first-child {
+        margin-top: 0;
+    }
+
+    h3 {
+        margin-top: px-to-vh(8);
+        margin-bottom: px-to-vh(8);
+        @include font-heading-s-semibold;
+    }
+
+    p {
+        @include font-body-s-regular;
+        color: $base-neutral-neutral;
+    }
+
+    ul {
+        margin: px-to-vh(8) 0;
+    }
+
+    li {
+        color: $text-body;
+        @include font-body-s-regular;
+
+        svg {
+            color: $brand-luminous-blue;
+        }
+    }
+
+    a {
+        font-weight: 700;
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    
+    .container {
+        h2 {
+            margin-top: px-to-vh-m(8);
+            margin-bottom: px-to-vh-m(8);
+        }
+
+        h3 {
+            margin-top: px-to-vh-m(8);
+            margin-bottom: px-to-vh-m(8);
+        }
+
+        ul {
+            margin: px-to-vh-m(8) 0;
+        }
+
+        button {
+            margin: 1.5rem 0 2rem 0;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: px-to-vw(32);
+    padding: px-to-vw(112) px-to-vw(64);
+}
+
+@media (max-width: $phone-breakpoint) {
+    .container {
+        flex-direction: column;
+        gap: px-to-vw-m(32);
+        padding: px-to-vh-m(64) px-to-vw-m(20);
+    }
+}

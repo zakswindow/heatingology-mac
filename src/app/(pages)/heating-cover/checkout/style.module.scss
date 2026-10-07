@@ -1,0 +1,934 @@
+// ── Shared Checkout Layout ────────────────────────────────────
+.checkoutPage {
+  min-height: 100vh;
+  background: #fafafa;
+  padding: px-to-vw(120) px-to-vw(80) px-to-vw(80);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: $phone-breakpoint) {
+    padding: px-to-vw-m(100) px-to-vw-m(20) px-to-vw-m(60);
+  }
+}
+
+.inner {
+  width: 100%;
+  max-width: px-to-vw(680);
+  display: flex;
+  flex-direction: column;
+  gap: px-to-vw(32);
+
+  @media (max-width: $phone-breakpoint) {
+    max-width: 100%;
+    gap: px-to-vw-m(24);
+  }
+}
+
+// ── Progress Stepper ─────────────────────────────────────────
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  justify-content: center;
+}
+
+.stepItem {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.stepPill {
+  display: flex;
+  align-items: center;
+  gap: px-to-vw(8);
+  padding: px-to-vw(8) px-to-vw(20);
+  border-radius: px-to-vw(100);
+  border: 1.5px solid #e0e0e0;
+  background: $base-neutral-white;
+  font-family: var(--font-baloo-2);
+  font-size: px-to-vw(14);
+  font-weight: 600;
+  color: #aaa;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+
+  @media (max-width: $phone-breakpoint) {
+    padding: px-to-vw-m(6) px-to-vw-m(12);
+    font-size: px-to-vw-m(12);
+    gap: px-to-vw-m(6);
+  }
+}
+
+.stepPillActive {
+  background: #5049bb;
+  border-color: #5049bb;
+  color: $base-neutral-white;
+}
+
+.stepPillCompleted {
+  background: #5049bb;
+  border-color: #5049bb;
+  color: $base-neutral-white;
+  opacity: 0.7;
+}
+
+.stepNum {
+  width: px-to-vw(22);
+  height: px-to-vw(22);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: px-to-vw(11);
+  font-weight: 700;
+
+  @media (max-width: $phone-breakpoint) {
+    width: px-to-vw-m(18);
+    height: px-to-vw-m(18);
+    font-size: px-to-vw-m(10);
+  }
+}
+
+.stepNumInactive {
+  background: #e0e0e0;
+  color: #aaa;
+}
+
+.stepConnector {
+  width: px-to-vw(32);
+  height: 1.5px;
+  background: #e0e0e0;
+  flex-shrink: 0;
+
+  @media (max-width: $phone-breakpoint) {
+    width: px-to-vw-m(12);
+  }
+}
+
+.stepConnectorActive {
+  background: #5049bb;
+}
+
+// ── Page Heading ─────────────────────────────────────────────
+.heading {
+  font-family: var(--font-baloo-2);
+  font-size: px-to-vw(36);
+  font-weight: 700;
+  color: $base-neutral-black;
+  line-height: 1.2;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(26);
+  }
+}
+
+// ── Plan Summary Box ─────────────────────────────────────────
+.planBox {
+  background: #f5f6fa;
+  border: 2px solid $brand-light-blue;
+  border-radius: px-to-vw(12);
+  padding: px-to-vw(26);
+  display: flex;
+  flex-direction: column;
+  gap: px-to-vw(20);
+
+  @media (max-width: $phone-breakpoint) {
+    border-radius: px-to-vw-m(12);
+    padding: px-to-vw-m(20);
+    gap: px-to-vw-m(16);
+  }
+}
+
+.planBoxHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: px-to-vw(8);
+
+  @media (max-width: $phone-breakpoint) {
+    gap: px-to-vw-m(6);
+  }
+}
+
+.planBoxName {
+  font-family: var(--font-baloo-2);
+  font-size: px-to-vw(22);
+  font-weight: 700;
+  color: #5049bb;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(18);
+  }
+}
+
+.planBoxPrice {
+  font-family: var(--font-baloo-2);
+  font-size: px-to-vw(28);
+  font-weight: 700;
+  color: $base-neutral-black;
+
+  span {
+    font-size: px-to-vw(16);
+    font-weight: 500;
+    color: $base-neutral-neutral;
+
+    @media (max-width: $phone-breakpoint) {
+      font-size: px-to-vw-m(14);
+    }
+  }
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(24);
+  }
+}
+
+.planBoxLabel {
+  font-family: var(--font-plus-jakarta-sans);
+  font-size: px-to-vw(11);
+  font-weight: 700;
+  color: #5049bb;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(10);
+  }
+}
+
+.planFeatureList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: px-to-vw(10);
+
+  @media (max-width: $phone-breakpoint) {
+    gap: px-to-vw-m(10);
+  }
+}
+
+.planFeatureItem {
+  display: flex;
+  align-items: center;
+  gap: px-to-vw(10);
+  font-family: var(--font-plus-jakarta-sans);
+  font-size: px-to-vw(15);
+  color: $base-neutral-black;
+
+  @media (max-width: $phone-breakpoint) {
+    gap: px-to-vw-m(10);
+    font-size: px-to-vw-m(14);
+  }
+}
+
+// ── Info Box (yellow) ────────────────────────────────────────
+.infoBox {
+  display: flex;
+  align-items: flex-start;
+  gap: px-to-vw(12);
+  background: #fffbeb;
+  border: 1.5px solid #fde68a;
+  border-radius: px-to-vw(10);
+  padding: px-to-vw(14) px-to-vw(16);
+
+  @media (max-width: $phone-breakpoint) {
+    gap: px-to-vw-m(10);
+    border-radius: px-to-vw-m(10);
+    padding: px-to-vw-m(12) px-to-vw-m(14);
+  }
+}
+
+.infoBoxText {
+  font-family: var(--font-plus-jakarta-sans);
+  font-size: px-to-vw(14);
+  color: #92400e;
+  line-height: 1.5;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(13);
+  }
+}
+
+// ── CTA Button ───────────────────────────────────────────────
+.ctaButton {
+  display: block;
+  width: 100%;
+  padding: px-to-vw(16) px-to-vw(24);
+  background: $brand-deep-violet;
+  color: $base-neutral-white;
+  font-family: var(--font-baloo-2);
+  font-size: px-to-vw(17);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  border-radius: px-to-vw(100);
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  @media (max-width: $phone-breakpoint) {
+    padding: px-to-vw-m(14) px-to-vw-m(20);
+    font-size: px-to-vw-m(16);
+    border-radius: px-to-vw-m(100);
+  }
+}
+
+.ctaButtonOutline {
+  background: transparent;
+  border: 2px solid $brand-deep-violet;
+  color: $brand-deep-violet;
+
+  &:hover {
+    background: rgba(52, 40, 137, 0.05);
+    opacity: 1;
+  }
+}
+
+// ── Back Link ────────────────────────────────────────────────
+.backLink {
+  font-family: var(--font-plus-jakarta-sans);
+  font-size: px-to-vw(14);
+  color: #959595;
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  display: block;
+
+  &:hover {
+    color: $base-neutral-neutral;
+  }
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(14);
+  }
+}
+
+// ── Form ─────────────────────────────────────────────────────
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: px-to-vw(16);
+
+  @media (max-width: $phone-breakpoint) {
+    grid-template-columns: 1fr;
+    gap: px-to-vw-m(14);
+  }
+}
+
+.formFull {
+  grid-column: 1 / -1;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: px-to-vw(6);
+
+  @media (max-width: $phone-breakpoint) {
+    gap: px-to-vw-m(6);
+  }
+}
+
+.formLabel {
+  font-family: var(--font-plus-jakarta-sans);
+  font-size: px-to-vw(14);
+  font-weight: 600;
+  color: $base-neutral-black;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(14);
+  }
+}
+
+.formInput {
+  height: px-to-vw(48);
+  padding: 0 px-to-vw(16);
+  background: $base-neutral-white;
+  border: 1px solid #d9d9d9;
+  border-radius: px-to-vw(12);
+  font-family: var(--font-plus-jakarta-sans);
+  font-size: px-to-vw(15);
+  color: $base-neutral-black;
+  outline: none;
+  transition: border-color 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+
+  &:focus {
+    border-color: #5049bb;
+  }
+
+  &::placeholder {
+    color: #bbb;
+  }
+
+  @media (max-width: $phone-breakpoint) {
+    height: px-to-vw-m(48);
+    padding: 0 px-to-vw-m(14);
+    border-radius: px-to-vw-m(12);
+    font-size: px-to-vw-m(15);
+  }
+}
+
+// ── Plan reminder bar ────────────────────────────────────────
+.planReminderBar {
+  background: $brand-light-blue;
+  border-radius: px-to-vw(10);
+  padding: px-to-vw(14) px-to-vw(20);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: $phone-breakpoint) {
+    border-radius: px-to-vw-m(10);
+    padding: px-to-vw-m(12) px-to-vw-m(16);
+  }
+}
+
+.planReminderName {
+  font-family: var(--font-baloo-2);
+  font-size: px-to-vw(15);
+  font-weight: 700;
+  color: $brand-deep-violet;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(14);
+  }
+}
+
+.planReminderPrice {
+  font-family: var(--font-baloo-2);
+  font-size: px-to-vw(15);
+  font-weight: 700;
+  color: $brand-deep-violet;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(14);
+  }
+}
+
+// ── Checkbox row ─────────────────────────────────────────────
+.checkboxRow {
+  display: flex;
+  align-items: flex-start;
+  gap: px-to-vw(12);
+  font-family: var(--font-plus-jakarta-sans);
+  font-size: px-to-vw(14);
+  color: $base-neutral-neutral;
+  line-height: 1.5;
+
+  input[type="checkbox"] {
+    width: px-to-vw(18);
+    height: px-to-vw(18);
+    flex-shrink: 0;
+    margin-top: 2px;
+    accent-color: #5049bb;
+    cursor: pointer;
+
+    @media (max-width: $phone-breakpoint) {
+      width: px-to-vw-m(18);
+      height: px-to-vw-m(18);
+    }
+  }
+
+  a {
+    color: #5049bb;
+    text-decoration: underline;
+  }
+
+  @media (max-width: $phone-breakpoint) {
+    gap: px-to-vw-m(10);
+    font-size: px-to-vw-m(13);
+  }
+}
+
+// ── Security footer ──────────────────────────────────────────
+.securityRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: px-to-vw(8);
+  font-family: var(--font-plus-jakarta-sans);
+  font-size: px-to-vw(13);
+  color: $base-neutral-neutral;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(13);
+    gap: px-to-vw-m(6);
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.securityDot {
+  color: #ccc;
+}
+
+// ── Payment page specific ─────────────────────────────────────
+.paymentPlanBox {
+  background: $brand-light-blue;
+  border: 2px solid #5049bb;
+  border-radius: px-to-vw(15);
+  padding: px-to-vw(24);
+  text-align: center;
+
+  @media (max-width: $phone-breakpoint) {
+    border-radius: px-to-vw-m(15);
+    padding: px-to-vw-m(20);
+  }
+}
+
+.paymentPlanName {
+  font-family: var(--font-baloo-2);
+  font-size: px-to-vw(18);
+  font-weight: 700;
+  color: $brand-deep-violet;
+  margin-bottom: px-to-vw(4);
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(16);
+    margin-bottom: px-to-vw-m(4);
+  }
+}
+
+.paymentPlanNote {
+  font-family: var(--font-plus-jakarta-sans);
+  font-size: px-to-vw(13);
+  color: $base-neutral-neutral;
+  margin-bottom: px-to-vw(12);
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(13);
+    margin-bottom: px-to-vw-m(10);
+  }
+}
+
+.paymentPlanPrice {
+  font-family: var(--font-baloo-2);
+  font-size: px-to-vw(32);
+  font-weight: 700;
+  color: $brand-deep-violet;
+  margin-bottom: px-to-vw(4);
+
+  span {
+    font-size: px-to-vw(16);
+    font-weight: 500;
+
+    @media (max-width: $phone-breakpoint) {
+      font-size: px-to-vw-m(14);
+    }
+  }
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(28);
+    margin-bottom: px-to-vw-m(4);
+  }
+}
+
+.paymentPlanCharge {
+  font-family: var(--font-plus-jakarta-sans);
+  font-size: px-to-vw(13);
+  color: $base-neutral-neutral;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(13);
+  }
+}
+
+.paymentInfoBox {
+  background: #f5f6fa;
+  border-radius: px-to-vw(15);
+  padding: px-to-vw(20) px-to-vw(24);
+
+  @media (max-width: $phone-breakpoint) {
+    border-radius: px-to-vw-m(15);
+    padding: px-to-vw-m(16) px-to-vw-m(20);
+  }
+}
+
+.paymentInfoTitle {
+  font-family: var(--font-baloo-2);
+  font-size: px-to-vw(15);
+  font-weight: 700;
+  color: $base-neutral-black;
+  margin-bottom: px-to-vw(14);
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(14);
+    margin-bottom: px-to-vw-m(12);
+  }
+}
+
+.paymentInfoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: px-to-vw(10);
+
+  @media (max-width: $phone-breakpoint) {
+    gap: px-to-vw-m(10);
+  }
+}
+
+.paymentInfoItem {
+  display: flex;
+  align-items: center;
+  gap: px-to-vw(10);
+  font-family: var(--font-plus-jakarta-sans);
+  font-size: px-to-vw(14);
+  color: $base-neutral-neutral;
+
+  @media (max-width: $phone-breakpoint) {
+    gap: px-to-vw-m(10);
+    font-size: px-to-vw-m(13);
+  }
+}
+
+.complianceRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: px-to-vw(24);
+
+  @media (max-width: $phone-breakpoint) {
+    gap: px-to-vw-m(16);
+    flex-wrap: wrap;
+  }
+}
+
+.complianceItem {
+  display: flex;
+  align-items: center;
+  gap: px-to-vw(8);
+  font-family: var(--font-plus-jakarta-sans);
+  font-size: px-to-vw(13);
+  color: $base-neutral-neutral;
+
+  @media (max-width: $phone-breakpoint) {
+    gap: px-to-vw-m(6);
+    font-size: px-to-vw-m(13);
+  }
+}
+
+.divider {
+  height: 1px;
+  background: #e0e0e0;
+}
+
+.termsText {
+  font-family: var(--font-plus-jakarta-sans);
+  font-size: px-to-vw(12);
+  color: #aaa;
+  line-height: 1.6;
+  text-align: center;
+
+  a {
+    color: #5049bb;
+    text-decoration: underline;
+  }
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(12);
+  }
+}
+
+// ── Confirmation page ─────────────────────────────────────────
+.confirmPage {
+  min-height: 100vh;
+  background: #fafafa;
+  padding: px-to-vw(60) px-to-vw(80) px-to-vw(80);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @media (max-width: $phone-breakpoint) {
+    padding: px-to-vw-m(40) px-to-vw-m(20) px-to-vw-m(60);
+  }
+}
+
+.confirmInner {
+  width: 100%;
+  max-width: px-to-vw(600);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: px-to-vw(28);
+
+  @media (max-width: $phone-breakpoint) {
+    max-width: 100%;
+    gap: px-to-vw-m(24);
+  }
+}
+
+.successCircle {
+  width: px-to-vw(100);
+  height: px-to-vw(100);
+  border-radius: 50%;
+  background: #dcfce7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  @media (max-width: $phone-breakpoint) {
+    width: px-to-vw-m(80);
+    height: px-to-vw-m(80);
+  }
+}
+
+.confirmHeading {
+  font-family: var(--font-baloo-2);
+  font-size: px-to-vw(32);
+  font-weight: 700;
+  color: $base-neutral-black;
+  line-height: 1.2;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(24);
+  }
+}
+
+.confirmBody {
+  font-family: var(--font-plus-jakarta-sans);
+  font-size: px-to-vw(16);
+  color: $base-neutral-neutral;
+  line-height: 1.6;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(15);
+  }
+}
+
+.confirmStepsBox {
+  width: 100%;
+  background: #f5f6fa;
+  border-radius: px-to-vw(15);
+  padding: px-to-vw(24);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  @media (max-width: $phone-breakpoint) {
+    border-radius: px-to-vw-m(15);
+    padding: px-to-vw-m(20);
+  }
+}
+
+.confirmStep {
+  display: flex;
+  align-items: flex-start;
+  gap: px-to-vw(16);
+  padding: px-to-vw(16) 0;
+
+  &:first-child {
+    padding-top: 0;
+  }
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  @media (max-width: $phone-breakpoint) {
+    gap: px-to-vw-m(14);
+    padding: px-to-vw-m(14) 0;
+  }
+}
+
+.confirmStepDivider {
+  height: 1px;
+  background: #e0e0e0;
+}
+
+.confirmStepNum {
+  width: px-to-vw(32);
+  height: px-to-vw(32);
+  border-radius: 50%;
+  background: #5049bb;
+  color: $base-neutral-white;
+  font-family: var(--font-baloo-2);
+  font-size: px-to-vw(14);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  @media (max-width: $phone-breakpoint) {
+    width: px-to-vw-m(30);
+    height: px-to-vw-m(30);
+    font-size: px-to-vw-m(13);
+  }
+}
+
+.confirmStepContent {
+  display: flex;
+  flex-direction: column;
+  gap: px-to-vw(4);
+
+  @media (max-width: $phone-breakpoint) {
+    gap: px-to-vw-m(3);
+  }
+}
+
+.confirmStepTitle {
+  font-family: var(--font-baloo-2);
+  font-size: px-to-vw(15);
+  font-weight: 700;
+  color: $base-neutral-black;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(14);
+  }
+}
+
+.confirmStepDesc {
+  font-family: var(--font-plus-jakarta-sans);
+  font-size: px-to-vw(14);
+  color: $base-neutral-neutral;
+  line-height: 1.5;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(13);
+  }
+}
+
+.confirmButtons {
+  display: flex;
+  gap: px-to-vw(16);
+  width: 100%;
+
+  @media (max-width: $phone-breakpoint) {
+    flex-direction: column;
+    gap: px-to-vw-m(12);
+  }
+}
+
+.confirmSupport {
+  font-family: var(--font-plus-jakarta-sans);
+  font-size: px-to-vw(14);
+  color: $base-neutral-neutral;
+  line-height: 1.6;
+
+  a {
+    color: #5049bb;
+    text-decoration: underline;
+  }
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(13);
+  }
+}
+
+// ── Address search ────────────────────────────────────────────
+.addressSearchWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: px-to-vw(6);
+
+  @media (max-width: $phone-breakpoint) {
+    gap: px-to-vw-m(6);
+  }
+}
+
+.addressDropdown {
+  position: absolute;
+  top: calc(100% + px-to-vw(4));
+  left: 0;
+  right: 0;
+  background: $base-neutral-white;
+  border: 1px solid #d9d9d9;
+  border-radius: px-to-vw(12);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  z-index: 100;
+  max-height: px-to-vw(220);
+  overflow-y: auto;
+
+  @media (max-width: $phone-breakpoint) {
+    top: calc(100% + px-to-vw-m(4));
+    border-radius: px-to-vw-m(12);
+    max-height: px-to-vw-m(200);
+  }
+}
+
+.addressDropdownItem {
+  padding: px-to-vh(12) px-to-vw(16);
+  font-family: var(--font-plus-jakarta-sans);
+  font-size: px-to-vw(14);
+  color: $base-neutral-black;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.1s ease;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    background-color: #f5f6fa;
+  }
+
+  @media (max-width: $phone-breakpoint) {
+    padding: px-to-vh-m(10) px-to-vw-m(14);
+    font-size: px-to-vw-m(14);
+  }
+}
+
+.addressToggle {
+  font-family: var(--font-plus-jakarta-sans);
+  font-size: px-to-vw(13);
+  color: #5049bb;
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(13);
+  }
+}
+
+// ── Centered heading area ─────────────────────────────────────
+.centeredHeader {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: px-to-vw(10);
+
+  @media (max-width: $phone-breakpoint) {
+    gap: px-to-vw-m(8);
+  }
+}
+
+.subheading {
+  font-family: var(--font-plus-jakarta-sans);
+  font-size: px-to-vw(16);
+  color: $base-neutral-neutral;
+  line-height: 1.5;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(15);
+  }
+}

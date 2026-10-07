@@ -1,0 +1,9 @@
+.page {
+    padding: px-to-vh(112) px-to-vw(80);
+}
+
+@media (max-width: $phone-breakpoint) {
+    .page {
+        padding: px-to-vh-m(80) px-to-vw-m(24);
+    }
+}

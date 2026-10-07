@@ -1,0 +1,84 @@
+.dialog {
+    @include modal;
+}
+
+.title {
+    @include font-heading-l-semibold;
+}
+
+.content {
+    height: 70vh !important;
+}
+
+.description {
+    @include font-body-s-regular;
+    color: $black;
+}
+
+.productCaption {
+    @include font-body-s-semibold;
+    color: $text-body;
+}
+
+.paymentOptions {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vw(8);
+    max-height: 30%;
+    overflow: scroll;
+}
+
+.descriptionRow {
+    @include font-body-xs-regular;
+    justify-content: space-between;
+    padding: px-to-vw(16) 0;
+    border-bottom: 1px solid $border-primary;
+}
+
+.button {
+    width: 100%;
+}
+
+.option {
+    border-radius: px-to-vw(10);
+    background-color: $base-neutral-white;
+    padding: px-to-vw(16);
+    border: 1px solid $base-neutral-lighter;
+}
+
+.option.selected {
+    border-color: $brand-deep-violet;
+    background-color: $surface-card-info;
+}
+
+.optionLabel {
+    .optionPrice {
+        @include font-body-s-semibold;
+        color: $brand-luminous-blue;
+    }
+}
+
+.option.selected .optionLabel {
+    @include font-body-s-semibold;
+    color: $neutral-darkest;
+
+    .optionPrice {
+        color: $neutral-darkest;
+    }
+}
+
+.radioMark {
+    width: px-to-vw(16);
+    height: px-to-vw(16);
+    position: absolute;
+    color: $brand-deep-violet;
+}
+
+.footprint {
+    @include font-body-xs-regular;
+    color: $text-body;
+}
+
+.footer {
+    padding: px-to-vw(12) px-to-vw(20);
+}

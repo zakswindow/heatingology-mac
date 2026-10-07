@@ -1,0 +1,37 @@
+.section {
+    background-color: $brand-deep-violet;
+    padding: 4rem;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    white-space: pre-line;
+    margin-bottom: 1rem;
+}
+.content {
+    gap: px-to-vw(16);
+    padding: px-to-vw(18) 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+.content > * {
+    flex: 1;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .section {
+        .title {
+            text-align: left;
+            white-space: wrap;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: px-to-vw-m(32);
+            padding-bottom: px-to-vw-m(18);
+        }
+    }
+}

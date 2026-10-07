@@ -1,0 +1,36 @@
+.page {
+    padding: px-to-vh(112) px-to-vw(80) 0 px-to-vw(80);
+    background-color: $base-neutral-lightest;
+}
+
+.packages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: px-to-vw(8);
+}
+
+.questions {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vw(16);
+}
+
+.contactUs {
+    display: flex;
+    justify-content: flex-start;
+    gap: px-to-vw(8);
+    width: fit-content;
+
+    button {
+        border-color: $border;
+        text-align: left;
+        flex: 1;
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .packages {
+        display: flex;
+        flex-direction: column;
+    }
+}

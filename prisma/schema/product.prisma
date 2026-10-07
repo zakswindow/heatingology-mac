@@ -1,0 +1,87 @@
+enum ProductType {
+  boiler
+  heatPump
+  ev_charger
+  ev_charger_extra
+  ev_cable
+  boiler_service
+  boiler_repair
+  boiler_add_ons
+  boiler_included
+  boiler_not_included
+  boiler_extra
+  install_time
+  install_date
+  ev_included
+}
+
+enum ProductQuality {
+  GOOD
+  BETTER
+  BEST
+}
+
+enum ProductFinanceOpts {
+  ZERO_APR
+  YEARS_ZERO_APR
+}
+
+enum BoilerType {
+  COMBI
+  SYSTEM
+  ELECTRIC
+  STANDARD
+  BACK
+  UNKNOWN
+}
+
+enum FuelType {
+  GAS
+  LPG
+  OIL
+  ELECTRIC
+  UNKNOWN
+}
+
+enum FlueType {
+  HORIZONTAL
+  VERTICAL
+  UNKNOWN
+}
+
+enum TagType {
+  POPULAR
+}
+
+model Product {
+  id                  String      @id @default(cuid())
+  brand               String?
+  model               String
+  homeowner           Boolean?    @default(false)
+  landlord            Boolean?    @default(false)
+  warranty            String?
+  specs               String[]    @default([])
+  price               Float       @default(0)
+  minBath             Int?        @default(0)
+  maxBath             Int?        @default(0)
+  minBed              Int?        @default(0)
+  maxBed              Int?        @default(0)
+  boilerType          BoilerType? @default(UNKNOWN)
+  description         Text[]
+  productType         ProductType
+  productImage        String?
+  productImages       String[]    @default([])
+  note                String?
+  rating              Float?      @default(0)
+  fuelType            FuelType?   @default(UNKNOWN)
+  flueType            FlueType?   @default(UNKNOWN)
+  OrderItem           OrderItem[]
+  quotes              Quote[]     @relation("OrderProducts")
+  included            String[]    @default([])
+  excluded            String[]    @default([])
+  priceWithVat        Float       @default(0)
+  hasVat              Boolean     @default(false)
+  dimensions          Json?       @default(dbgenerated("'{}'::jsonb"))
+  descriptionMarkdown String?     @default("")
+  tags                String[]    @default([])
+}

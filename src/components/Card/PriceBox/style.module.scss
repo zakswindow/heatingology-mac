@@ -1,0 +1,55 @@
+.price {
+    border: 1px solid $border-primary;
+    padding: px-to-vw(16);
+    border-radius: px-to-vw(10);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $bg-info;
+    border-color: $brand-luminous-blue;
+}
+
+.priceLabel {
+    color: $text-info-body;
+    white-space: nowrap;
+    @include font-body-xxs-regular;
+}
+
+.priceTotal,
+.priceMonthly {
+    @include font-heading-m-bold;
+    color: $brand-deep-violet;
+}
+
+.priceMonthly {
+    display: flex;
+    flex-direction: row;
+    gap: px-to-vw(4);
+    text-decoration: underline;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+
+    span {
+        display: flex;
+    }
+
+    svg {
+        width: px-to-vw(20);
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .price {
+        padding: px-to-vw-m(16);
+        border-radius: px-to-vw-m(10);
+    }
+
+    .priceMonthly {
+        gap: px-to-vw-m(4);
+
+        svg {
+            width: px-to-vw-m(20);
+        }
+    }
+}

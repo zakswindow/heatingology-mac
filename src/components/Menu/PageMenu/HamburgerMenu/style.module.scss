@@ -1,0 +1,38 @@
+@media (max-width: $phone-breakpoint) {
+    .nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .menuBar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: px-to-vh-m(20) px-to-vw-m(20);
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        background-color: transparent;
+        
+        &.isScrolled {
+            background-color: $white;
+        }
+
+        .menuIcon {
+            all: unset;
+
+            .icon {
+                display: flex;
+                width: px-to-vw-m(24);
+                height: px-to-vw-m(24);
+                color: $white;
+            }
+        }
+
+        &.isScrolled .menuIcon .icon {
+            color: $brand-deep-violet;
+        }
+    }
+}

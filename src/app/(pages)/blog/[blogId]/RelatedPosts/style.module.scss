@@ -1,0 +1,47 @@
+.section {
+    margin-top: px-to-vw(80);
+    width: 100%;
+}
+
+.heading {
+    color: $text-heading;
+    margin-bottom: px-to-vw(32);
+    text-align: center;
+    @include font-heading-m-semibold;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: px-to-vw(16);
+}
+
+.viewAll {
+    display: block;
+    text-decoration: none;
+    margin-top: px-to-vw(32);
+
+    button {
+        @include button-round;
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .section {
+        margin-top: px-to-vw-m(48);
+    }
+
+    .heading {
+        margin-bottom: px-to-vw-m(24);
+    }
+
+    .grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .viewAll {
+        margin-top: px-to-vw-m(24);
+    }
+}

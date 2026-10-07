@@ -1,0 +1,10 @@
+model Customer {
+  id        Int      @id @default(autoincrement())
+  firstName String
+  LastName  String
+  email     String
+  phone     String
+  address   String
+  createdAt DateTime @default(now())
+  Order     Order[]
+}

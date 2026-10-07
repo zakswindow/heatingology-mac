@@ -1,0 +1,18 @@
+.faqsContainer {
+    padding: px-to-vh(8) 0;
+
+    dt {
+        margin: px-to-vh(8) 0;
+        @include font-heading-m-bold;
+    }
+
+    p {
+        @include font-body-s-regular;
+    }
+
+    .faqs {
+        background-color: transparent !important;
+        padding: unset;
+        margin-top: px-to-vh(24);
+    }
+}

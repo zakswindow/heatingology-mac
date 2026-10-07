@@ -1,0 +1,38 @@
+.description {
+    @include font-body-s-regular;
+    color: $text-body;
+    padding: 0 px-to-vw(40);
+}
+
+.scrollable {
+    height: fit-content;
+    padding: px-to-vw(40) px-to-vw(40);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vw(20);
+    padding: px-to-vw(8) 0 px-to-vw(16) px-to-vw(8);
+}
+
+.footer {
+    @include drop-shadow;
+    padding: px-to-vw(12) px-to-vw(40);
+
+    button {
+        @include button-round;
+        width: 100%;
+        border-color: transparent !important;
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .description {
+        padding: 0 2.25rem;
+    }
+
+    .footer {
+        padding: 1rem 2.25rem;
+    }
+}

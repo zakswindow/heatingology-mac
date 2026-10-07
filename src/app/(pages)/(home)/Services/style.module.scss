@@ -1,0 +1,51 @@
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vw(32);
+    flex-wrap: wrap;
+    padding: px-to-vw(40) px-to-vw(64) px-to-vw(112);
+    background-color: $base-neutral-white;
+
+    :global(article) {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    &.visible :global(article) {
+        animation: fadeIn 500ms ease-out forwards;
+    }
+}
+
+.featured {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: px-to-vw(32);
+}
+
+.others {
+    display: flex;
+    flex-direction: row;
+    gap: px-to-vw(32);
+}
+
+@media (max-width: $phone-breakpoint) {
+    .section {
+        padding-top: 3rem;
+    }
+
+    .featured {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: px-to-vh-m(16);
+    }
+
+    .others {
+        flex-direction: column;
+    }
+}

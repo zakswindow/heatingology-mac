@@ -1,0 +1,41 @@
+.container {
+    height: fit-content;
+    max-height: 80vh;
+    padding: 0 px-to-vw(40);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vw(16);
+}
+.footer {
+    padding: px-to-vw(12) px-to-vw(20);
+}
+
+.names {
+    display: flex;
+    flex-direction: row;
+    gap: px-to-vw(16);
+}
+
+.textArea {
+    // margin-bottom: px-to-vw(80);
+}
+
+.footer {
+    @include drop-shadow;
+    padding: px-to-vw(12) px-to-vw(40);
+
+    button {
+        @include button-round;
+        width: 100%;
+    }
+
+    .footerNote {
+        @include font-body-xs-regular;
+        text-align: center;
+        color: $text-body;
+        margin-top: px-to-vw(8);
+    }
+}

@@ -1,0 +1,13 @@
+.title {
+    @include font-body-s-regular;
+    color: $text-default;
+}
+
+.description {
+    @include font-body-xs-regular;
+    color: $text-body;
+}
+.footprint {
+    @include font-body-xs-regular;
+    color: $text-body;
+}

@@ -1,0 +1,25 @@
+enum OrderStatus {
+  PENDING
+  IN_PROGRESS
+  CANCELLED
+  DONE
+}
+
+model OrderItem {
+  id        Int     @id @default(autoincrement())
+  orderId   Int
+  order     Order   @relation(fields: [orderId], references: [id])
+  productId String
+  product   Product @relation(fields: [productId], references: [id])
+  price     Int     @default(0)
+}
+
+model Order {
+  id         Int         @id @default(autoincrement())
+  status     OrderStatus
+  customerId Int
+  customer   Customer    @relation(fields: [customerId], references: [id])
+  createdAt  DateTime    @default(now())
+  totalAmout Int         @default(0)
+  OrderItem  OrderItem[]
+}

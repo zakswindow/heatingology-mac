@@ -1,0 +1,14 @@
+enum HtmlTag {
+  PARAGRAPH
+  LIST
+  HEADER
+  NONE
+}
+
+model Text {
+  id        Int      @id @default(autoincrement())
+  tag       HtmlTag
+  content   String
+  Product   Product? @relation(fields: [productId], references: [id])
+  productId String?
+}

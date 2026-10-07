@@ -1,0 +1,54 @@
+@media (max-width: $phone-breakpoint) {
+    .mobileBottomBar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 6rem;
+        border-top: 1px solid $border-primary;
+        background-color: white;
+        flex-shrink: 0;
+        gap: px-to-vw-m(12);
+    }
+
+    .mobilePrice {
+        display: flex;
+        flex-direction: column;
+        gap: px-to-vw-m(2);
+    }
+
+    .mobilePriceTotal {
+        @include font-heading-m-bold;
+        color: $text-heading;
+    }
+
+    .mobilePriceMonthly {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: px-to-vw-m(4);
+        @include font-body-xs-regular;
+        color: $text-body;
+        cursor: pointer;
+
+        svg {
+            width: px-to-vw-m(14);
+            height: px-to-vw-m(14);
+        }
+    }
+
+    .mobileContinueBtn {
+        @include button-round;
+        border-radius: px-to-vw-m(40);
+        margin: 0;
+        gap: px-to-vw-m(8);
+        white-space: nowrap;
+        flex-shrink: 0;
+
+        svg {
+            width: px-to-vw-m(16);
+            height: px-to-vw-m(16);
+        }
+    }
+    
+}

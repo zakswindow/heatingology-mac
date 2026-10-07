@@ -1,0 +1,19 @@
+.container {
+    background-color: $surface-secondary !important;
+
+    h1 {
+        color: $text-heading;
+        @include font-heading-xl-semibold;
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .container {
+        h1 {
+            text-align: center;
+            padding: 0 px-to-vw-m(16);
+            margin-bottom: px-to-vh-m(32);
+            @include font-heading-l-semibold;
+        }
+    }
+}

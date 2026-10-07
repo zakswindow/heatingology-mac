@@ -1,0 +1,23 @@
+{
+    "leftPanel": {
+        "title": "Why Homeowners Trust Heatingology",
+        "text": "We know heating problems can be stressful — that’s why we keep things simple, honest, and human. From clear pricing to trusted engineers, everything we do is about keeping your home warm, safe, and looked after."
+    },
+    "rightPanel": [
+        {
+            "title": "Certified & Trusted Engineers",
+            "text": "Every visit is handled by fully qualified, vetted engineers who treat your home with care and respect. You’ll always know who’s arriving, what they’re doing, and that the job is being done safely and properly.",
+            "image": "https://assets.heatingology.com/boiler-servicing/certified-engineer.jpeg"
+        },
+        {
+            "title": "Clear Pricing. No Upsells.",
+            "text": "We keep things simple and honest. You’ll know the cost upfront, and we’ll never push work you don’t need. Just transparent pricing and straightforward service you can feel confident about.",
+            "image": "https://assets.heatingology.com/boiler-servicing/clear-pricing.png"
+        },
+        {
+            "title": "Reminders & Aftercare",
+            "text": "We help you stay on top of your yearly service with helpful reminders and friendly follow-ups. From booking to aftercare, we’re here to keep your heating running smoothly all year round.",
+            "image": "https://assets.heatingology.com/boiler-servicing/reminders-care.png"
+        }
+    ]
+}

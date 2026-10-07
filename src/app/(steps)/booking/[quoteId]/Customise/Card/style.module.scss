@@ -1,0 +1,131 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: px-to-vw(20);
+    overflow: hidden;
+    background-color: $white;
+
+    .banner {
+        height: px-to-vh(236);
+        background-color: $brand-light-blue;
+        padding: px-to-vh(16) 0;
+    }
+
+    .imageContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        img {
+            object-fit: contain;
+        }
+    }
+
+    .metadata {
+        padding: px-to-vw(16);
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .headline {
+        color: $text-default;
+        @include font-body-m-semibold;
+    }
+
+    .benefits {
+        // color: $text-body;
+        // @include font-body-s-regular;
+
+        // svg {
+        //     color: $brand-luminous-blue;
+        // }
+        gap: px-to-vw(4);
+
+        li {
+            color: $text-body;
+            @include font-body-s-regular;
+            @include list-li;
+        }
+    }
+
+    .priceRow {
+        display: flex;
+        align-items: center;
+        gap: px-to-vw(8);
+        margin-top: px-to-vh(8);
+    }
+
+    .price {
+        color: $text-default;
+        @include font-heading-m-semibold;
+    }
+
+    .saveTag {
+        background-color: #fff0d5;
+        color: $base-neutral-black;
+        border-radius: px-to-vw(20);
+        padding: px-to-vh(4) px-to-vw(10);
+        @include font-body-xs-semibold;
+    }
+
+    .note {
+        color: $text-body;
+        @include font-body-s-regular;
+    }
+
+    .spacer {
+        margin-bottom: px-to-vw(32);
+        @include spacer;
+    }
+
+    .button {
+        width: 100%;
+        @include button-round;
+
+        &.remove {
+            color: $base-neutral-black;
+            background-color: $base-neutral-lighter;
+        }
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .card {
+        border-radius: px-to-vw-m(20);
+
+        .banner {
+            height: px-to-vw-m(200);
+        }
+
+        .benefits {
+            gap: px-to-vw-m(4);
+        }
+
+        .metadata {
+            padding: px-to-vw-m(16);
+        }
+
+        .spacer {
+            margin-bottom: px-to-vw-m(32);
+        }
+
+        .priceRow {
+            gap: px-to-vw-m(8);
+            margin-top: px-to-vh-m(8);
+        }
+
+        .saveTag {
+            border-radius: px-to-vw-m(20);
+            padding: px-to-vh-m(4) px-to-vw-m(10);
+        }
+
+        .button {
+            margin-top: 1rem;
+        }
+    }
+}
+
+
+

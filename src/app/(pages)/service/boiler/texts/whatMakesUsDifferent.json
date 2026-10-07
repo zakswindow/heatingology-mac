@@ -1,0 +1,38 @@
+{
+    "leftPanel": {
+        "title": "A Warmer Way Forward",
+        "text": "We’re not just here to install boilers, we’re here to make home heating feel simple, honest, and human. With fixed pricing, trusted engineers, smart technology, and real aftercare, we take the stress out of every job and put your comfort first."
+    },
+    "rightPanel": [
+        {
+            "title": "Better Prices. Better People.",
+            "text": "We don’t just beat quotes, we beat expectations. Better price, better people, better care.",
+            "image": "https://assets.heatingology.com/buy-new-boiler/better-prices.png",
+            "listText": [
+                "No hidden fees",
+                "Friendlier experts",
+                "Care that goes beyond the job"
+            ]
+        },
+        {
+            "title": "Flexible Ways To Pay",
+            "text": "Get your new boiler now and pay in a way that works for you, including 0% interest plans.",
+            "image": "https://assets.heatingology.com/buy-new-boiler/flexible-pay.png",
+            "listText": [
+                "Pay in 3 with Klarna",
+                "Secure Checkout with PayPal",
+                "Google Pay & All Major Cards"
+            ]
+        },
+        {
+            "title": "Vetted & Certified Engineers",
+            "text": "Our engineers are fully vetted, certified, and trusted to deliver safe, high quality work, every visit, every time.",
+            "image": "https://assets.heatingology.com/buy-new-boiler/certified-engineer.jpeg",
+            "listText": [
+                "Fully Vetted & DBS-Checked",
+                "Certified & Highly Trained",
+                "Professional, Polite & People-First"
+            ]
+        }
+    ]
+}

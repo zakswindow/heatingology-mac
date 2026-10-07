@@ -1,0 +1,99 @@
+.hidden {
+    opacity: 0;
+}
+
+.selectDate {
+    color: $text-body;
+    @include font-body-m-regular;
+}
+.calendarForm {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vw(16);
+
+    .selectTime {
+        legend {
+            font-weight: 700;
+        }
+
+        label {
+            border-radius: px-to-vw(10);
+            border: 1px solid $border-primary;
+            background-color: $base-neutral-white;
+            color: $base-neutral-black;
+            padding: px-to-vw(16);
+        }
+
+        .selected {
+            border: 2px solid $brand-deep-violet;
+            background-color: $surface-card-info;
+        }
+
+        input {
+            accent-color: red;
+        }
+
+        .icon {
+            position: absolute;
+            top: px-to-vw(-2);
+            left: px-to-vw(-2);
+            width: px-to-vw(20);
+            height: px-to-vw(20);
+            color: $brand-deep-violet;
+        }
+
+        .labelContainer {
+            display: flex;
+            flex-direction: row;
+            gap: px-to-vw(8);
+            align-items: center;
+            @include font-body-s-regular;
+        }
+
+        .tag {
+            background-color: $tag-label-promo-bg;
+            color: $base-neutral-white;
+            @include font-label-s;
+        }
+    }
+
+    .note {
+        color: $text-body;
+        @include font-body-xxs-regular;
+    }
+
+    .noteCall {
+        @include font-body-s-semibold;
+    }
+
+    .continue {
+        width: 100%;
+        margin: px-to-vh(8) 0;
+        @include button-round;
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .calendarForm {
+        gap: px-to-vh-m(16);
+
+        .selectTime {
+            label {
+                border-radius: px-to-vw-m(10);
+                padding: px-to-vw-m(16);
+            }
+
+            .icon {
+                top: px-to-vw-m(-2);
+                left: px-to-vw-m(-2);
+                width: px-to-vw-m(20);
+                height: px-to-vw-m(20);
+            }
+
+            .labelContainer {
+                gap: px-to-vw-m(8);
+                justify-content: space-between;
+            }
+        }
+    }
+}

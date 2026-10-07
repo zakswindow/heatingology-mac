@@ -1,0 +1,64 @@
+.page {
+    padding: px-to-vh(184) px-to-vw(80);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .title {
+        color: $text-heading;
+        text-align: center;
+        @include font-heading-xl-semibold;
+    }
+
+    .subTitle {
+        color: $base-neutral;
+        text-align: center;
+        margin-bottom: px-to-vw(80);
+        @include font-body-m-regular;
+    }
+
+    .categories {
+        display: flex;
+        flex-direction: row;
+        gap: px-to-vw(16);
+        justify-content: center;
+        margin-bottom: px-to-vw(64);
+
+        .button {
+            margin: 0;
+            height: fit-content;
+            width: max-content;
+            white-space: nowrap;
+            background-color: $surface-card-info;
+            border-color: $brand-luminous-blue;
+            color: $text-body;
+            @include button-round;
+
+            &.selected {
+                color: $base-neutral-white;
+                background-color: $brand-luminous-blue;
+            }
+        }
+    }
+
+    .accordionHeader {
+        color: $text-heading;
+        @include font-body-m-semibold;
+    }
+
+    .accordionContent {
+        color: $text-body;
+        @include font-body-s-regular;
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .page {
+        overflow: visible;
+
+        .categories {
+            overflow-x: scroll;
+            justify-content: flex-start;
+        }
+    }
+}

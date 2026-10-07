@@ -1,0 +1,83 @@
+@import "../mixins";
+
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vh(24);
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .buttons {
+            display: flex;
+            flex-direction: row;
+            gap: px-to-vw(8);
+
+            .greyedOut {
+                background-color: $base-neutral-lighter;
+                color: $base-neutral-black;
+            }
+
+            button {
+                @include button-round;
+            }
+        }
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: px-to-vw(32);
+    }
+
+    .title {
+        @include page-title;
+        & {
+            margin-bottom: px-to-vh(4);
+        }
+    }
+
+    .subTitle {
+        color: $base-neutral;
+        @include font-body-m-regular;
+    }
+
+}
+
+@media (max-width: $phone-breakpoint) {
+    .page {
+        gap: px-to-vh-m(24);
+
+        .header {
+            flex-direction: column;
+            gap: px-to-vh-m(12);
+
+            .buttons {
+                gap: px-to-vw-m(8);
+
+                button {
+                    flex: 1;
+                }
+
+                .greyedOut {
+                    flex: unset;
+                    width: fit-content;
+                    margin: 1rem 0;
+                }
+            }
+        }
+
+        .cards {
+            display: flex;
+            flex-direction: column;
+            gap: px-to-vh-m(26);
+        }
+
+        .title {
+            margin-bottom: px-to-vh-m(4);
+        }
+
+    }
+}

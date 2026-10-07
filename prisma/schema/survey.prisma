@@ -1,0 +1,22 @@
+enum CustomerTitle {
+  MR
+  MISS
+  MRS
+  MS
+}
+
+model Survey {
+  id                          Int           @id @default(autoincrement())
+  title                       CustomerTitle
+  firstName                   String
+  lastName                    String
+  email                       String
+  contactNumber               String
+  note                        String?
+  gasMeterAreaImage           String?
+  frontOfPropertyImage        String?
+  proposedBoilerLocationImage String?
+  areaBelowBoilerImage        String?
+  flueImage                   String?
+  areaAboveBoilerImage        String?
+}

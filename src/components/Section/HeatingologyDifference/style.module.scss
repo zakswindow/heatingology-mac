@@ -1,0 +1,419 @@
+/* Fonts loaded globally via next/font/google — no @import needed.
+   CSS vars --font-baloo-2 and --font-plus-jakarta-sans come from layout.tsx. */
+
+/* ─── Brand tokens ────────────────────────────────────────────────────────── */
+.section {
+  --hd-font-heading: var(--font-baloo-2), sans-serif;
+  --hd-font-body:    var(--font-plus-jakarta-sans), sans-serif;
+
+  --hd-size-xl:      48px;
+  --hd-lh-xl:        1.2;
+  --hd-size-m:       32px;
+  --hd-lh-m:         1.3;
+  --hd-size-body:    16px;
+  --hd-lh-body:      1.5;
+  --hd-ls-body:      0.32px;
+
+  --hd-purple:       #342889;
+  --hd-blue:         #5369CA;
+  --hd-light-blue:   #D8DFFF;
+  --hd-orange:       #F18263;
+  --hd-red:          #A62501;
+  --hd-surface:      #F8F8F8;
+  --hd-heading:      #1A1A1A;
+  --hd-body-color:   #5B5B5B;
+  --hd-muted:        #AAAAAA;
+  --hd-sep:          #E0E0E0;
+
+  --hd-radius:       20px;
+  --hd-gap:          16px;
+  --hd-padding-x:    64px;
+  --hd-padding-y:    112px;
+
+  background: #ffffff;
+  padding: var(--hd-padding-y) var(--hd-padding-x);
+  font-family: var(--hd-font-body);
+}
+
+/* ─── Container ───────────────────────────────────────────────────────────── */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Header ──────────────────────────────────────────────────────────────── */
+.header {
+  display: flex;
+  margin-bottom: 48px;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.eyebrow {
+  font-family: var(--hd-font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--hd-blue);
+}
+
+.title {
+  font-family: var(--hd-font-heading);
+  font-size: var(--hd-size-xl);
+  font-weight: 600;
+  line-height: var(--hd-lh-xl);
+  letter-spacing: 0;
+  color: var(--hd-heading);
+  margin: 0;
+}
+
+.headerSubtitle {
+  font-family: var(--hd-font-body);
+  font-size: var(--hd-size-body);
+  font-weight: 400;
+  line-height: var(--hd-lh-body);
+  letter-spacing: var(--hd-ls-body);
+  color: var(--hd-body-color);
+  max-width: 520px;
+  margin: 0;
+}
+
+/* ─── Main grid ───────────────────────────────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: 536px 1fr;
+  gap: var(--hd-gap);
+  align-items: start;
+  margin-bottom: 28px;
+}
+
+/* ─── Featured card ───────────────────────────────────────────────────────── */
+.featuredCard {
+  background: var(--hd-purple);
+  border-radius: var(--hd-radius);
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 590px;
+  position: relative;
+  overflow: hidden;
+}
+
+.featuredGlow {
+  position: absolute;
+  top: -60px;
+  left: 28px;
+  width: 480px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(83, 105, 202, 0.18);
+  pointer-events: none;
+}
+
+.featuredContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.featuredNum {
+  font-family: var(--hd-font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: rgba(216, 223, 255, 0.8);
+  text-transform: uppercase;
+}
+
+.featuredStat {
+  font-family: var(--hd-font-heading);
+  font-size: 54px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: 0;
+  color: var(--hd-light-blue);
+  margin: 0;
+
+  span {
+    font-size: 24px;
+    font-weight: 600;
+    color: rgba(216, 223, 255, 0.55);
+    margin-left: 4px;
+  }
+}
+
+.featuredTitle {
+  font-family: var(--hd-font-heading);
+  font-size: var(--hd-size-m);
+  font-weight: 600;
+  line-height: var(--hd-lh-m);
+  letter-spacing: 0;
+  color: #ffffff;
+  margin: 0;
+}
+
+.featuredBody {
+  font-family: var(--hd-font-body);
+  font-size: var(--hd-size-body);
+  font-weight: 400;
+  line-height: var(--hd-lh-body);
+  letter-spacing: var(--hd-ls-body);
+  color: rgba(216, 223, 255, 0.9);
+  margin: 0;
+}
+
+/* ─── Right grid ──────────────────────────────────────────────────────────── */
+.rightGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hd-gap);
+}
+
+.cardRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--hd-gap);
+}
+
+/* ─── Small card ──────────────────────────────────────────────────────────── */
+.card {
+  background: var(--hd-surface);
+  border-radius: var(--hd-radius);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  min-height: 287px;
+}
+
+.cardNum {
+  font-family: var(--hd-font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: rgba(83, 105, 202, 0.5);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.iconBadge {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--hd-light-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+  color: var(--hd-purple);
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* ─── Pills ───────────────────────────────────────────────────────────────── */
+.pill {
+  display: inline-block;
+  font-family: var(--hd-font-body);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: var(--hd-ls-body);
+  padding: 4px 12px;
+  border-radius: 50px;
+  margin-bottom: 10px;
+  width: fit-content;
+}
+
+.pillBlue {
+  background: var(--hd-light-blue);
+  color: var(--hd-purple);
+}
+
+.pillOrange {
+  background: rgba(241, 130, 99, 0.14);
+  color: var(--hd-red);
+}
+
+/* ─── Card text ───────────────────────────────────────────────────────────── */
+.cardTitle {
+  font-family: var(--hd-font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: var(--hd-lh-m);
+  letter-spacing: 0;
+  color: var(--hd-heading);
+  margin: 0 0 8px;
+}
+
+.cardBody {
+  font-family: var(--hd-font-body);
+  font-size: var(--hd-size-body);
+  font-weight: 400;
+  line-height: var(--hd-lh-body);
+  letter-spacing: var(--hd-ls-body);
+  color: var(--hd-body-color);
+  margin: 0;
+}
+
+/* ─── Wide aftercare card ─────────────────────────────────────────────────── */
+.wideCard {
+  background: var(--hd-surface);
+  border-radius: var(--hd-radius);
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  .iconBadge {
+    margin-bottom: 0;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+}
+
+.wideCardNum {
+  font-family: var(--hd-font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: rgba(83, 105, 202, 0.5);
+  flex-shrink: 0;
+  text-transform: uppercase;
+}
+
+.wideCardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+/* ─── Trust bar ───────────────────────────────────────────────────────────── */
+.trustBar {
+  background: var(--hd-surface);
+  border-radius: 16px;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.trustItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.trustVal {
+  font-family: var(--hd-font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: var(--hd-lh-m);
+  letter-spacing: 0;
+  color: var(--hd-heading);
+}
+
+.trustLabel {
+  font-family: var(--hd-font-body);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: var(--hd-lh-body);
+  letter-spacing: var(--hd-ls-body);
+  color: var(--hd-body-color);
+}
+
+.trustSep {
+  width: 1px;
+  height: 32px;
+  background: var(--hd-sep);
+  flex-shrink: 0;
+}
+
+.ctaButton {
+  margin-left: auto;
+  background: var(--hd-purple);
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  padding: 13px 28px;
+  font-family: var(--hd-font-body);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: var(--hd-ls-body);
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+  display: inline-block;
+
+  &:hover {
+    background: var(--hd-blue);
+  }
+}
+
+/* ─── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .section {
+    padding: 72px 40px 60px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .featuredCard {
+    min-height: 380px;
+  }
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .headerSubtitle {
+    text-align: left;
+    max-width: 100%;
+  }
+  .title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 56px 20px 48px;
+  }
+  .title {
+    font-size: 28px;
+  }
+  .cardRow {
+    grid-template-columns: 1fr;
+  }
+  .wideCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .trustBar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .trustSep {
+    display: none;
+  }
+  .ctaButton {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+}

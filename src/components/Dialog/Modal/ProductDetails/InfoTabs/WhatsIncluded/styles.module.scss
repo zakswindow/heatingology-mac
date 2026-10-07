@@ -1,0 +1,31 @@
+.whatsIncluded {
+    padding: px-to-vh(8) 0;
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vh(16);
+
+    dt {
+        margin: px-to-vh(8) 0;
+        @include font-heading-m-bold;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        gap: px-to-vh(8);
+    }
+}
+
+.whatsIncludedTrigger {
+    color: $text-body;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: px-to-vw(8);
+    align-items: center;
+    @include font-body-s-regular;
+}
+
+.underline {
+    text-decoration: underline;
+}

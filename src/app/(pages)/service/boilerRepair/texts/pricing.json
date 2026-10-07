@@ -1,0 +1,55 @@
+{
+    "title": "Clear, Fixed Prices. No Surprises. Ever.",
+    "subheading": [
+        {
+            "title": "Standard Repair:",
+            "description": "If we’re able to fix the issue during our one-hour visit and no parts are required, the cost is £85."
+        },
+        {
+            "title": "If parts are needed:",
+            "description": "We’ll provide a no-obligation fixed quote on the spot before carrying out any further work."
+        }
+    ],
+    "tableTitle": "Clear pricing. Fair quotes. No hidden extras.",
+    "tableData": [
+        [
+            "",
+            "Repair category",
+            "Fixed Price"
+        ],
+        [
+            "Sensor",
+            "Boiler",
+            "£115"
+        ],
+        [
+            "Electrodes",
+            "Boiler",
+            "£125"
+        ],
+        [
+            "Plate heat exchanger",
+            "Boiler",
+            "£249"
+        ],
+        [
+            "Fan",
+            "Boiler",
+            "£295"
+        ],
+        [
+            "Thermostat (not smart controls)",
+            "Control",
+            "£175"
+        ]
+    ],
+    "additionalInfo": {
+        "text": "Important to know:",
+        "listItems": [
+            "Full diagnostic included",
+            "No hidden call-out charges",
+            "If your boiler is Beyond Economical Repair, the visit is capped at £120"
+        ]
+    },
+    "buttonText": "Get Your Fixed Price"
+}

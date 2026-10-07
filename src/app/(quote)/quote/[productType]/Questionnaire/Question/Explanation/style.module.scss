@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: px-to-vw(4);
+    text-decoration: underline;
+    color: $brand-luminous-blue;
+    cursor: pointer;
+    @include font-body-s-regular;
+}
+
+.explanation.dialog {
+    width: 30%;
+    height: 100dvh;
+    max-height: unset;
+    top: 0;
+    right: 0;
+    left: unset;
+    transform: unset;
+
+    .title {
+        color: $text-heading;
+        @include font-heading-m-semibold;
+    }
+
+    .description {
+        color: $text-body;
+        @include font-body-s-regular;
+    }
+}
+
+.spacer {
+    @include spacer;
+}

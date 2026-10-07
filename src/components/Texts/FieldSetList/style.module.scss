@@ -1,0 +1,14 @@
+.container {
+    border: unset;
+    border-top: 1px solid $base-neutral-neutral;
+
+    legend {
+        @include font-heading-s-semibold;
+        padding-right: px-to-vw(8);
+        color: $text-colors-950;
+    }
+
+    li {
+        list-style: none;
+    }
+}

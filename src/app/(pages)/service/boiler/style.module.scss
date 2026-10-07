@@ -1,0 +1,23 @@
+.boilerContainer {
+    background-color: $brand-deep-violet;
+}
+
+.brandContainer {
+    background-color: $base-neutral-lightest !important;
+
+    h1, h2 {
+        color: $base-neutral-black !important;
+    }
+}
+
+.reviews {
+    background-color: $base-neutral-lightest !important;
+
+    h1 {
+        color: $base-neutral-black !important;
+    }
+
+    h2 {
+        color: $base-neutral-black !important;
+    }
+}

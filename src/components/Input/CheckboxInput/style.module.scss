@@ -1,0 +1,72 @@
+.title {
+    margin-bottom: px-to-vw(16);
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(px-to-vw(200), 1fr));
+}
+
+.label {
+    display: grid;
+    grid-template-columns: px-to-vw(16) 1fr;
+    align-items: center;
+    gap: px-to-vw(8);
+}
+
+.checkbox {
+    width: px-to-vw(16);
+    height: px-to-vw(16);
+    border: 1px solid $base-neutral-light;
+    background-color: $white;
+    position: relative;
+    color: $brand-deep-violet;
+    box-sizing: border-box;
+    padding: px-to-vw(2);
+}
+
+.checkMark {
+    box-sizing: content-box;
+    opacity: 0;
+}
+
+.label.checked .checkMark {
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    box-sizing: content-box;
+    background-color: $brand-deep-violet;
+}
+
+.input {
+    width: px-to-vw(16);
+    height: px-to-vw(16);
+    opacity: 0;
+    position: absolute;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .title {
+        margin-bottom: px-to-vw-m(16);
+    }
+
+    .list {
+        grid-template-columns: repeat(auto-fill, minmax(px-to-vw-m(200), 1fr));
+    }
+
+    .label {
+        grid-template-columns: px-to-vw-m(16) 1fr;
+        gap: px-to-vw-m(8);
+    }
+
+    .checkbox {
+        width: px-to-vw-m(16);
+        height: px-to-vw-m(16);
+    }
+
+    .input {
+        width: px-to-vw-m(16);
+        height: px-to-vw-m(16);
+    }
+}

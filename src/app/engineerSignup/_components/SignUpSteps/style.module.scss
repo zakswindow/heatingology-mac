@@ -1,0 +1,72 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: px-to-vw(360);
+    gap: px-to-vw(32);
+    list-style-type: none;
+    counter-reset: item;
+    border-right: 1px solid $border-primary;
+
+    .stepCount {
+        width: px-to-vw(24);
+        height: px-to-vw(24);
+        border-radius: 50%;
+        border: 1px solid $text-disabled;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include font-body-s-regular;
+    }
+
+    li {
+        counter-increment: item;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        gap: px-to-vw(16);
+        align-items: center;
+        @include font-body-s-bold;
+
+        .edit {
+            cursor: pointer;
+        }
+    }
+
+    li.completed {
+        list-style: none;
+        color: $brand-deep-violet;
+
+        .icon {
+            width: px-to-vw(24);
+            height: 100%;
+        }
+    }
+
+    li.inProgress {
+        color: $brand-deep-violet;
+        .stepCount {
+            border-color: $brand-deep-violet;
+        }
+    }
+
+    li.pending {
+        color: $text-disabled;
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .container {
+        border: none;
+        width: 100%;
+
+        .stepCount {
+            width: px-to-vw-m(16);
+            height: px-to-vw-m(16);
+            @include font-body-xs-regular;
+        }
+
+        li.completed .icon {
+            width: px-to-vw-m(24);
+        }
+    }
+}

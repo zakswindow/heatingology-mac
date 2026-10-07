@@ -1,0 +1,31 @@
+enum HeatAssurePlan {
+  essential
+  plus
+  pro
+}
+
+enum HeatAssureStatus {
+  ACTIVE
+  CANCELLED
+  PAST_DUE
+  INCOMPLETE
+}
+
+model HeatAssureSubscription {
+  id                   Int                @id @default(autoincrement())
+  stripeCustomerId     String
+  stripeSubscriptionId String             @unique
+  stripeSessionId      String?
+  plan                 HeatAssurePlan
+  status               HeatAssureStatus   @default(ACTIVE)
+  customerEmail        String
+  customerName         String             @default("")
+  address              String             @default("")
+  postcode             String             @default("")
+  phone                String             @default("")
+  currentPeriodStart   DateTime?
+  currentPeriodEnd     DateTime?
+  cancelledAt          DateTime?
+  createdAt            DateTime           @default(now())
+  updatedAt            DateTime           @updatedAt
+}

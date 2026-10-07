@@ -1,0 +1,77 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vh(40);
+
+    .title {
+        @include font-heading-m-semibold;
+    }
+
+    .selection {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: px-to-vw(8);
+
+        .label {
+            @include font-body-s-semibold;
+        }
+
+        .valueContainer {
+            @include button-round;
+            @include font-body-xs-regular;
+            display: flex;
+            flex-direction: row;
+            gap: px-to-vw(8);
+            align-items: center;
+            padding: px-to-vh(8) px-to-vw(16);
+            background-color: $white;
+            border: 1px solid $border-primary;
+        }
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .faqs {
+        background-color: transparent;
+    }
+}
+
+.haveQuestions {
+    margin-left: -px-to-vw(80);
+    margin-right: -px-to-vw(80);
+    margin-bottom: -px-to-vh(112);
+    background-color: $base-neutral-white;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .page {
+        .selection {
+            flex-direction: column;
+            align-items: start;
+
+            .valueContainer {
+                align-items: center;
+                gap: px-to-vw-m(8);
+                padding-left: px-to-vw-m(8);
+                padding-right: px-to-vw-m(8);
+
+                a {
+                    display: flex;
+                    background: $text-default-teritiary;
+                    border-radius: 50%;
+                    padding: px-to-vw-m(4);
+                }
+            }
+        }
+
+
+        .cards {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

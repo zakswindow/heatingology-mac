@@ -1,0 +1,56 @@
+@import "../mixin";
+
+.card {
+    @include cart-card;
+    display: grid;
+    grid-template-columns: px-to-vw(48) 1fr;
+    padding: px-to-vw(16);
+    gap: px-to-vw(16);
+
+    .dateTile {
+        background-color: #f4f4f4;
+        border-radius: px-to-vw(8);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        .day {
+            @include font-body-xs-regular;
+        }
+
+        .date {
+            @include font-body-xs-semibold;
+        }
+    }
+
+    .details {
+        .date,
+        .time {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .date {
+            @include font-body-xs-semibold;
+        }
+
+        .time {
+            @include font-body-xs-regular;
+        }
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .card {
+        grid-template-columns: px-to-vw-m(48) 1fr;
+        padding: px-to-vw-m(16);
+        gap: px-to-vw-m(16);
+
+        .dateTile {
+            border-radius: px-to-vw-m(8);
+        }
+    }
+}
+

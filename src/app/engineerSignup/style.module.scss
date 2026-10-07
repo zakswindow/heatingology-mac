@@ -1,0 +1,28 @@
+.page {
+    padding: px-to-vh(40) px-to-vw(80);
+
+}
+
+.content {
+    display: grid;
+    grid-template-columns: px-to-vw(335) 1fr;
+    gap: px-to-vw(40);
+    justify-content: center;
+    padding-top: px-to-vw(40);
+}
+
+.form {
+    padding: 0 px-to-vw(40);
+    width: px-to-vw(1280 - 360);
+}
+
+@media (max-width: $phone-breakpoint) {
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form {
+        width: 100%;
+    }
+}

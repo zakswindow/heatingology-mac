@@ -1,0 +1,160 @@
+/* EnergyCard.css */
+.card {
+    position: relative;
+    width: 100%;
+    background-color: $white;
+    // background: linear-gradient(135deg, #7c9ae3 0%, #5a7bd3 100%);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(124, 154, 227, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(124, 154, 227, 0.4);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(135deg, #8bb5ff 0%, #6b96ff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    aspect-ratio: 405 / 233;
+}
+
+.image {
+    object-fit: cover;
+    object-position: center;
+}
+
+.tips_wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.guide_text {
+    @include font-label-s;
+    color: $base-neutral-white;
+    border-radius: 10%;
+    background-color: $brand-luminous-blue;
+    padding: 2px;
+}
+
+.duration {
+    @include font-body-xs-regular;
+}
+
+.text_wrapper {
+    padding: 24px 20px 20px;
+    background-color: $base-neutral-white;
+    color: $base-neutral-black;
+    height: var(--text-height, 40%);
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper_title {
+    @include font-heading-s-semibold;
+}
+
+.wrapper_description {
+    @include font-body-s-regular;
+    margin: 0 0 20px 0;
+    opacity: 0.9;
+}
+
+.learn_more {
+    @include font-button-m-bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    color: $primary;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    margin-top: auto;
+}
+
+.learn_more:hover {
+    opacity: 0.8;
+    transform: translateX(2px);
+}
+
+.learn_more:focus {
+    outline: 2px solid rgba(255, 255, 255, 0.5);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.arrow {
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.learn_more:hover .arrow {
+    transform: translateX(2px);
+}
+
+.modalContent {
+    max-width: 35vw;
+    padding: px-to-vw(32);
+}
+
+.modalImage {
+    position: relative;
+    width: 100%;
+    height: px-to-vw(240);
+    border-radius: px-to-vw(8);
+    overflow: hidden;
+    margin-bottom: px-to-vw(20);
+    margin-top: px-to-vw(20);
+}
+.modalFooter {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-top: px-to-vh(8);
+    margin-top: px-to-vh(16);
+    border-top: 1px solid $base-neutral-lighter;
+}
+.modalCloseButton {
+    width: fit-content;
+    margin-top: px-to-vw(24);
+    padding: px-to-vw(12) px-to-vw(24);
+    margin: 0;
+    align-items: end;
+    cursor: pointer;
+    @include font-button-m-semibold;
+    @include button-round;
+
+    // &:hover {
+    //     background-color: #170F55;
+    // }
+}
+
+.modalText {
+    @include font-body-s-regular;
+    color: $base-neutral-black;
+    line-height: 1.6;
+    margin: 0;
+
+    & + & {
+        margin-top: px-to-vw(12);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: $phone-breakpoint) {
+    .container {
+        padding: px-to-vw-m(20) px-to-vw-m(16);
+        aspect-ratio: 335 / 251;
+    }
+}

@@ -1,0 +1,54 @@
+@mixin slide-in-menu {
+    opacity: 0;
+    width: 0;
+    transform: translateX(100vw);
+    animation: slideInMenu 0.5s forwards;
+
+    @keyframes slideInMenu {
+        to {
+            opacity: 1;
+            width: 100vw;
+            transform: translateX(0px);
+        }
+    }
+}
+
+@mixin slide-out-menu {
+    opacity: 1;
+    width: 100vw;
+    transform: translateX(0px);
+    animation: slideOutMenu 0.5s forwards;
+
+    @keyframes slideOutMenu {
+        to {
+            opacity: 0;
+            width: 0;
+            transform: translateX(100vw);
+        }
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .mainMenu {
+        position: absolute;
+        z-index: 1;
+        background-color: $white;
+        width: 0;
+        height: calc(100vh - var(--bar-height, 0px));
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: px-to-vh-m(12);
+        padding: px-to-vh-m(20) px-to-vw-m(24);
+        opacity: 0;
+
+        &.open {
+            @include slide-in-menu;
+        }
+
+        &.closed {
+            @include slide-out-menu;
+        }
+    }
+    
+}

@@ -1,0 +1,24 @@
+.dialog {
+    @include modal;    
+}
+
+.contentHeader {
+    @include font-heading-m-semibold;
+    text-align: center;
+    max-width: 50%;
+    margin: px-to-vw(24) auto;
+}
+
+.contentDescription {
+    @include font-body-s-regular;
+    color: $text-body;
+    text-align: left;
+    max-width: 70%;
+    margin: auto auto px-to-vw(32) auto;
+}
+
+.contentButton {
+    @include button-round;
+    @include font-button-m-semibold;
+    width: 75%;
+}

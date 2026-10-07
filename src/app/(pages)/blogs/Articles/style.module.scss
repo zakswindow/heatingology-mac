@@ -1,0 +1,13 @@
+.articles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: px-to-vw(16);
+}
+
+@media (max-width: $phone-breakpoint) {
+    .articles {
+        display: flex;
+        flex-direction: column;
+        gap: px-to-vh-m(16);
+    }
+}

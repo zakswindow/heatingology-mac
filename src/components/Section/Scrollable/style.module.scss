@@ -1,0 +1,50 @@
+.scrollableViewport {
+    max-height: 10%;
+}
+
+.container {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.scrollableNavContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.scrollableNav {
+    all: unset;
+
+    @include font-body-s-regular;
+    flex: 1;
+    text-align: center;
+    color: $text-info-body;
+    width: fit-content;
+    padding: px-to-vw(12) px-to-vw(16);
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.scrollableNav.selected {
+    @include font-body-s-semibold;
+    background-color: $base-neutral-lightest;
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+
+.scrollAreaRoot {
+    flex: 1;
+    overflow: hidden;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .container {
+        overflow: visible;
+    }
+
+    .scrollAreaRoot {
+        height: 0;
+        overflow: visible;
+    }
+}

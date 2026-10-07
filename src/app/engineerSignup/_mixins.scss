@@ -1,0 +1,53 @@
+@mixin form {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vh(16);
+
+    @media (max-width: $phone-breakpoint) {
+        margin-bottom: px-to-vw-m(16);
+        gap: px-to-vh-m(16);
+    }
+}
+
+@mixin form-title {
+    color: $text-heading;
+    @include font-body-m-semibold;
+}
+
+@mixin form-description {
+    color: $base-neutral;
+    margin-bottom: px-to-vw(40);
+    @include font-body-m-regular;
+
+    @media (max-width: $phone-breakpoint) {
+        margin-bottom: px-to-vw-m(40);
+    }
+}
+
+@mixin form-button-list {
+    display: flex;
+    flex-direction: row;
+    gap: px-to-vw(16);
+
+    @media (max-width: $phone-breakpoint) {
+        gap: px-to-vw-m(16);
+    }
+}
+
+@mixin form-button {
+    width: 100%;
+    @include button-round;
+}
+
+@mixin form-section {
+    border-radius: px-to-vw(8);
+    border: 1px solid $brand-light-blue;
+    background-color: $surface-card-info;
+    padding: px-to-vw(16);
+
+    @media (max-width: $phone-breakpoint) {
+        border-radius: px-to-vw-m(8);
+        padding: px-to-vw-m(16);
+    }
+
+}

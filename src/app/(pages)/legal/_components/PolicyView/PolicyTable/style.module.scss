@@ -1,0 +1,43 @@
+.header {
+    border: 1px solid $border-primary;
+    background-color: $base-neutral-white;
+    padding: px-to-vh(16) px-to-vw(16);
+    color: #0d0d0d;
+    border-radius: px-to-vw(8);
+    @include font-body-l-bold;
+}
+
+.headings {
+    margin-top: px-to-vh(32);
+}
+
+.table {
+    .heading {
+        padding: px-to-vh(12);
+        cursor: pointer;
+        border: 1px solid transparent;
+        @include font-body-m-semibold;
+
+        &.selected {
+            border-radius: px-to-vw(8);
+            padding: px-to-vh(12) px-to-vw(16);
+            border: 1px solid $border-primary;
+        }
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+
+    .header {
+        border-radius: px-to-vw-m(8);
+        padding: px-to-vh-m(16) px-to-vw-m(16);
+    }
+    .table .heading {
+        padding: px-to-vw-m(12);
+
+        &.selected {
+            border-radius: px-to-vw-m(8);
+            padding: px-to-vh-m(12) px-to-vw-m(16);
+        }
+    }
+}

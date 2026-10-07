@@ -1,0 +1,66 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vh(20);
+    
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: px-to-vh(32);
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: px-to-vw(16);
+        }
+
+        .faqs {
+            background-color: transparent;
+        }
+    }
+
+    .save {
+        margin: 0;
+        background-color: $base-neutral-lighter;
+        color: $text-default;
+        @include button-round;
+    }
+}
+
+.headerButtonsContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.haveQuestions {
+    margin-left: -px-to-vw(80);
+    margin-right: -px-to-vw(80);
+    margin-bottom: -px-to-vh(112);
+    background-color: $base-neutral-white;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .page {
+        gap: px-to-vh-m(20);
+
+        .content {
+            gap: px-to-vh-m(32);
+
+            .cards {
+                display: flex;
+                flex-direction: column;
+                gap: px-to-vh-m(32);
+            }
+        }
+    }
+
+    .headerButtonsContainer {
+        display: flex;
+        flex-direction: column;
+        gap: px-to-vw-m(16);
+
+        .save {
+            width: fit-content;
+        }
+    }
+}

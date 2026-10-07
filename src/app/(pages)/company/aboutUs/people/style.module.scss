@@ -1,0 +1,114 @@
+.header {
+    text-align: center;
+    margin-bottom: px-to-vw(48);
+}
+
+.title {
+    @include font-heading-xl-semibold;
+    color: $text-heading;
+    margin-bottom: px-to-vw(16);
+}
+
+.description {
+    @include font-body-m-regular;
+    color: $text-body;
+    max-width: px-to-vw(700);
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: px-to-vw(48);
+}
+
+.member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.imageWrapper {
+    width: px-to-vw(100);
+    height: px-to-vw(100);
+    margin-bottom: px-to-vw(24);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name {
+    @include font-heading-m-semibold;
+    color: $text-heading;
+    margin-bottom: px-to-vw(8);
+}
+
+.memberTitle {
+    @include font-body-s-regular;
+    color: $text-heading;
+    margin-bottom: px-to-vw(12);
+}
+
+.memberDescription {
+    @include font-body-s-regular;
+    color: $text-body;
+    margin-bottom: px-to-vw(20);
+}
+
+.socials {
+    display: flex;
+    gap: px-to-vw(16);
+    align-items: center;
+    justify-content: center;
+}
+
+.socialLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.socialIcon {
+    height: 26px;
+    width: 26px;
+}
+
+@media (max-width: $phone-breakpoint) {
+
+    .description {
+        max-width: 100%;
+    }
+
+    .team {
+        padding-top: 30px;
+    }
+
+    .member {
+        padding-top: 30px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 1fr;
+        gap: px-to-vw(80);
+    }
+
+    .imageWrapper {
+        width: px-to-vw-m(100);
+        height: px-to-vw-m(100);
+        margin-bottom: px-to-vw(24);
+        border-radius: 50%;
+        overflow: hidden;
+    }
+}

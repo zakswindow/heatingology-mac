@@ -1,0 +1,38 @@
+.card {
+    border-radius: px-to-vw(20);
+    background-color: $surface-secondary;
+    padding: px-to-vw(32);
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vh(8);
+}
+
+.headline {
+    @include font-heading-m-semibold;
+}
+
+.content {
+    @include font-body-s-regular;
+}
+
+.iconContainer {
+    width: px-to-vw(100);
+    transform: translateX(px-to-vw(-20))
+}
+
+.spacer {
+    @include spacer;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .card {
+        border-radius: px-to-vw-m(20);
+        gap: px-to-vh-m(8);
+        padding: px-to-vw-m(32);
+
+        .iconContainer {
+            width: px-to-vw-m(100);
+        }
+        
+    }
+}

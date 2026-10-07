@@ -1,0 +1,25 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    gap: px-to-vw(16);
+    padding: px-to-vh(16) px-to-vw(16);
+}
+
+.productImage {
+    width: px-to-vw(60);
+    aspect-ratio: 1;
+
+    img {
+        width: auto;
+    }
+}
+
+.name {
+    @include font-body-xs-semibold;
+    color: $black;
+}
+
+.price {
+    @include font-body-xs-regular;
+    color: $black;
+}

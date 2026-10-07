@@ -1,0 +1,50 @@
+.dialog {
+    width: px-to-vw(450);
+    min-width: px-to-vw(450);
+
+    @media (max-width: $phone-breakpoint) {
+        width: 85%;
+        min-width: 85%;
+    }
+}
+
+.title {
+    @include font-heading-m-semibold;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin-top: px-to-vw(8);
+
+    @media (max-width: $phone-breakpoint) {
+        margin-top: px-to-vw-m(8);
+    }
+}
+
+.description {
+    @include font-body-s-regular;
+    color: $base-neutral;
+    margin: 0 0 px-to-vw(24) 0;
+
+    @media (max-width: $phone-breakpoint) {
+        margin-bottom: px-to-vw-m(24);
+        @include font-body-xs-regular;
+    }
+}
+
+.button {
+    @include button-round;
+    @include font-button-m-semibold;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: $primary;
+    color: $primaryButtonText;
+    padding: px-to-vw(14) px-to-vw(24);
+    width: 100%;
+
+    @media (max-width: $phone-breakpoint) {
+        padding: px-to-vw-m(14) px-to-vw-m(24);
+    }
+}

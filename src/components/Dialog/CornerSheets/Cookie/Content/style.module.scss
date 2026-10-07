@@ -1,0 +1,33 @@
+.consentMessage {
+    color: $text-body;
+    @include font-body-s-regular;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: px-to-vw(16);
+
+    .button {
+        margin: 0;
+        min-width: px-to-vw(107);
+        @include font-button-m-semibold;
+        @include button-round;
+    }
+
+    .preferences {
+        border: none !important;
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .buttons {
+        display: flex;
+        flex-direction: column;
+
+        .button {
+            width: 100%;
+        }
+    }
+}

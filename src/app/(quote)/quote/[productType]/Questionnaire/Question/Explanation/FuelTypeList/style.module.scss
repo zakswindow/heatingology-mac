@@ -1,0 +1,25 @@
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vh(16);
+
+    .title {
+        text-align: center;
+        @include font-heading-m-semibold;
+    }
+
+    .card {
+        border: 1px solid $border-primary;
+        border-radius: px-to-vw(16);
+        padding: px-to-vh(16) px-to-vw(16);
+
+        .headline {
+            @include font-heading-s-semibold;
+        }
+
+        .content {
+            @include font-body-s-regular;
+        }
+    }
+}
+

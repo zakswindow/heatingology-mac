@@ -1,0 +1,59 @@
+.accordionRoot {
+  width: 100%;
+}
+
+.accordionContent {
+  padding-bottom: px-to-vw(16);
+}
+
+.accordionContent[data-state="closed"] {
+  @include slide-up(var(--radix-accordion-content-height));
+}
+.accordionContent[data-state="open"] {
+  @include slide-down(var(--radix-accordion-content-height));
+}
+
+.accordionHeader {
+  padding: px-to-vw(16) 0;
+  border-top: solid 1px $base-neutral-neutral;
+}
+
+.accordionTrigger {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  svg {
+    width: px-to-vw(24);
+    height: px-to-vw(24);
+  }
+}
+
+.accordionTrigger[data-state="open"] > .accordionChevron {
+  transform: rotate(180deg);
+}
+
+.accordionChevron {
+	transition: transform 300ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+@media (max-width: $phone-breakpoint) {
+  .accordionContent {
+    padding-bottom: px-to-vh-m(16);
+  }
+
+  .accordionHeader {
+    padding: px-to-vh-m(16) 0;
+  }
+
+  .accordionTrigger {
+    align-items: center;
+    
+    svg {
+      width: px-to-vw-m(24);
+      height: px-to-vw-m(24);
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vw(8);
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .label {
+        @include font-body-s-semibold;
+    }
+
+    .button {
+        @include font-button-s-semibold;
+        margin: 0;
+        background-color: transparent;
+        color: $brand-luminous-blue;
+    }
+}

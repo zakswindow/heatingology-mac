@@ -1,0 +1,75 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    @include font-body-s-regular;
+    color: $text-heading;
+    margin-bottom: px-to-vw(8);
+}
+
+.container input {
+    all: unset;
+
+    @include font-body-s-single-line;
+    padding: px-to-vw(12) px-to-vw(16);
+    border-radius: px-to-vw(8);
+    border: 1px solid $border-primary;
+    background-color: $white;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container.dirty input,
+.container.dirty textarea {
+    border-color: $brand-light-blue;
+}
+
+.container.disabled label {
+    color: $text-disabled;
+}
+.container.disabled input,
+.container.disabled textarea {
+    background-color: $base-neutral-lighter;
+    border-color: $base-neutral-light;    
+}
+
+.container.error input,
+.container.error textarea {
+    border-color: $border-danger;
+}
+
+.container textarea {
+    @include font-body-s-regular;
+    border-radius: px-to-vw(8);
+    border-color: $border-primary;
+    padding: px-to-vh(12) px-to-vw(16);
+}
+
+.errorMessage {
+    color: #a62501;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: px-to-vw(4);
+    margin-top: px-to-vh(4);
+    @include font-body-s-regular;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .label {
+        margin-bottom: px-to-vw-m(8);
+    }
+
+    .container input {
+        padding: px-to-vw-m(12) px-to-vw-m(16);
+        border-radius: px-to-vw-m(8);
+        box-sizing: border-box;
+    }
+
+    .container textarea {
+        border-radius: px-to-vw-m(8);
+        padding: px-to-vh-m(12) px-to-vw-m(16);
+    }
+}

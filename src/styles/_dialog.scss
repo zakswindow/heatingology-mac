@@ -1,0 +1,9 @@
+@mixin modal {
+    width: 35%;
+    max-height: 90vh;
+    margin: auto;
+
+    @media (max-width: $phone-breakpoint) {
+        width: 80%;
+    }
+}

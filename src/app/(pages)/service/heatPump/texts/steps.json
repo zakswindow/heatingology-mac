@@ -1,0 +1,27 @@
+{
+    "heading": {
+        "title": "Your Heat Pump Journey, Simplified"
+    },
+    "steps": [
+        {
+            "image": "https://heatingology-marketing.s3.eu-west-2.amazonaws.com/images/heat-pump/hp-01.png",
+            "title": "Answer questions",
+            "text": "Takes 2–3 minutes. No personal details needed up front."
+        },
+        {
+            "image": "https://heatingology-marketing.s3.eu-west-2.amazonaws.com/images/heat-pump/hp-02.png",
+            "title": "See your price",
+            "text": "Including any eligible grant support."
+        },
+        {
+            "image": "https://heatingology-marketing.s3.eu-west-2.amazonaws.com/images/heat-pump/hp-03.png",
+            "title": "We install",
+            "text": "Our certified engineers will handle everything."
+        },
+        {
+            "image": "https://heatingology-marketing.s3.eu-west-2.amazonaws.com/images/heat-pump/hp-04.png",
+            "title": "Care begins",
+            "text": "To make sure everything is running smoothly."
+        }
+    ]
+}

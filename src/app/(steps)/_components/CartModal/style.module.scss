@@ -1,0 +1,47 @@
+.dialog {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vh-m(12);
+    position: fixed;
+    top: unset;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+    width: 100%;
+    max-height: 85dvh;
+    padding: px-to-vh-m(20) px-to-vw-m(20);
+    padding-top: px-to-vh-m(12);
+    border-top-left-radius: px-to-vw-m(20);
+    border-top-right-radius: px-to-vw-m(20);
+    overflow-y: auto;
+
+    &::before {
+        content: '';
+        display: block;
+        width: px-to-vw-m(40);
+        height: px-to-vw-m(4);
+        background-color: $border-primary;
+        border-radius: px-to-vw-m(2);
+        margin: 0 auto px-to-vh-m(8);
+        flex-shrink: 0;
+    }
+
+    .saveButton {
+        @include button-round;
+        @include font-button-s-semibold;
+        & {
+            gap: px-to-vw-m(8);
+            margin: 0;
+            background-color: $base-neutral-black;
+        }
+    }
+}
+
+
+@media (max-width: $phone-breakpoint) {
+  .dialog {
+    max-height: unset;
+    height: 85%;
+  }
+}

@@ -1,0 +1,10 @@
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vw(16);
+    flex: 1;
+}
+
+.note {
+    @include font-body-xxs-regular;
+}

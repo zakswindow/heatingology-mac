@@ -1,0 +1,130 @@
+
+.calendarWrapper :global(.rdp-months) {
+    max-width: unset;
+    display: flex;
+    flex-direction: column;
+
+    table {
+        border-spacing: px-to-vw(4);
+        border-collapse: unset;
+        width: 100%;
+    }
+}
+.calendarWrapper :global(.rdp-day.rdp-disabled) {
+    background-color: $base-neutral-lighter;
+    color: $base-neutral-light;
+}
+.calendarWrapper :global(.rdp-month) {
+    background-color: $white;
+    border-radius: 8px;
+    padding: px-to-vw(16);
+}
+
+.calendarWrapper :global(.rdp-nav) {
+    top: px-to-vh(8);
+    right: px-to-vw(16);
+
+    button {
+        width: px-to-vw(20);
+        height: px-to-vw(20);    }
+}
+
+.calendarWrapper :global(.rdp-chevron) {
+    fill: $brand-deep-violet;
+}
+
+.calendarDay {
+    position: relative;
+
+    button {
+        width: 100%;
+        height: 100%;
+        padding: px-to-vw(8);
+        border-radius: 8px;
+        background-color: $base-neutral-lightest;
+        color: $brand-dark-purple;
+        min-width: px-to-vw(80);
+        min-height: px-to-vw(64);
+        @include font-body-s-regular;
+    }
+    button[disabled] {
+        background-color: $base-neutral-lighter;
+        color: $base-neutral-light;
+    }
+
+    .today {
+        position: absolute;
+        top: px-to-vh(8);
+        right: px-to-vw(8);
+        width: px-to-vw(4);
+        height: px-to-vw(4);
+        border-radius: 50%;
+        background-color: $brand-dark-purple;
+    }
+}
+
+.calendarDay:not(.selected):hover {
+    button:not(:disabled) {
+        background-color: $faded-primary-blue;
+        color: $light-blue;
+    }
+
+}
+
+.calendarDay.selected {
+    button {
+        background-color: $brand-deep-violet;
+        color: $white;
+    }
+
+    .today {
+        background-color: $brand-dark-purple;
+    }
+}
+
+.calendarDay.holiday button {
+    color: $brand-light-red;
+}
+
+.priceTag {
+    @include font-body-xxs-regular;
+    position: absolute;
+    color: $brand-light-red;
+    top: px-to-vw(4);
+    right: px-to-vw(8);
+}
+
+@media (max-width: $phone-breakpoint) {
+
+    .calendarWrapper :global(.rdp-months) {
+        table {
+            border-spacing: px-to-vw-m(4);
+        }
+    }
+
+    .calendarWrapper :global(.rdp-month) {
+        border-radius: px-to-vw-m(8);
+        padding: px-to-vw-m(16);
+    }
+
+    .calendarWrapper :global(.rdp-nav) {
+        top: px-to-vh-m(8);
+        right: px-to-vw-m(16);
+
+        button {
+            width: px-to-vw-m(20);
+            height: px-to-vw-m(20);
+            color: $brand-deep-violet;
+        }
+    }
+
+    .calendarDay {
+        button {
+            padding: px-to-vw-m(8);
+            border-radius: px-to-vw-m(8);
+            min-width: px-to-vw-m(40);
+            min-height: px-to-vw-m(64);
+        }
+    }
+}
+

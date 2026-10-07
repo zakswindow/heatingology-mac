@@ -1,0 +1,22 @@
+.link {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    position: relative !important;
+    object-fit: cover;
+    width: 100%;
+    height: auto !important;
+    max-width: px-to-vw(173);
+    max-height: px-to-vw(32);
+    display: inline-flex;
+    align-items: center;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .logo {
+        max-width: px-to-vw-m(126);
+        max-height: px-to-vw-m(24);
+    }
+}
+

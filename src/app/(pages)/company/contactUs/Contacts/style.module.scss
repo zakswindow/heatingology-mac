@@ -1,0 +1,29 @@
+.container {
+    padding: px-to-vw(112) px-to-vw(64);
+    background-color: $bg-info;
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vw(60);
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    gap: px-to-vw(32);
+}
+
+.email {
+    @include font-body-s-regular;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .container {
+        flex-direction: column;
+        padding: px-to-vh(64) px-to-vw-m(20);
+    }
+
+    .cards {
+        flex-direction: column;
+        gap: px-to-vw-m(32);
+    }
+}

@@ -1,0 +1,53 @@
+.articles {
+    padding: px-to-vh(80) px-to-vw(64);
+    background-color: $brand-deep-violet;
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vh(32);
+
+    .title {
+        text-align: center;
+        color: $white;
+    }
+
+    .subHeading {
+        text-align: center;
+        margin-bottom: px-to-vh(40);
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: px-to-vw(24);
+        align-items: stretch;
+
+        > div {
+            height: 100%;
+
+            > * {
+                height: 100%;
+            }
+        }
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ctaButton {
+        background-color: $white;
+        color: $brand-deep-violet;
+        @include button-round;
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .articles {
+        .grid {
+            display: flex;
+            flex-direction: column;
+            gap: px-to-vh-m(32);
+        }
+    }
+}

@@ -1,0 +1,8 @@
+.button {
+    all: unset;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: px-to-vw-m(8);
+    @include font-button-m-bold;
+}

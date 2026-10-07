@@ -1,0 +1,5 @@
+-- AlterEnum
+ALTER TYPE "BLOG_CATEGORIES" ADD VALUE 'BOILER_SERVICE';
+
+-- AlterTable
+ALTER TABLE "Product" ALTER COLUMN "dimensions" SET DEFAULT '{}'::jsonb;

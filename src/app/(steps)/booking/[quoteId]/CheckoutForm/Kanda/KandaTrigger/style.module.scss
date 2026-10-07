@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    color: $text-body;
+    gap: px-to-vw(16);
+    align-items: center;
+    font-size: 0.65rem;
+}
+.radioMarkContainer {
+    position: relative;
+    width: px-to-vw(16);
+    height:px-to-vw(16);
+}
+
+.radioMark {
+    display: block;
+    width: px-to-vw(16);
+    height: px-to-vw(16);
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 1px solid $brand-luminous-blue;
+    padding: px-to-vw(2);
+    position: absolute;
+}
+
+.radioDot {
+    display: none;    
+}
+
+.radioMark.checked .radioDot {
+    width: px-to-vw(8);
+    height: px-to-vw(8);
+    border-radius: 50%;
+    display: block;
+    top: px-to-vw(4);
+    left: px-to-vw(4);
+    background-color: $brand-luminous-blue;
+}

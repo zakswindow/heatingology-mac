@@ -1,0 +1,27 @@
+{
+    "heading": {
+        "title": "Your Fast, Friendly Repair Journey"
+    },
+    "steps": [
+        {
+            "image": "/home/contact_us.png",
+            "title": "Tap",
+            "text": "Just a few simple questions"
+        },
+        {
+            "image": "/home/contact_us.png",
+            "title": "Get your price",
+            "text": "A clear, fixed price in seconds."
+        },
+        {
+            "image": "/home/contact_us.png",
+            "title": "Help arrives",
+            "text": "A qualified pro at a time that suits you."
+        },
+        {
+            "image": "/home/contact_us.png",
+            "title": "You’re back warm",
+            "text": "A proper repair and a smooth follow-up"
+        }
+    ]
+}

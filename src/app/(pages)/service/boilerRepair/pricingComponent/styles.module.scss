@@ -1,0 +1,75 @@
+.container {
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: sans-serif;
+}
+
+.title {
+    @include font-heading-xl-semibold;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.subHeadings {
+    width: max-content;
+    margin: auto;
+        
+    .subheading {
+        margin-bottom: 10px;
+    }
+
+    .subheadingTitle {
+        @include font-body-m-semibold;
+        color: $base-neutral-neutral;
+    }
+
+    .subheadingDescription {
+        @include font-body-m-regular;
+        color: $base-neutral-neutral;
+    }
+}
+
+.tableSection {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.additional_info {
+    @include font-body-s-semibold;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.additional_info ul {
+    @include font-body-s-regular;
+    margin-top: 6px;
+    padding-left: 20px;
+}
+
+.button {
+    @include font-body-s-semibold;
+    background-color: $brand-deep-violet;
+    color: $base-neutral-white;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 20%;
+    cursor: pointer;
+    margin-top: px-to-vh(10);
+    @include button-round;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .cta-button {
+        width: 100%;
+    }
+
+    .button {
+        width: 100%;
+        margin-top: px-to-vh-m(32);
+        margin-bottom: px-to-vh-m(32);
+    }
+
+    .subHeadings {
+        width: auto;
+    }
+}

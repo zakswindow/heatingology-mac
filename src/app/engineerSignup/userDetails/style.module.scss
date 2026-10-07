@@ -1,0 +1,29 @@
+@import "../mixins";
+
+.title {
+    @include form-title;
+}
+
+.description {
+    @include form-description;
+}
+
+.form {
+    @include form;
+}
+
+.submit {
+    @include button-round;
+    @include font-button-m-semibold;
+    width: 100%;
+}
+
+.footprint {
+    @include font-body-xs-regular;
+    color: $text-body;
+    text-align: center;
+
+    a {
+        text-decoration: underline;
+    }
+}

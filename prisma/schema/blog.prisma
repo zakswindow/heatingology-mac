@@ -1,0 +1,33 @@
+enum BLOG_CATEGORIES {
+  VIEW_ALL
+  HOME_HEATING
+  CUSTOMER_STORIES
+  BOILER_GUIDE
+  HEAT_PUMP_GUIDE
+  UNKONWN
+  BOILER_SERVICE
+}
+
+model BlogCategory {
+  id         Int             @default(autoincrement())
+  categoryId BLOG_CATEGORIES @unique
+  label      String
+  Blog       Blog[]
+}
+
+model Blog {
+  id          String          @id @default(cuid())
+  published   Boolean         @default(false)
+  title       String
+  content     String
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+  publishedAt DateTime?
+  categoryId  BLOG_CATEGORIES
+  category    BlogCategory    @relation(fields: [categoryId], references: [categoryId])
+  image       String?
+  readTime        Int?            @default(0)
+  viewCount       Int?            @default(0)
+  metaTitle       String          @default("")
+  metaDescription String          @default("")
+}

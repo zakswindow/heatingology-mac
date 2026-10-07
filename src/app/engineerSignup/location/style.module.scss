@@ -1,0 +1,19 @@
+@import "../mixins";
+
+.form {
+    @include form;
+    gap: px-to-vw(16);
+}
+
+.section {
+    display: flex;
+    gap: px-to-vw(16);
+}
+
+.buttonList {
+    @include form-button-list;
+
+    button {
+        @include form-button;
+    }
+}

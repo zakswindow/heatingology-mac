@@ -1,0 +1,110 @@
+.dialog {
+    width: 30%;
+    height: 100dvh;
+    max-height: unset;
+    top: 0;
+    right: 0;
+    left: unset;
+    transform: unset;
+
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vw(12);
+    font-size: px-to-vw(16);
+    padding: px-to-vw(8) 0;
+    flex: 1;
+    overflow: scroll;
+
+    li {
+        @include font-body-s-regular;
+        @include list-li;
+    }
+
+    .included svg {
+        color: $system-success-green;
+        margin-top: px-to-vw(4);
+    }
+
+    .excluded svg {
+        color: $brand-vibrant-red;
+        margin-top: px-to-vw(4);
+    }
+
+    .questions {
+        padding: 0;
+    }
+}
+.intro {
+    margin: px-to-vw(8) 0;
+}
+
+.help {
+    color: $secondaryText;
+    display: grid;
+    grid-template-columns: fit-content(100%) 1fr;
+    gap: px-to-vw(4);
+    align-items: center;
+    cursor: pointer;
+}
+
+.ellipsis {
+    @include text-ellipsis;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.footprint {
+    font-size: px-to-vw(12);
+}
+
+.footer {
+    a {
+        font-weight: 700;
+        text-decoration: underline;
+    }
+}
+
+
+
+@media (max-width: $phone-breakpoint) {
+    .dialog {
+        top: unset;
+        left: unset;
+        right: unset;
+        height: unset;
+        max-height: 80dvh;
+        width: 100%;
+        height: fit-content;
+        bottom: 0;
+    }
+
+    .content {
+        gap: px-to-vw-m(12);
+        font-size: px-to-vw-m(16);
+        padding: px-to-vw-m(8) 0;
+        overflow: scroll;
+    }
+
+    .included svg,
+    .excluded svg {
+        margin-top: px-to-vw-m(4);
+    }
+
+    .intro {
+        margin: px-to-vw-m(8) 0;
+    }
+
+    .help {
+        grid-template-columns: px-to-vw-m(16) 1fr;
+        gap: px-to-vw-m(4);
+    }
+
+    .footprint {
+        font-size: px-to-vw-m(12);
+    }
+}

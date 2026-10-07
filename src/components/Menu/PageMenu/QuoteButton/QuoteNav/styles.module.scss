@@ -1,0 +1,98 @@
+.container {
+    position: absolute;
+    background-color: $base-neutral-white;
+    border-radius: px-to-vw(20);
+    padding: px-to-vw(16);
+    display: flex;
+    gap: px-to-vw(8);
+    flex-direction: column;
+    margin-top: px-to-vw(8);
+    right: px-to-vw(16);
+}
+.card {
+    @include font-button-m-bold;
+    border-radius: px-to-vw(10);
+    background-color: $teritary;
+    padding: px-to-vw(16);
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: px-to-vw(20) 1fr px-to-vw(40);
+    width: 100%;
+    white-space: nowrap;
+    justify-content: space-between;
+    color: $brand-deep-violet;
+    align-items: center;
+    gap: px-to-vw(16);
+
+    .imageContainer {
+        width: 100%;
+
+        img {
+            object-fit: cover;
+            scale: 2;
+        }
+    }
+
+
+    .iconContainer {
+        display: flex;
+        width: px-to-vw(40);
+        height: px-to-vw(40);
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 1px solid transparent
+    }
+
+    .icon {
+        width: px-to-vw(24);
+        height: px-to-vw(24);
+    }
+}
+
+.card:hover {
+    background-color: $brand-luminous-blue;
+    color: $base-neutral-lightest;
+
+    .iconContainer {
+        border-color: $base-neutral-lightest;
+    }
+}
+
+.visible {
+    height: auto;
+}
+
+.hidden {
+    height: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    visibility: hidden;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .container {
+        border-radius: px-to-vw-m(20);
+        padding: px-to-vw-m(16);
+        gap: px-to-vw-m(8);
+        margin-top: px-to-vw-m(8);
+        right: px-to-vw-m(16);
+    }
+    .card {
+        border-radius: px-to-vw-m(10);
+        padding: px-to-vw-m(16);
+        grid-template-columns: px-to-vw-m(20) 1fr px-to-vw-m(40);
+        gap: px-to-vw-m(16);
+
+
+        .iconContainer {
+            width: px-to-vw-m(40);
+            height: px-to-vw-m(40);
+        }
+
+        .icon {
+            width: px-to-vw-m(24);
+            height: px-to-vw-m(24);
+        }
+    }
+}

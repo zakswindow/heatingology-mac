@@ -1,0 +1,16 @@
+{
+    "heading": {
+        "title": "Explore Our Most Popular EV Chargers",
+        "subHeading": "See what kind of brands fit your needs."
+    },
+    "brands": [
+        {
+            "brand": "HyperVolt",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+        },
+        {
+            "brand": "Ohme",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+        }
+    ]
+}

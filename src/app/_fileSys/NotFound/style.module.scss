@@ -1,0 +1,42 @@
+.page {
+    display: flex;
+    flex-grow: 1;
+
+    * {
+        margin: auto;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: px-to-vh(16);
+        height: 100%;
+    }
+
+    .image {
+        width: px-to-vw(335);
+        height: px-to-vw(335);
+    }
+
+    .title {
+        color: $text-heading;
+        @include font-heading-l-semibold;
+    }
+
+    .message {
+        color: $text-body;
+        @include font-body-s-regular;
+    }
+
+    .button {
+        @include button-round;
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .page .image {
+        width: px-to-vw-m(335);
+        height: px-to-vw-m(335);
+    }
+}

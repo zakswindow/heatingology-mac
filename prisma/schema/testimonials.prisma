@@ -1,0 +1,7 @@
+model Testimonials {
+  customerName String
+  customerRole String
+  statement    String
+
+  @@id([customerName, customerRole])
+}

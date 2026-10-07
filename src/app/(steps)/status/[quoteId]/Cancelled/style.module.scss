@@ -1,0 +1,90 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: px-to-vw(48) px-to-vw(32);
+    max-width: px-to-vw(480);
+    margin: 0 auto;
+    text-align: center;
+
+    h1 {
+        @include font-heading-m-bold;
+        color: #000;
+        margin-bottom: px-to-vw(16);
+    }
+}
+
+.iconCircle {
+    width: px-to-vw(96);
+    height: px-to-vw(96);
+    border-radius: 50%;
+    background-color: $brand-deep-violet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: px-to-vw(32);
+}
+
+.crossIcon {
+    width: px-to-vw(40);
+    height: px-to-vw(40);
+
+    path {
+        stroke: #fff;
+        fill: #fff;
+    }
+}
+
+.body {
+    @include font-body-m-regular;
+    color: $text-info-body;
+    margin-bottom: px-to-vw(32);
+    max-width: px-to-vw(320);
+}
+
+.button {
+    width: 100%;
+    max-width: px-to-vw(400);
+    @include button-round;
+}
+
+.moreQuestions {
+    background-color: $white;
+    padding: px-to-vh(80) px-to-vw(64);
+}
+
+.faqs {
+    background-color: transparent !important;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .page {
+        padding: px-to-vw-m(48) px-to-vw-m(24);
+        max-width: 100%;
+
+        h1 {
+            margin-bottom: px-to-vw-m(16);
+        }
+    }
+
+    .iconCircle {
+        width: px-to-vw-m(96);
+        height: px-to-vw-m(96);
+        margin-bottom: px-to-vw-m(32);
+    }
+
+    .crossIcon {
+        width: px-to-vw-m(40);
+        height: px-to-vw-m(40);
+    }
+
+    .body {
+        margin-bottom: px-to-vw-m(32);
+        max-width: px-to-vw-m(320);
+    }
+
+    .button {
+        max-width: 100%;
+    }
+}

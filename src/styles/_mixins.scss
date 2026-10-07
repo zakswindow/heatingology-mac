@@ -1,0 +1,404 @@
+@import "functions";
+@import "colours";
+@import "sizes";
+
+@mixin text-ellipsis {
+  white-space: nowrap;
+  /* Prevents text from wrapping */
+  overflow: hidden;
+  /* Hides overflowing text */
+  text-overflow: ellipsis;
+  /* Adds the ellipsis (...) */
+}
+
+@mixin floating-box {
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.25);
+}
+
+@mixin drop-shadow {
+  box-shadow: 0 0 px-to-vw(4) rgba(0, 0, 0, 0.15);
+}
+
+@mixin menu-hover {
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
+}
+
+@mixin card-hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+@mixin sticky-nav {
+  box-shadow: 0 0 px-to-vh(4) rgba(0, 0, 0, 0.1);
+}
+
+@mixin spacer {
+  flex-grow: 1;
+}
+
+@mixin card {
+  border: 1px solid $border-primary;
+  border-radius: 5px;
+}
+
+@mixin enable-line-break {
+  white-space: pre-line;
+}
+
+@mixin linear-overlay {
+  background: linear-gradient(to right,
+      rgba(0, 0, 0, 0.55) 0%,
+      rgba(0, 0, 0, 0.2) 50%,
+      rgba(0, 0, 0, 0) 100%);
+}
+
+@mixin list-li {
+  list-style: none;
+  display: grid;
+  grid-template-columns: px-to-vw(16) 1fr;
+  gap: px-to-vw(4);
+  align-items: start;
+
+  svg {
+    color: $brand-luminous-blue;
+    margin-top: px-to-vw(4);
+  }
+
+  @media (max-width: $phone-breakpoint) {
+    grid-template-columns: px-to-vw-m(16) 1fr;
+    gap: px-to-vw-m(4);
+
+    svg {
+      margin-top: px-to-vw-m(4);
+    }
+  }
+}
+
+// LAYOUT
+
+@mixin pages-layout {
+  padding: px-to-vw(112) px-to-vw(64);
+
+  @media (max-width: $phone-breakpoint) {
+    padding: px-to-vw-m(112) px-to-vw-m(64);
+  }
+}
+
+// FONTS
+
+@mixin font-body-s-bold {
+  font-size: px-to-vw(16);
+  line-height: px-to-vw(16 * 1.5);
+  font-weight: 700;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(16);
+    line-height: px-to-vw-m(16 * 1.5);
+  }
+}
+
+@mixin font-body-s-semibold {
+  font-size: px-to-vw(16);
+  line-height: px-to-vw(16 * 1.5);
+  font-weight: 600;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(16);
+    line-height: px-to-vw-m(16 * 1.5);
+  }
+}
+
+@mixin font-body-s-regular {
+  font-size: px-to-vw(16);
+  line-height: px-to-vw(16 * 1.5);
+  font-weight: 400;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(16);
+    line-height: px-to-vw-m(16 * 1.5);
+  }
+}
+
+@mixin font-body-s-single-line {
+  font-size: px-to-vw(16);
+  line-height: px-to-vw(16);
+  font-weight: 400;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(16);
+    line-height: px-to-vw-m(16);
+  }
+}
+
+@mixin font-body-xs-bold {
+  font-size: px-to-vw(14);
+  line-height: px-to-vw(14 * 1.5);
+  font-weight: 700;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(14);
+    line-height: px-to-vw-m(14 * 1.5);
+  }
+}
+
+@mixin font-body-xs-semibold {
+  font-size: px-to-vw(14);
+  line-height: px-to-vw(14 * 1.5);
+  font-weight: 600;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(14);
+    line-height: px-to-vw-m(14 * 1.5);
+  }
+}
+
+@mixin font-body-xs-regular {
+  font-size: px-to-vw(14);
+  line-height: px-to-vw(14 * 1.5);
+  font-weight: 400;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(12);
+    line-height: px-to-vw-m(12 * 1.5);
+  }
+}
+
+@mixin font-body-xxs-regular {
+  font-size: px-to-vw(12);
+  line-height: px-to-vw(12 * 1.5);
+  font-weight: 400;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(10);
+    line-height: px-to-vw-m(10 * 1.5);
+  }
+}
+
+@mixin font-body-m-bold {
+  font-size: px-to-vw(18);
+  line-height: px-to-vw(18 * 1.5);
+  font-weight: 700;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(18);
+    line-height: px-to-vw-m(18 * 1.5);
+  }
+}
+
+@mixin font-body-m-semibold {
+  font-size: px-to-vw(18);
+  line-height: px-to-vw(18 * 1.5);
+  font-weight: 600;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(18);
+    line-height: px-to-vw-m(18 * 1.5);
+  }
+}
+
+@mixin font-body-m-regular {
+  font-size: px-to-vw(18);
+  line-height: px-to-vw(18 * 1.5);
+  font-weight: 400;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(18);
+    line-height: px-to-vw-m(18 * 1.5);
+  }
+}
+
+@mixin font-body-l-bold {
+  font-size: px-to-vw(20);
+  line-height: px-to-vw(20 * 1.5);
+  font-weight: 700;
+}
+
+@mixin font-heading-s-semibold {
+  font-family: var(--font-baloo-2);
+  font-size: px-to-vw(24);
+  line-height: px-to-vw(18 * 1.2);
+  font-weight: 600;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(18);
+    line-height: px-to-vw-m(18 * 1.2);
+  }
+}
+
+
+@mixin font-heading-xxl-semibold {
+  font-family: var(--font-baloo-2);
+  font-size: px-to-vw(64);
+  line-height: px-to-vw(64 * 1.2);
+  font-weight: 600;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(40);
+    line-height: px-to-vw-m(40 * 1.2);
+  }
+}
+
+@mixin font-heading-xl-semibold {
+  font-family: var(--font-baloo-2);
+  font-size: px-to-vw(48);
+  line-height: px-to-vw(64 * 1.2);
+  font-weight: 600;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(32);
+    line-height: px-to-vw-m(32 * 1.2);
+  }
+}
+
+@mixin font-heading-l-bold {
+  font-family: var(--font-baloo-2);
+  font-size: px-to-vw(40);
+  line-height: px-to-vw(40 * 1.6);
+  font-weight: 700;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(32);
+    line-height: px-to-vw-m(32 * 1.2);
+  }
+}
+
+@mixin font-heading-l-semibold {
+  font-family: var(--font-baloo-2);
+  font-size: px-to-vw(40);
+  line-height: px-to-vw(40 * 1.2);
+  font-weight: 600;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(32);
+    line-height: px-to-vw-m(32 * 1.2);
+  }
+}
+
+@mixin font-heading-m-bold {
+  font-family: var(--font-baloo-2);
+  font-size: px-to-vw(32);
+  line-height: px-to-vw(32 * 1.3);
+  font-weight: 700;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(24);
+    line-height: px-to-vw-m(24 * 1.2);
+  }
+}
+
+@mixin font-heading-m-semibold {
+  font-family: var(--font-baloo-2);
+  font-size: px-to-vw(32);
+  line-height: px-to-vw(40 * 1.3);
+  font-weight: 600;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(24);
+    line-height: px-to-vw-m(24 * 1.2);
+  }
+
+}
+
+@mixin font-heading-s-semibold {
+  font-family: var(--font-baloo-2);
+  font-size: px-to-vw(24);
+  line-height: 1.3;
+  font-weight: 600;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(16);
+    line-height: px-to-vw-m(16 * 1.2);
+  }
+}
+
+@mixin font-button-s-semibold {
+  font-size: px-to-vw(14);
+  line-height: px-to-vw(14 * 1.5);
+  font-weight: 600;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(14);
+    line-height: px-to-vw-m(14 * 1.3);
+  }
+}
+
+@mixin font-button-m-semibold {
+  font-size: px-to-vw(16);
+  line-height: px-to-vw(16 * 1.5);
+  font-weight: 600;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(16);
+    line-height: px-to-vw-m(16 * 1.5);
+  }
+}
+
+@mixin font-button-m-bold {
+  font-size: px-to-vw(16);
+  line-height: px-to-vw(16 * 1.5);
+  font-weight: 700;
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(16);
+    line-height: px-to-vw-m(16 * 1.5);
+  }
+}
+
+@mixin font-label-s {
+  font-size: px-to-vw(12);
+  line-height: px-to-vw(12);
+
+  @media (max-width: $phone-breakpoint) {
+    font-size: px-to-vw-m(12);
+    line-height: px-to-vw-m(12);
+  }
+}
+
+// Button
+@mixin button-round {
+  border-radius: px-to-vw(40);
+
+  @media (max-width: $phone-breakpoint) {
+    border-radius: px-to-vw-m(40);
+  }
+}
+
+@mixin button-box {
+  border-radius: 8px;
+  border-color: $brand-light-blue;
+  color: $brand-deep-violet;
+  background-color: $surface-card-info;
+}
+
+@mixin button-primary-disabled {
+  background-color: #d9d9d9;
+  border-color: #aaa;
+  color: #b3b3b3;
+}
+
+@mixin button-default {
+  border-color: $brand-luminous-blue;
+  background-color: $base-neutral-white;
+  color: $brand-deep-violet;
+}
+
+@mixin button-hover {
+  border-color: $brand-luminous-blue;
+  background-color: $brand-luminous-blue;
+  color: $base-neutral-white;
+}
+
+@mixin button-disabled {
+  border-color: $text-disabled;
+  background-color: $base-neutral-white;
+}
+
+@mixin transform-rotate($deg, $speed) {
+  transition: transform $speed;
+  transform: rotate($deg);
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

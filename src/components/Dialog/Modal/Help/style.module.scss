@@ -1,0 +1,38 @@
+.title {
+    @include font-heading-l-semibold;
+}
+
+.helpContainer {
+    .description {
+        margin: px-to-vw(18) 0;
+        color: $base-neutral;
+        @include font-body-s-regular;
+    }
+
+    .buttonList {
+        display: flex;
+        flex-direction: column;
+        gap: px-to-vw(16);
+        margin-top: px-to-vw(16);
+    }
+
+    .button {
+        width: 100%;
+        background-color: $surface-card-info;
+        border-radius: px-to-vw(9);
+        border: 1px solid $brand-light-blue;
+        padding: px-to-vw(16);
+        align-items: center;
+        color: $brand-deep-violet;
+        @include font-body-s-semibold;
+
+        .icon {
+            flex: 0.2;
+        }
+
+        .label {
+            flex: 1;
+            text-align: left;
+        }
+    }
+}

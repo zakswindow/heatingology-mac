@@ -1,0 +1,9 @@
+@mixin cart-card {
+    border: 1px solid $border-primary;
+    border-radius: px-to-vw(8);
+    background-color: $base-neutral-white;
+
+    @media (max-width: $phone-breakpoint) {
+      border-radius: px-to-vw-m(8);
+    }
+}

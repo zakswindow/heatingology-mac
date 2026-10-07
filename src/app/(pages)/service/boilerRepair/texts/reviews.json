@@ -1,0 +1,46 @@
+{
+    "heading": {
+        "title": "Don’t Just Take Our Word for It"
+    },
+    "reviews": [
+        {
+            "kind": "video",
+            "src": "/products/boiler.png",
+            "posterImage": "/products/boiler.png"
+        },
+        {
+            "kind": "text",
+            "starRating": 5,
+            "review": "This is my review",
+            "username": "User D",
+            "userAvatar": "/products/boiler.png",
+            "userTitle": "Professional Reviewer"
+        },
+        {
+            "kind": "video",
+            "src": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/elephantsdream.mp4",
+            "posterImage": "/products/boiler.png"
+        },
+        {
+            "kind": "text",
+            "starRating": 2,
+            "review": "This is my review",
+            "username": "User A",
+            "userAvatar": "/products/boiler.png",
+            "userTitle": "Professional Reviewer"
+        },
+        {
+            "kind": "text",
+            "starRating": 2,
+            "review": "This is my review2",
+            "username": "User B",
+            "userAvatar": "/products/boiler.png",
+            "userTitle": "Professional Reviewer"
+        },
+        {
+            "kind": "video",
+            "src": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/elephantsdream.mp4",
+            "posterImage": "/products/boiler.png"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+enum QuoteStatus {
+  Pending
+  Paid
+  Completed
+}
+
+model Quote {
+  id                        String      @id @default(cuid())
+  price                     Float       @default(0)
+  extraPrice                Float       @default(0)
+  content                   String
+  createdAt                 DateTime    @default(now())
+  updatedAt                 DateTime    @updatedAt
+  productType               ProductType
+  postcode                  String?
+  title                     String?
+  firstName                 String?
+  lastName                  String?
+  contactNumber             String?
+  email                     String?
+  addressCity               String?
+  addressCounty             String?
+  addressLine1              String?
+  addressLine2              String?
+  note                      String?
+  installDate               DateTime?
+  installTime               String?
+  products                  Product[]   @relation("OrderProducts")
+  landlordAddressCity       String?
+  landlordAddressCounty     String?
+  landlordAddressLine1      String?
+  landlordAddressLine2      String?
+  landlordPostcode          String?
+  isLandlordAddressBusiness Boolean?
+  userType                  String?
+  status                    QuoteStatus @default(Pending)
+  paymentMethod             String?
+}

@@ -1,0 +1,60 @@
+.card {
+    position: relative;
+    overflow: hidden;
+    height: max-content;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner {
+    position: relative !important;
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 1.5rem;
+    aspect-ratio: 290/174;
+}
+
+.headline {
+    text-align: center;
+    color: white;
+    margin: 0.25rem 0;
+    @include font-heading-s-semibold;
+}
+
+.content {
+    text-align: center;
+    color: white;
+    margin-top: px-to-vw(8);
+    @include font-body-s-regular;
+}
+
+.order {
+    position: relative;
+    top: -1rem;
+    background-color: #F18263;
+    border: 2px solid $primary;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $secondary;
+    font-size: 0.75rem;
+    margin: auto;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .headline,
+    .content {
+        text-align: left;
+    }
+
+    .order {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem;
+    }
+}

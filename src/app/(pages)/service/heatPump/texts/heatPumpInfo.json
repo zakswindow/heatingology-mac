@@ -1,0 +1,34 @@
+{
+    "heading": {
+        "title": "Everything you need to know about Heat Pumps"
+    },
+    "infoItems": [
+        {
+            "title": "Is my home suitable for heat pumps?",
+            "learnMoreText": "Button",
+            "imageSrc": "/products/boiler.png",
+            "imageAlt": "Is my home suitable for heat pumps?",
+            "redirectUrl": "/about",
+            "guideText": "Guide Tips",
+            "duration": "5 min read"
+        },
+        {
+            "title": "Types of heat pumps available",
+            "learnMoreText": "Button",
+            "imageSrc": "/products/boiler.png",
+            "imageAlt": "Types of heat pumps available",
+            "redirectUrl": "/about",
+            "guideText": "Guide Tips",
+            "duration": "5 min read"
+        },
+        {
+            "title": "Why choose a heat pump?",
+            "learnMoreText": "Button",
+            "imageSrc": "/products/boiler.png",
+            "imageAlt": "Why choose a heat pump",
+            "redirectUrl": "/about",
+            "guideText": "Guide Tips",
+            "duration": "5 min read"
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+.button {
+    padding: px-to-vw(8) px-to-vw(16);
+    border: none;
+    border-radius: px-to-vw(8);
+    width: fit-content;
+    margin: auto;
+    cursor: pointer;
+    display: flex;
+    gap: px-to-vw(4);
+    justify-content: center;
+    align-items: center;
+
+    svg {
+        width: px-to-vw(24);
+        height: px-to-vw(24);
+    }
+}
+
+.button.disabled {
+    border-color: transparent !important;
+    @include button-primary-disabled;
+}
+
+.default {
+    background-color: $primary;
+    color: $primaryButtonText;
+    border: 1px solid transparent;
+    @include font-button-m-semibold;
+}
+
+.outline {
+    background-color: transparent;
+    border: 1px solid $secondary;
+    color: $secondary;
+}
+
+.transparent {
+    background-color: transparent;
+    border: none;
+    color: $secondary;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .button {
+        padding: px-to-vh-m(8) px-to-vw-m(16);
+        border-radius: px-to-vw-m(8);
+        gap: px-to-vw-m(4);
+
+        svg {
+            width: px-to-vw-m(24);
+            height: px-to-vw-m(24);
+        }
+    }
+}

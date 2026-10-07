@@ -1,0 +1,84 @@
+.dialog {
+    @include modal;
+
+    .description {
+        margin: px-to-vw(8) 0;
+        @include font-body-m-regular;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: px-to-vw(8);
+        margin-top: 1rem;
+    }
+
+    .buttonFirst {
+        margin-top: 1rem;
+    }
+
+    .button {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        @include button-round;
+        @include font-button-m-semibold;
+
+        svg {
+            width: 1rem;
+            height: 1rem;
+            flex-shrink: 0;
+            margin-right: 0.5rem;
+        }
+    }
+
+    .footer {
+        text-align: center;
+        margin-top: 1rem;
+        @include font-body-xxs-regular;
+    }
+
+    .link {
+        text-decoration: underline;
+    }
+
+    .confirmation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+        min-height: 0;
+        gap: px-to-vw(12);
+    }
+
+    .submitChecked {
+        flex: 1;
+        width: 100%;
+        min-height: 0;
+        color: $primary;
+    }
+
+    .submitTitle {
+        @include font-heading-l-semibold;
+        text-align: center;
+        flex-shrink: 0;
+    }
+
+    .submitDescription {
+        @include font-body-m-regular;
+        text-align: center;
+        flex-shrink: 0;
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .dialog {
+        .description {
+            margin: px-to-vw-m(8) 0;
+        }
+        .form {
+            gap: px-to-vw-m(8);
+        }
+    }
+}
+

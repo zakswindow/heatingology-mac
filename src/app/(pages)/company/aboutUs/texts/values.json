@@ -1,0 +1,21 @@
+{
+    "title": "What We Stand For",
+    "description": "Everything we do is built around trust, simplicity, and doing the job properly — from your first quote to long after we leave your home.",
+    "values": [
+        {
+            "icon": "ABOUT_US_HONESTY",
+            "title": "Clear & Honest Pricing",
+            "text": "No hidden costs. No surprises. Just straightforward pricing you can trust from the start."
+        },
+        {
+            "icon": "ABOUT_US_PEOPLE",
+            "title": "People First, Always",
+            "text": "We recommend what’s right for your home, not what makes us the most money."
+        },
+        {
+            "icon": "ABOUT_US_TRUST",
+            "title": "Support That Stays",
+            "text": "We don’t disappear after the job. We’re here whenever you need us."
+        }
+    ]
+}

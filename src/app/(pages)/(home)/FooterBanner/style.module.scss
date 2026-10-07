@@ -1,0 +1,76 @@
+.banner {
+    width: 100%;
+    aspect-ratio: 1440 / 448;
+}
+
+.contentContainer {
+    display: flex;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    max-width: px-to-vw(768);
+    margin: auto;
+    color: $white;
+    gap: px-to-vw(16);
+}
+
+.headline {
+    @include font-heading-l-semibold;
+}
+
+.benefits {
+    display: flex;
+    justify-content: center;
+    gap: px-to-vw(32);
+    margin-bottom: px-to-vw(32);
+
+    li {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        gap: px-to-vw(8);
+        @include font-body-s-semibold;
+
+        svg {
+            height: 100%;
+            aspect-ratio: 1;
+        }
+    }
+}
+
+.button {
+    @include button-round;
+    @include font-button-m-semibold;
+    padding: px-to-vh(12) px-to-vw(24);
+    display: flex;
+    flex-direction: row;
+    gap: px-to-vw(8);
+    background-color: $white;
+    color: $brand-deep-violet;
+}
+
+.spacer {
+    @include spacer;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .banner {
+        aspect-ratio: 375/488;
+
+        .content {
+            gap: px-to-vh-m(24);
+        }
+
+        img {
+            object-fit: fill;
+        }
+
+        .benefits {
+            flex-direction: column;
+        }
+    }
+}

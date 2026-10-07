@@ -1,0 +1,95 @@
+.table_wrap {
+    overflow-x: auto;
+    margin: 2rem auto;
+    width: fit-content;
+}
+
+.table {
+    display: grid;
+    grid-template-columns: fit-content(100%) 1fr 1fr;
+    min-width: 42.5rem;
+    max-width: 75rem;
+    margin: 0 auto;
+    gap: 0 1.5rem;
+}
+
+.cell {
+    @include font-body-s-semibold;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    line-height: 1.35;
+    font-size: 1rem;
+}
+
+.header {
+    @include font-body-m-semibold;
+    justify-content: start;
+}
+
+.col_left {
+    color: $text-primary;
+    text-align: left;
+    border-bottom: 0.0625rem solid $border-primary;
+}
+
+.col_left.header,
+.col_left:nth-last-child(3) {
+    border-bottom: none;
+}
+
+.col_blue {
+    @include font-body-s-regular;
+    background-color: $brand-luminous-blue;
+    color: $white;
+    text-align: left;
+    border-left: 0.125rem solid $brand-luminous-blue;
+    border-right: 0.125rem solid $brand-luminous-blue;
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.col_blue.header {
+    border-top: 0.125rem solid $brand-luminous-blue;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.col_blue.body {
+    background-color: $bg-info;
+    color: $text-primary;
+    box-shadow: inset 1rem 0 0 $bg-info, inset -1rem 0 0 $bg-info, inset 0 0.0625rem 0 $border-primary;
+}
+
+.col_blue.body:nth-last-child(2),
+.col_blue.body:nth-last-child(1) {
+    border-bottom: 0.125rem solid $brand-luminous-blue;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.tableHeading {
+    @include font-body-m-bold;
+    align-self: end;
+    padding-bottom: 0.5rem;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .table {
+        min-width: 12.5rem;
+        padding: 0;
+    }
+
+    .cell {
+        padding-top: 0.3125rem;
+        padding-bottom: 0.3125rem;
+        padding-left: 0.3125rem;
+        padding-right: 0.3125rem;
+        min-width: 5rem;
+    }
+
+    .col_blue.header,
+    .col_blue.body {
+        justify-content: center;
+        text-align: center;
+    }
+}

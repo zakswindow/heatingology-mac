@@ -1,0 +1,64 @@
+// .paypalMessage {
+//     margin-bottom: px-to-vh(16);
+// }
+
+.paypalContent {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vh(16);
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        gap: px-to-vh(12);
+        border-radius: px-to-vw(8);
+        padding: px-to-vh(16) px-to-vw(16);
+        background-color: $base-neutral-lightest;
+        border: 1px solid $border-secondary;
+        color: $text-body;
+        font-size: 0.65rem;
+
+        .icon {
+            width: 3em;
+            height: 3em;
+        }
+    }
+
+    .button {
+        width: 100%;
+
+        @include button-round;
+        @include font-button-m-semibold;
+
+        .icon {
+            width: px-to-vw(24);
+            height: px-to-vw(24);
+        }
+    }
+
+    .footprint {
+        text-align: center;
+        color: $base-neutral;
+        font-size: 0.65rem;
+    }
+
+}
+
+@media (max-width: $phone-breakpoint) {
+    .kandaContent {   
+        .description {
+            border-radius: px-to-vw-m(8);
+            padding: px-to-vh-m(16) px-to-vw-m(16);
+        }
+
+        .button {
+            gap: px-to-vw-m(16);
+            font-size: 1em;
+
+            .icon {
+                width: 1em;
+                height: 1em;
+            }
+        }
+    }
+}

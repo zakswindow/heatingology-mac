@@ -1,0 +1,8 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: px-to-vw(4);
+    text-decoration: underline;
+    color: $brand-luminous-blue;
+    @include font-body-s-regular;
+}

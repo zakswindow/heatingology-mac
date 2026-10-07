@@ -1,0 +1,56 @@
+.details,
+.specs,
+.dimension {
+    dt {
+        @include font-heading-m-bold;
+        margin: px-to-vw(8) 0;
+    }
+}
+
+.details {
+    h3 {
+        white-space: pre-line;
+        font-size: px-to-vw(16);
+        line-height: px-to-vw(16 * 1.6);
+    }
+
+    li {
+        @include font-body-s-regular;
+        @include list-li;
+
+    }
+
+    p {
+        @include font-body-s-regular;
+        margin: px-to-vw(16) 0;
+    }
+}
+
+.specsList {
+    color: $text-info-body;
+
+    li {
+        @include font-body-s-regular;
+        svg {
+            color: $brand-deep-violet;
+        }
+    }
+}
+
+.dimension {
+    dd {
+        @include font-body-s-regular;
+        color: $text-default;
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .details,
+    .specs,
+    .dimension {
+        dt {
+            @include font-heading-m-bold;
+            margin: 1rem 0;
+        }
+    }
+}

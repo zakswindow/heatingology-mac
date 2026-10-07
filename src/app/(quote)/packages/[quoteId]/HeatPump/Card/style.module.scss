@@ -1,0 +1,109 @@
+.card {
+    border-radius: px-to-vw(20);
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vw(8);
+    min-width: px-to-vw(285);
+    overflow: hidden;
+    background-color: $white;
+
+    .imageContainer {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        background-color: $brand-light-blue;
+        min-height: px-to-vh(236);
+
+        img {
+            width: 100%;
+            height: px-to-vh(236);
+            object-fit: contain;
+        }
+    }
+
+    .tags {
+        position: absolute;
+        top: px-to-vw(10);
+        left: px-to-vw(10);
+        display: flex;
+        gap: px-to-vw(4);
+        z-index: 1;
+    }
+
+    .metadata {
+        display: flex;
+        flex-direction: column;
+        padding: px-to-vh(16) px-to-vw(16);
+        height: 100%;
+        gap: px-to-vh(8);
+
+        .brandContainer {
+            aspect-ratio: 132 / 32;
+            max-width: 132px;
+        }
+
+        .name {
+            color: $text-heading;
+            @include font-body-s-semibold;
+        }
+
+        .benefits {
+            gap: px-to-vw(4);
+
+            li {
+                color: $text-body;
+                @include font-body-s-regular;
+                @include list-li;
+            }
+        }
+
+        .note {
+            color: $text-body;
+            @include font-body-xs-regular;
+        }
+    }
+}
+
+
+.ellipsis {
+    @include text-ellipsis;
+}
+
+.button {
+    width: 100%;
+    border-radius: px-to-vw(10);
+}
+
+.spacer {
+    @include spacer;
+}
+
+.whatsIncludedTrigger {
+    @include font-body-s-regular;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .card {
+        border-radius: px-to-vw-m(20);
+        gap: px-to-vw-m(8);
+        min-width: px-to-vw-m(285);
+
+        .metadata {
+            padding: px-to-vh-m(16) px-to-vw-m(16);
+            gap: px-to-vh-m(8);
+
+            .brandContainer {
+                aspect-ratio: 132 / 32;
+                max-width: 132px;
+            }
+
+            .benefits {
+                gap: px-to-vw-m(4);
+            }
+        }
+
+        .button {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+.tag {
+    border-radius: px-to-vw(8);
+    padding: px-to-vh(6) px-to-vw(8);
+    background-color: $brand-dark-purple;
+    color: $white;
+    @include font-label-s;
+}
+
+.homeHeating {
+    background-color: #FFA48F;
+}
+
+.customerStories {
+    background-color: #FFECD1;
+}
+
+.price {
+    background-color: $brand-vibrant-red;
+}
+
+.popular {
+    background-color: #feeaff;
+    color: $base-neutral-black;
+}
+
+.on-sale {
+    background-color: #a62501;
+    color: $base-neutral-white;
+}
+
+.apr {
+    background-color: #e2f5ea;
+    color: $base-neutral-black;
+}
+.homeheat {
+    background-color: #FFA48F;
+    color: $white;
+}
+
+.customerStories {
+    background-color: #e6f0fa;
+    color: #000000;
+}
+
+.boilerguide {
+    background-color: #5369ca;
+    color: $white;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .tag {
+        border-radius: px-to-vw-m(8);
+        padding: px-to-vh-m(6) px-to-vw-m(8);
+    }
+}

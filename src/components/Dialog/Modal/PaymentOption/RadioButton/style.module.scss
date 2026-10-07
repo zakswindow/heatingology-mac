@@ -1,0 +1,7 @@
+.container {
+    @include button-box;
+    padding: px-to-vw(16);
+    display: flex;
+    flex-direction: row;
+    gap: px-to-vw(8);
+}

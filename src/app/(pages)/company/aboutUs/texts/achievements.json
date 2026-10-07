@@ -1,0 +1,19 @@
+{
+    "title": "What We Believe",
+    "description": "3 simple pillars:",
+    "achievements": [
+        {
+            "label": "Keep it \nsimple",
+            "description": "No jargon. No confusion. Just clear choices and honest advice."
+        },
+        {
+            "label": "Do it properly",
+            "description": "Qualified engineers, high standards, and work we stand behind."
+        },
+        {
+            "label": "Be there \nafter",
+            "description": "Support doesn’t stop when we leave your home."
+        }
+    ],
+    "image_url": "https://assets.heatingology.com/our-story/what-we-believe.png"
+}

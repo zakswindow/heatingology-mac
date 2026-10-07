@@ -1,0 +1,28 @@
+.heatPumpContainer {
+    background-color: $base-neutral-lightest !important;
+    // color: $base-neutral-black !important;
+
+    h1, h2 {
+        color: $base-neutral-black !important;
+    }
+
+    section {
+        width: fit-content;
+        margin: auto;
+    }
+}
+
+.heatPumpReasons {
+    background-color: $base-neutral-white !important;
+    color: $base-neutral-black !important;
+    --text-height: 50%;
+}
+
+.heatPumpReasons .heatPumpInfo {
+    background-color: $base-neutral-lightest !important;
+    color: $base-neutral-black !important;
+}
+
+.heatPumpSteps {
+    background-color: $brand-deep-violet !important;
+}

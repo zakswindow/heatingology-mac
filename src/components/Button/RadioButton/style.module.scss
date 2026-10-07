@@ -1,0 +1,70 @@
+.container {
+    border: none;
+}
+
+.label {
+    @include font-body-s-regular;
+    margin-bottom: px-to-vw(8);
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
+    gap: px-to-vw(16);
+}
+
+.vertical {
+    display: flex;
+    flex-direction: column;
+    line-height: px-to-vw(16 * 1.5);
+    gap: px-to-vw(16);
+}
+
+.inputContainer {
+    @include font-body-s-regular;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: px-to-vw(8);
+
+    input {
+        opacity: 0;
+        width: px-to-vw(16);
+        height: px-to-vw(16);
+        position: absolute;
+    }
+}
+.radioMarkContainer {
+    position: relative;
+    width: px-to-vw(16);
+    height:px-to-vw(16);
+}
+
+.radioMark {
+    display: block;
+    width: px-to-vw(16);
+    height: px-to-vw(16);
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: px-to-vw(2) solid $base-neutral-light;
+    padding: px-to-vw(2);
+    position: absolute;
+}
+
+.radioMark.checked {
+    border-color: $text-default;
+}
+
+.radioDot {
+    display: none;    
+}
+
+.radioMark.checked .radioDot {
+    width: px-to-vw(8);
+    height: px-to-vw(8);
+    border-radius: 50%;
+    display: block;
+    top: px-to-vw(4);
+    left: px-to-vw(4);
+    background-color: $text-default;
+}

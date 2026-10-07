@@ -1,0 +1,32 @@
+.accordionRoot {
+    width: fit-content;
+}
+
+.accordionHeader {
+    border: none;
+    padding: px-to-vw(8) 0;
+
+    button {
+        gap: px-to-vw(8);
+        color: $white;
+    }
+}
+
+.accordionContent {
+    background-color: $white;
+    border-radius:  10px;
+    font-size: 0.75rem;
+    padding: 0.5rem;
+
+    li {
+        padding: 0.5rem 0;
+    }
+}
+
+.accordionRoot.isScrolled {
+    .accordionHeader {
+        button {
+            color: $brand-deep-violet;
+        }
+    }
+} 

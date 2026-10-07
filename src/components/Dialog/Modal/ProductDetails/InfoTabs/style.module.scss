@@ -1,0 +1,30 @@
+.content {
+    overflow: scroll;
+    max-height: px-to-vw(500);
+
+    dt {
+        @include font-heading-m-bold;
+    }
+}
+
+
+.whatsIncluded,
+.faqs {
+    padding: px-to-vh(8) 0;
+
+    dt {
+        margin: px-to-vh(8) 0;
+        @include font-heading-m-bold;
+    }
+}
+
+.faqs {
+    text-align: left;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .content {
+        max-height: unset;
+    }
+
+}

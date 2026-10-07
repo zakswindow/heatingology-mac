@@ -1,0 +1,16 @@
+.content {
+    max-width: 90vw;
+    max-height: 90vh;
+    width: max-content;
+    height: max-content;
+    padding: px-to-vw(40) !important;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .content {
+        padding: px-to-vw-m(20) !important;
+        border-radius: px-to-vw-m(20) !important;
+    }
+}

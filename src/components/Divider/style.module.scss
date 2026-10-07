@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    align-items: center;
+    margin: px-to-vh(16) 0;
+
+    .text {
+        @include font-body-s-semibold;
+        & {
+            padding: 0 px-to-vw(16);
+            $text-color: $base-neutral;
+        }
+    }
+}
+
+.container::before,
+.container::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: $border-secondary;
+}

@@ -1,0 +1,69 @@
+.dialog {
+    min-width: px-to-vw(480);
+    padding: 0;
+
+    h2 {
+        @include font-heading-l-semibold;
+        padding: px-to-vw(40);
+    }
+
+    @media (max-width: $phone-breakpoint) {
+        min-width: unset;
+        width: 90vw;
+
+        h2 {
+            padding: px-to-vw-m(24);
+        }
+    }
+}
+
+.confirmation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: px-to-vw(16);
+    padding: px-to-vw(40);
+    text-align: center;
+}
+
+.submitChecked {
+    flex: 1;
+    width: 30%;
+    min-height: 0;
+    color: $primary;
+}
+
+.submitTitle {
+    text-align: center;
+    flex-shrink: 0;
+    color: $text-heading;
+    @include font-heading-m-semibold;
+}
+
+.submitDescription {
+    text-align: center;
+    flex-shrink: 0;
+    color: $text-body;
+    @include font-body-s-regular;
+}
+
+.submitButton {
+    width: 100%;
+    margin: 2dvh 0 auto 0;
+    @include button-round;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .confirmation {
+        gap: px-to-vw-m(16);
+        padding: px-to-vw-m(24);
+    }
+
+    .confirmationTitle {
+        @include font-heading-s-semibold;
+    }
+
+    .confirmationMessage {
+        @include font-body-s-regular;
+    }
+}

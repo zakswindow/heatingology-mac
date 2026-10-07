@@ -1,0 +1,38 @@
+.banner {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 768 / 214;
+    overflow: hidden;
+}
+
+.previewImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+.bin {
+    position: absolute;
+    right: px-to-vw(8);
+    top: px-to-vw(8);
+    background-color: transparent;
+    margin: 0;
+
+    .icon {
+        width: px-to-vw(32);
+        height: px-to-vw(32);
+        color: $brand-deep-violet;
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .bin {
+        right: px-to-vw-m(8);
+        top: px-to-vw-m(8);
+
+        .icon {
+            width: px-to-vw-m(24);
+            height: px-to-vw-m(24);
+        }
+    }
+}

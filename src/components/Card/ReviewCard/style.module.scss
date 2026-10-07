@@ -1,0 +1,239 @@
+// Variables
+$card-width: px-to-vw(320);
+$card-height: px-to-vw(600);
+$border-radius: px-to-vw(12);
+$shadow: 0 px-to-vw(2) px-to-vw(8) rgba(0, 0, 0, 0.1);
+$shadow-hover: 0 px-to-vw(4) px-to-vw(12) rgba(0, 0, 0, 0.15);
+
+.card {
+    position: relative;
+    max-width: 20rem;
+    background-color: $base-neutral-white;
+    border-radius: $border-radius;
+    box-shadow: $shadow;
+    transition: box-shadow 0.3s ease;
+    overflow: hidden;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    aspect-ratio: 400/600;
+
+    &:hover {
+        box-shadow: $shadow-hover;
+    }
+}
+
+.externalButton {
+    position: absolute;
+    top: px-to-vw(12);
+    right: px-to-vw(12);
+    width: px-to-vw(32);
+    height: px-to-vw(32);
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    backdrop-filter: blur(px-to-vw(4));
+    transition: background-color 0.2s ease;
+
+    &:hover {
+        background-color: $base-neutral-white;
+    }
+
+    .externalIcon {
+        width: px-to-vw(16);
+        height: px-to-vw(16);
+        color: $light-blue;
+    }
+}
+
+.videoContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+
+    .posterImage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .playOverlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.3);
+
+        .playButton {
+            width: px-to-vw(60);
+            height: px-to-vw(60);
+            background-color: $base-neutral-white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 px-to-vw(4) px-to-vw(12) rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            .playIcon {
+                width: px-to-vw(24);
+                height: px-to-vw(24);
+                color: $black;
+                margin-left: px-to-vw(2);
+                fill: $black;
+            }
+        }
+    }
+}
+
+.reviewContainer {
+    padding: px-to-vw(20);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .ratingContainer {
+        display: flex;
+        align-items: center;
+        gap: px-to-vw(4);
+        margin-bottom: px-to-vw(12);
+
+        .star {
+            width: px-to-vw(16);
+            height: px-to-vw(16);
+
+            &.filled {
+                fill: $brand-vibrant-red;
+                color: $brand-vibrant-red;
+            }
+
+            &.empty {
+                color: $brand-light-blue;
+            }
+        }
+    }
+
+    .reviewContent {
+        flex: 1;
+        margin-bottom: px-to-vw(16);
+
+        .reviewText {
+            @include font-body-l-bold;
+            color: $base-neutral-black;
+            margin: 0;
+            max-height: px-to-vw(180);
+            overflow-y: auto;
+
+            // Custom scrollbar
+            &::-webkit-scrollbar {
+                width: px-to-vw(4);
+            }
+
+            &::-webkit-scrollbar-track {
+                background: #f1f5f9;
+                border-radius: px-to-vw(2);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: #cbd5e1;
+                border-radius: px-to-vw(2);
+            }
+
+            &::-webkit-scrollbar-thumb:hover {
+                background: #94a3b8;
+            }
+        }
+    }
+
+    .userInfo {
+        display: flex;
+        align-items: center;
+        gap: px-to-vw(12);
+        margin-top: auto;
+
+        .userAvatar {
+            width: px-to-vw(40);
+            height: px-to-vw(40);
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .userDetails {
+            .username {
+                @include font-body-s-semibold;
+                color: $base-neutral-black;
+                margin: 0 0 px-to-vw(2) 0;
+            }
+
+            .userTitle {
+                @include font-body-s-regular;
+                color: $base-neutral-black;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.videoModal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    .videoModalContent {
+        position: relative;
+        max-width: 90vw;
+        max-height: 90vh;
+        cursor: default;
+
+        .modalVideo {
+            width: 100%;
+            height: auto;
+            max-height: 90vh;
+            border-radius: px-to-vw(8);
+        }
+    }
+}
+
+.closeButton {
+    position: absolute;
+    top: px-to-vw(-16);
+    right: px-to-vw(-16);
+    width: px-to-vw(36);
+    height: px-to-vw(36);
+    background-color: $base-neutral-white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+
+    @media (max-width: $phone-breakpoint) {
+        top: px-to-vw-m(-20);
+        right: 0;
+        width: px-to-vw-m(36);
+        height: px-to-vw-m(36);
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .card {
+        width: px-to-vw-m(280);
+        height: px-to-vw-m(367);
+    }
+}

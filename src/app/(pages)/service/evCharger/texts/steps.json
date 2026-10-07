@@ -1,0 +1,27 @@
+{
+    "heading": {
+        "title": "Here's how it works"
+    },
+    "steps": [
+        {
+            "image": "/home/contact_us.png",
+            "title": "Answer a few quick questions ",
+            "text": "Takes 2-3 mins."
+        },
+        {
+            "image": "/home/contact_us.png",
+            "title": "Get an Instant Quote",
+            "text": "No hidden fees. No surprises."
+        },
+        {
+            "image": "/home/contact_us.png",
+            "title": "Pick your install date",
+            "text": "We'll work around your schedule."
+        },
+        {
+            "image": "/home/contact_us.png",
+            "title": "We get you charging",
+            "text": "Plus, we provide aftercare if anything's not quite right."
+        }
+    ]
+}

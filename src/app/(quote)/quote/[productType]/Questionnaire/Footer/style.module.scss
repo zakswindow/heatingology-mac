@@ -1,0 +1,67 @@
+.footer {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: px-to-vw(24) px-to-vw(80);
+    background-color: #fafafa;
+
+    .bottomButton {
+        width: px-to-vw(200);
+        @include button-round;
+        margin: 0;
+    }
+
+    .iconButton {
+        border-radius: 50%;
+        aspect-ratio: 1;
+        margin: 0;
+    }
+
+    .iconButton:hover {
+        @include button-hover;
+    }
+
+    .restart {
+        @include font-body-m-semibold;
+    }
+}
+
+
+.postcodeFooter {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: px-to-vw(16);
+
+    .bottomButton {
+        width: px-to-vw(480);
+        margin: auto;
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .footer {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .bottomButton {
+            margin: 0;
+            width: max-content;
+            order: 1;
+        }
+
+        .iconButton {
+            width: px-to-vw-m(48);
+            height: px-to-vw-m(48);
+            order: 0;
+        }
+
+        a {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: px-to-vw(16);
+}
+
+.showMore {
+    @include font-button-m-semibold;
+    @include button-round;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .products {
+        display: flex;
+        flex-direction: column;
+        gap: px-to-vh-m(32);
+    }
+
+    .showMore {
+        width: 100%;
+        border: px-to-vw-m(2) solid $brand-deep-violet;
+        @include button-round;
+    }
+}

@@ -1,0 +1,62 @@
+.container {
+    padding: px-to-vw(16);
+    border: 1px solid $brand-light-blue;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vh(24);
+    background-color: $base-neutral-white;
+
+    .header {
+        color: $black;
+        border-bottom: 1px solid $border-primary;
+        padding-bottom: px-to-vh(4);
+        @include font-body-s-semibold;
+    }
+
+    .breakdown {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: px-to-vw(24);
+
+        .description {
+            border-bottom: 1px solid $border-primary;
+            padding-bottom: px-to-vh(4);
+
+            dt {
+                color: $text-heading;
+                @include font-body-s-semibold;
+            }
+
+            dd {
+                color: $text-body;        
+                @include font-body-xs-regular;
+            }
+
+            svg {
+                color: $brand-luminous-blue;
+            }
+        }
+    }
+
+    .restart {
+        margin: unset;
+        padding: unset;
+        background-color: transparent;
+        color: $base-neutral;
+        @include font-button-s-semibold;
+    }
+}
+
+
+@media (max-width: $phone-breakpoint) {
+    .container {
+        padding: px-to-vw-m(16);
+
+        .breakdown {
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
+}

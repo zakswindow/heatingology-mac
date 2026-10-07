@@ -1,0 +1,12 @@
+.nav {
+    @include sticky-nav;
+    padding: px-to-vh(12) px-to-vw(80);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    button {
+        margin: 0;
+        @include button-round;
+    }
+} 

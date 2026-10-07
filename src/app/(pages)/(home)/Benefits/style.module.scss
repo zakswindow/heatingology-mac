@@ -1,0 +1,27 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    padding: px-to-vw(112) px-to-vw(64);
+    gap: px-to-vw(64);
+}
+
+.title {
+    @include font-heading-xl-semibold;
+    text-align: center;
+    width: 100%;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: px-to-vw(32);
+}
+
+@media (max-width: $phone-breakpoint) {
+    .cards {
+        display: flex;
+        flex-direction: column;
+        gap: px-to-vh-m(24);
+    }
+}

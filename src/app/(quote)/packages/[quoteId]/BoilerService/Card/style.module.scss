@@ -1,0 +1,76 @@
+.card {
+    border-radius: px-to-vw(20);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: $white;
+    gap: px-to-vh(8);
+
+    .banner {
+        position: relative;
+        aspect-ratio: 405 / 188;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+    .tags {
+        position: absolute;
+        top: px-to-vw(10);
+        left: px-to-vw(10);
+        display: flex;
+        gap: px-to-vw(4);
+        z-index: 1;
+    }
+
+    .details {
+        padding: px-to-vh(16) px-to-vw(20);
+    }
+
+    .name {
+        @include font-body-m-semibold;
+    }
+
+    .benefits {
+        li {
+            @include font-body-xs-regular;
+            
+            svg {
+                color: $brand-luminous-blue;
+            }
+        }
+    }
+
+    .price {
+        color: $brand-deep-violet;
+        margin-top: px-to-vh(16);
+        @include font-heading-m-semibold;
+    }
+
+    .button {
+        width: 100%;
+        @include button-round;
+    }
+}
+
+
+@media (max-width: $phone-breakpoint) {
+    .card {
+        border-radius: px-to-vw-m(20);
+        gap: px-to-vh-m(8);
+
+        .details {
+            padding: px-to-vh-m(16) px-to-vw-m(20);
+            gap: px-to-vh-m(8);
+        }
+
+        .price {
+            margin-top: px-to-vh-m(16);
+            margin-bottom: px-to-vh-m(16);
+        }
+    }
+
+}

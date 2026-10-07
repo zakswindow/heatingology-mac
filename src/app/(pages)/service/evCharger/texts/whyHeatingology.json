@@ -1,0 +1,23 @@
+{
+    "leftPanel": {
+        "title": "Why Homeowners Choose Heatingology",
+        "text": "Clear prices, trusted people, and support that stays with you."
+    },
+    "rightPanel": [
+        {
+            "title": "",
+            "text": "",
+            "image": "https://assets.heatingology.com/buy-ev-charger/see-your-price.png"
+        },
+        {
+            "title": "Smart Options for Every EV",
+            "text": "We install fast, reliable chargers compatible with all vehicles - and help you choose what works for your home.",
+            "image": "https://assets.heatingology.com/buy-ev-charger/smart-options-ev.png"
+        },
+        {
+            "title": "Trusted Installation",
+            "text": "Our engineers are qualified, tidy, and experienced with real homes (not just new builds).",
+            "image": "https://assets.heatingology.com/buy-ev-charger/we-install.png"
+        }
+    ]
+}

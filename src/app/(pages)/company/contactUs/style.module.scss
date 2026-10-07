@@ -1,0 +1,41 @@
+.page {
+    padding: px-to-vw(184) 0;
+    background-color: $white;
+
+    .title {
+        margin-bottom: px-to-vw(24);
+        padding-left: px-to-vw(64);
+        @include font-heading-xxl-semibold;
+    }
+
+    .subTitle {
+        color: $text-body;
+        padding-left: px-to-vw(64);
+        @include font-body-s-regular;
+    }
+
+    .partnership {
+        margin-top: px-to-vh(80);
+    }
+}
+
+
+@media (max-width: $phone-breakpoint) {
+    .page {
+        padding: px-to-vw-m(184) 0;
+
+        .title {
+            margin-bottom: px-to-vw-m(24);
+            padding-left: px-to-vw-m(20);
+        }
+
+        .subTitle {
+            padding-left: px-to-vw-m(20);
+        }
+
+        .partnership {
+            margin-top: px-to-vh-m(80);
+    }
+
+    }
+}

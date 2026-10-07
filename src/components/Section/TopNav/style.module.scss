@@ -1,0 +1,48 @@
+.navContainer {
+    @include menu-hover;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    padding: 1rem px-to-vw(32);
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    li {
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.navContainer.isScrolled {
+    @include menu-hover;
+    background-color: white;
+}
+
+.navContainer.isPlain {
+    background-color: $white;
+    box-shadow: none;
+}
+
+.logo {
+    // position: relative !important;
+    // object-fit: cover;
+    // width: 100%;
+    // aspect-ratio: 173 / 28;
+    max-width: 173px;
+    flex: 0.2;
+    z-index: 1;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.spacer {
+    @include spacer;
+}

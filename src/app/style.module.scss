@@ -1,0 +1,10 @@
+.rootLayout {
+    overflow-x: hidden;
+    max-width: 100%;
+
+    .pageWrapper {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+}

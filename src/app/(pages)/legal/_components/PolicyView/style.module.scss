@@ -1,0 +1,28 @@
+.policyContainer {
+    display: grid;
+    grid-template-columns: px-to-vw(320) 1fr;
+    gap: px-to-vw(24);
+    margin-top: px-to-vw(112);
+
+    .intro {
+        display: flex;
+        flex-direction: column;
+        gap: px-to-vh(16);
+    }
+
+    .paragraph {
+        color: $text-body;
+        @include font-body-s-regular;
+    }
+}
+
+@media (max-width: $phone-breakpoint) {
+    .policyContainer {
+        display: flex;
+        flex-direction: column;
+
+        .intro {
+            margin-top: px-to-vh(24);
+        }
+    }
+}

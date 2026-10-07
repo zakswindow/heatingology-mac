@@ -1,0 +1,64 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vh(40);
+
+    .title {
+        @include font-heading-m-semibold;
+    }
+
+    .selection {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: px-to-vw(8);
+
+        .label {
+            @include font-body-s-semibold;
+        }
+
+        .valueContainer {
+            @include button-round;
+            @include font-body-xs-regular;
+            display: flex;
+            flex-direction: row;
+            gap: px-to-vw(8);
+            align-items: center;
+            padding: px-to-vh(8) px-to-vw(16);
+            background-color: $white;
+            border: 1px solid $border-primary;
+        }
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: px-to-vw(40);
+    }
+
+    .faqs {
+        background-color: transparent;
+    }
+}
+
+
+.haveQuestions {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-bottom: -px-to-vh(112);
+    background-color: $base-neutral-white;
+}
+
+@media (max-width: $phone-breakpoint) {
+    .page {
+        .cards {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .price {
+        margin-top: px-to-vh-m(16);
+        margin-bottom: px-to-vh-m(16);
+    }
+}

@@ -1,0 +1,20 @@
+.footerSection {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vh(8);
+
+    strong {
+        @include font-body-m-semibold;
+    }
+}
+
+.footerSectionList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vh(8);
+
+    li {
+        @include font-body-s-regular;
+    }
+}
